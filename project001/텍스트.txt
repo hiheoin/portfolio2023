@@ -1,0 +1,126 @@
+*******header
+
+- logo
+- hero - 신비의 오월드 그 찬란한 두근거림!
+- menu - O! World? - O!World 소개
+		 - 서비스헌장
+		 - 고객마당
+		 - 공고 및 지원서
+		 - 사이트맵
+		 - 개인정보처리방침
+          - 이용안내 - 뉴스 & 공지
+		- 이용요금
+		- 예약안내
+		- 운휴안내
+		- 주차안내
+		- 교통정보
+          - 시설안내 - 버드랜드
+		- 조이랜드
+		- 주랜드
+		- 플라워랜드
+		- 조각공원
+		- 부대시설
+		- 편의시설
+		- 시즌놀이시설
+		- 가이드맵
+          - 즐길거리 - 나이트 유니버스
+		- 버드랜드 퍼포먼스
+		- 공연안내
+		- 축제 & 이벤트
+		- 오월드 메타버스
+		- 레이저 태그 스포츠
+- direct - icon(<i class="fa fa-map-marker" aria-hidden="true"></i>) - 가이드맵
+	- icon(<i class="fa fa-moon-o" aria-hidden="true"></i>) - 나이트 유니버스
+	- icon(<i class="fa fa-bullseye" aria-hidden="true"></i>) - 레이저 태그 스포츠
+	- icon(<i class="fa fa-globe" aria-hidden="true"></i>) - 오월드 메타버스
+- time - 오월드 운영시간 09:30 ~ 18:00
+         - 나이트 유니버스 운영시간 18:00 ~ 21:00
+         - 사파리 운영시간 09:45 ~ 17:30
+- info - 요금안내
+        - 예약안내
+        - 고객지원
+        - WELCOME                  O!WORLD
+	일상에서 벗어나 신비의 세계로, 오월드와 함께해요!
+        - O! WORLD?
+
+** floating
+- O!
+- 요금
+- 예약
+- 고객
+
+
+ 
+*******section
+
+- facil - 시설안내
+          - big - 버드랜드
+	     - 조이랜드
+	     - 주랜드
+	     - 플라워랜드
+          - small - icon(<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>)
+	       - photo1
+	       - photo2
+	       - phoro3
+	       - icon(<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>)
+
+- guide - 가이드맵
+        - map - 오월드가이드맵
+	    - 나이트유니버스가이드맵
+        - btn - 가이드맵 자세히 보기
+	    - 운휴정보
+ 
+- notice - 공지사항
+	- 1 - 2023년 오월드 불꽃쇼 5월 운영 안내 
+	     - 안녕하세요, 대전오월드입니다. 
+		2023년 오월드 불꽃쇼 5월 운영 관련하여 안내드립니다. □ 운영일 : 5/5, 5/6, 5/13, 5/20, 5/27, 5/28 (총 6회)
+	     - 04/25
+ 	- 2 - 2023년 오월드 어린이날 연장운영 및 5월 야간개장 안내
+	     - 안녕하세요, 대전오월드입니다. 
+		2023년 대전오월드 어린이날 연장운영 및 5월 야간개장 관련하여 안내드리오니, 이용에 참고하여 주시기 바랍니다. 
+	     - 04/21
+	- 3 - 플라워랜드 식음매장 및 교복대여점 오픈 안내
+	     - 안녕하세요, 대전오월드입니다.
+		플라워랜드 내 식음매장과 교복대여점 오픈 관련하여 안내드리오니, 고객 여러분의 많은 이용 부탁드립니다. 감사합니다.
+	     - 01/18
+
+- banner
+
+- gallery - 갤러리
+	- photo1
+	- photo2
+	- photo3
+	- wheel
+
+- map - 오시는길
+	- map
+	- 교통편 - 버스 이용시
+		- 차량 이용시
+	- 주차안내
+	- popup - 버스 이용시 + icon(<i class="fa fa-times-circle" aria-hidden="true"></i>)
+		- 차량 이용시 + icon(<i class="fa fa-times-circle" aria-hidden="true"></i>)
+		- 주차안내 + icon(<i class="fa fa-times-circle" aria-hidden="true"></i>)
+ 
+*******footer
+
+- snsSet - SNS
+        - 페이스북
+        - 블로그
+        - 인스타그램
+        - 유튜브
+        - 카카오톡
+
+- footer - 개인정보처리방침 ㅣ  영상정보처리기기운영방침 ㅣ  오월드소개 ㅣ  오시는 길
+	  35073 대전광역시 중구 사정공원로 70 (사정동) 대전오월드(305-82-12294)
+	  TEL 042-580-4820   FAX 042-580-4711
+	  Copyright (c) Heoin. 2023. All rights reserved.
+	- black logo
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+body {font-family: 'Nanum Gothic', sans-serif;}
+
+
+
+
+/* 히어로 설정 */
+/* .box1 {}
+.box1-1 {background-image: url(../img/hero.png);
+        width: 1440px;
+        height: 1024px;
+        background-size: contain;
+        background-repeat: no-repeat;} */
+
+
+
+
+
+
+/* 미디어쿼리구간 설정 ///////////////// */
+
+@media(min-width:768px) {
+
+    /* 헤더 설정 */
+    .boxA, .boxB, .boxC, .boxD {width: 15%;
+                                height: 25%;}
+    header {position: fixed;
+            width: 100%;
+            height: 100%;}
+
+    .boxE {position: fixed;
+        float: left;
+        margin-left: 15%;
+        margin-top: 75vh;
+        width: 85vw;
+        height: 25vh;}
+
+
+
+}
