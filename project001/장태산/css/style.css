@@ -15,15 +15,125 @@ body {font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;}
 
 
+/* 로고 설정 */
+.logo {width: 150px;
+        height: 90px;
+        background-image: url(../img/logo.png);
+        text-indent: -9999px;
+        background-size: contain;
+        background-repeat: no-repeat;}
+
+/* gnb 설정 */
+.gnb {}
+.gnb ul {display: flex;}
+.gnb ul li {}
+.gnb ul li a {display: block;
+            padding: 10px 30px;
+            color: #333;}
 
 
+/* hero 설정 */
+.hero {width: 100%;
+    height: 80vh;
+    overflow: hidden;}
+.hero img {width: 100%;
+    transform: translateY(-100px);}
+
+/* hero 화살표 설정 */
+.hero_arrow {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;}
+.hero_arrow span {display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: #006837;
+            padding: 15px;
+            cursor: pointer;}
+.hero_arrow span:hover {color: #333;}
+
+.hero_num {position: absolute;
+            right: 20%;
+            top: 30%;
+            font-weight: bold;
+            font-size: 14px;}
+.hero_num em {font-size: 18px;
+            font-style: normal;
+            margin-right: 5px;
+            color: #006837;}
+
+
+/* 전체 타이틀 설정 */
+.title {font-size: 28px;
+        margin-bottom: 20px;}
+.title::before {content: "\00A4";
+                color: #006837;
+                font-size: 20px;
+                margin-right: 5px;}
+
+
+/* info 설정 */
+.info {}
+.info .title {font-size: 28px;
+    margin-bottom: 20px;}
+.info .title::before {content: "\00A4";
+            color: #006837;
+            font-size: 20px;
+            margin-right: 5px;}
+.info .top_txt {font-size: 14px;
+            margin-bottom: 15px;
+            color: #474747;}
+.info .top_txt em {font-weight: bold;
+                font-style: normal;}
+.info .bottom_txt {font-size: 22px;
+            letter-spacing: 2px;}
+.info .bottom_txt em {font-style: normal;
+                font-size: 24px;
+                color: #f15a25;
+                font-weight: bold;}
+
+
+/* 문의하기 설정 */
+.qnaimg {width: 100%;}
+.qna {}
+.qna h2 {font-size: 22px;
+        color: #006837;
+        font-weight: bold;}
+.qna .listBox {display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: space-between;}
+.qna .listBox ul {width: 60%;}
+.qna .listBox ul li {padding: 15px 0;
+                    border-bottom: dotted 2px #ddd;
+                    margin-bottom: 10px;
+                    }
+.qna .listBox ul li::before {content: "\2022";
+                            font-size: 28px;
+                            vertical-align: middle;
+                            color: #006837;}
+.qna .listBox ul li:nth-child(2):before {color: #f15a25;}
+.qna .listBox button {background-color: #006837;
+                    border: none;
+                    padding: 20px 45px;
+                    color: #fff;
+                    cursor: pointer;}
+.qna .listBox button:hover {opacity: 0.6;}
+.qna p {font-size: 18px;
+        letter-spacing: 1px;
+        margin-top: 20px;}
+
+
+
+/* 박스 상하여백 설정 */
+.box3 {padding-bottom: 20px;}
+.box4 {padding-bottom: 40px;}
 
 
 
 /* 미디어쿼리구간 ///////////////////////////////// */
-
-
-
 
 
 /* 768px 이상 ////////// */
@@ -33,14 +143,30 @@ body {font-family: 'Nanum Gothic', sans-serif;
 /* 레이아웃 설정 */
     /* 박스1과 박스2의 가로정렬 */
     .boxA {display: flex;
-        justify-content: space-between;}
+        justify-content: space-between;
+        align-items: center;}
     /* 박스5-1과 박스5-2의 가로정렬 */
-    .box5 {display: flex;}
-    .box5-1,.box5-2 {width: 50%;}
+    .box5 {display: flex;
+        justify-content: space-between;}
+    .box5-1,.box5-2 {width: 46%;}
     /* 박스9-1. 박스9-2, 박스9-3 가로정렬 */
     .box9 {display: flex;
         justify-content: space-between}
     .box9>div {width: 32%;}
+
+}
+
+
+/* 1140px 이상 ////////// */
+@media(min-width:1140px) {
+
+    header,.box3-2,.box4-1,.box5 {width: 1100px;
+            margin: 0 auto;}
+    /* 와이드 사이즈가 있으면 마진으로 중앙정렬(박스 전체 움직이는 거, 내부에 있는 아이들 조절 안 됨),
+    저스티파이콘텐츠는 플렉스로 언급한 애들만 가는 거(내부 아이들 조절)
+    텍스트얼라인도 내부 아이들 조절 */
+
+
 
 }
 

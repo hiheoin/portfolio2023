@@ -14,6 +14,7 @@ body {font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px;}
 
 
+    
 
 /* 로고 설정 */
 .logo {width: 298px;
@@ -21,7 +22,10 @@ body {font-family: 'Nanum Gothic', sans-serif;
         background-color: #bbb;
         border-radius: 0 0 30% 0;}
 .logo img {width: 220px;
-        height: 136px;}
+        height: 136px;
+        margin-top: 35px;
+        margin-left: 35px;}
+
 
 
 /* gnb 설정 */
@@ -33,9 +37,13 @@ body {font-family: 'Nanum Gothic', sans-serif;
     margin-bottom: 15px;
     margin-left: 15px;}
 .gnb ul {}
-.gnb ul li {}
-.gnb ul li a {}
-.gnb ul li a:hover {}
+.gnb ul li {font-size: 20px;
+            color: #513155;
+            padding: 30px;
+            font-weight: bold;
+            text-align: center;}
+.gnb ul li:hover {opacity: 0.8;}
+
 
 
 /* 바로가기 설정 */
@@ -46,9 +54,13 @@ body {font-family: 'Nanum Gothic', sans-serif;
     margin-bottom: 15px;
     margin-left: 15px;}
 .direct ul {}
-.direct ul li {}
-.direct ul li a {}
-.direct ul li a:hover {}
+.direct ul li {font-size: 14px;
+                color: #513155;
+                padding: 15px 5px;
+                text-align: center;}
+.direct ul li:hover {opacity: 0.8;}
+.direct i {padding-right: 5px;}
+
 
 
 /* 운영시간 설정 */
@@ -56,42 +68,57 @@ body {font-family: 'Nanum Gothic', sans-serif;
     height: 240px;
     background-color: #bbb;
     border-radius: 0 30% 0 0;}
-.time a {display: block;}
-.time ul {}
-.time ul li {}
-.time ul li span {}
+.time ul {display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;}
+.time ul li {font-size: 16px;
+            color: #513155;
+            letter-spacing: 2px;
+            padding: 15px 5px;}
+.time ul li span {display: block;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                padding-top: 7px;}
 
 
 /* 인포 설정 */
 .info {display: flex;
-        margin-left: 298px;}
+        width: 1142px;
+        margin-left: 280px;
+        flex-wrap: wrap;}
 .info div {width: 130px;
             height: 130px;
             background-color: silver;
             border-radius: 100%;
-            margin: 30px;}
-.info div a {}
-.info div a:hover {}
-.info div:nth-child(4) {width: 300px;
+            margin: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;}
+.info div em {width: 100%;
+            font-size: 20px;
+            font-style: normal;}
+.info div:hover {}
+.info div:nth-child(4) {width: 320px;
                         height: 130px;
                         background-color: #aaa;
                         border-radius: 0%;}
 .info div:nth-child(4) h3 {}
-.info div:nth-child(4) h3 span {margin-right: 20px;}
+.info div:nth-child(4) h3 span {}
 .info div:nth-child(4) p {}
 
 
 
 /* 히어로 설정 */
-.hero {position: relative;
-    width: 100%;
-    height: 100%;}
-.hero img {max-width: 100%;
+.hero {}
+.hero img {width: 100%;
         height: 100%;}
 .hero p {position: absolute;
         right: 41px;
         top: 368px;
-    font-size: 90px;}
+        font-size: 90px;}
+
 
 
 /* 시설안내 설정 */
@@ -116,17 +143,85 @@ body {font-family: 'Nanum Gothic', sans-serif;
 
 
 
+/* 가이드맵 설정 */
+.box3-1 {border-left: 8px solid #000;
+    padding-left: 12px;
+    margin-left: 280px;}
+.box3-2 {}
+.box3-2 ul {display: flex;
+            flex-wrap: wrap;
+            width: 480px;}
+.box3-2 ul li {width: 240px;
+            height: 38px;
+            background-color: #C79FCC;
+            text-align: center;}
+.box3-3 {}
+.box3-3 .guideimg {width: 983px;
+                height: 678px;}
+.box3-3 button {width: 232px;
+                height: 47px;
+                border: none;
+                background-color: #FEF066;
+                border-radius: 30px;}
 
 
 
+/* 공지사항 설정 */
+.box4-1 {border-left: 8px solid #000;
+    padding-left: 12px;
+    margin-left: 280px;}
+.box4-2 {}
+.box4-2 ul {}
+.box4-2 ul li {}
+.box4-2 ul li a {display: flex;}
+.noticetxt {}
+.box4-2 ul li a span {}
 
 
 
+/* 배너 설정 */
+.box5-1 {}
+.banner a {}
+.banner a img {}
 
 
 
+/* 갤러리 설정 */
+.box6-1 {border-left: 8px solid #000;
+    padding-left: 12px;
+    margin-left: 280px;}
+.box6-2 {}
+.trailer {}
+.trailer ul {}
+.trailer ul li {}
+.trailer ul li img {}
+.gallerytxt {}
+
+    
+
+/* 오시는길 설정 */
+.box7-1 {border-left: 8px solid #000;
+    padding-left: 12px;
+    margin-left: 280px;}
+.box7-2 {}
+.box7-3 {}
+.box7-3 div {}
+.box7-3 div a {}
+.box7-3 div a h3 {}
+.box7-3 div a h3 i {}
+.box7-4 {}
+.popup {}
+.popup div {}
+.popup div img {}
+.popup div i {}
 
 
+
+/* SNS 설정 */
+.box8 {}
+.box8 h3 {}
+.box8 ul {}
+.box8 ul li {}
 
 
 
@@ -135,19 +230,13 @@ body {font-family: 'Nanum Gothic', sans-serif;
 @media(min-width:768px) {
 
     /* 헤더 설정 */
-    /* .boxA, .boxB, .boxC, .boxD {width: 15%;
-                                height: 25%;}
-    header {position: fixed;
-            width: 100%;
-            height: 100%;}
+    
+    header {position: fixed;}
 
     .boxE {position: fixed;
-        float: left;
-        margin-left: 15%;
-        margin-top: 75vh;
-        width: 85vw;
-        height: 25vh;} */
+        margin-top: 840px;}
 
 
 
 }
+
