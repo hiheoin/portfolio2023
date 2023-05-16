@@ -11,13 +11,40 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- 폰트 어썸 CDN-->
     <script src="https://kit.fontawesome.com/fdff7e00bc.js" crossorigin="anonymous"></script>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $(window).scroll(function(){
+
+                let sc = $(this).scrollTop()
+                let ot = $('.box2').offset().top
+                console.log(ot)
+
+
+                if(sc>=ot){
+                    $('.logo').addClass('on')
+                }
+                else{
+                    $('.logo').removeClass('on')
+                }
+
+
+            })
+            
+        })
+    </script>
 </head>
 <body>
 
     <header>
             <div class="boxA">
-                <div class="logo">
-                    <a href="#"><img src="img/logo001.png" alt=""></a>
+                <div class="logo on">
+                    <a href="#">로고</a>
                 </div>
             </div>
             <div class="boxB">
@@ -68,10 +95,10 @@
             <div><em>요금안내</em></div>
             <div><em>예약안내</em></div>
             <div><em>고객지원</em></div>
-            <div>
+            <aside class="infotxt">
                 <h3><span>WELCOME</span> O!WORLD </h3>
                 <p>일상에서 벗어나 신비의 세계로, <br> 오월드와 함께해요!</p>
-            </div>
+            </aside>
             <div><em>O!WORLD?</em></div>
         </div>
     </div>
@@ -82,25 +109,29 @@
             <div class="box1-1">
                 <div class="hero">
                     <img class="heroimg" src="img/hero.png" alt="">
-                    <p>신비의 오월드, <br> 그 찬란한 두근거림!</p>
+                    <p>신비의
+                        <span>오월드</span>,
+                    <br> 그
+                        <span>찬란한</span> 두근거림!
+                </p>
                 </div>
             </div>
         </article>
 
-        <article class="box2">
+        <article class="box2 facil">
             <div class="box2-1">
                 <h2 class="title">시설안내</h2>
             </div>
-            <div class="box2-2">
+            <div class="box2-2 faciltxt">
                 <ul>
-                    <li>버드랜드</li>
-                    <li>조이랜드</li>
-                    <li>주랜드</li>
-                    <li>플라워랜드</li>
+                    <li><span>버드랜드</span></li>
+                    <li><span>조이랜드</span></li>
+                    <li><span>주랜드</span></li>
+                    <li><span>플라워랜드</span></li>
                 </ul>
             </div>
-            <div class="box2-3">
-                <div class="facilimg">
+            <div class="box2-3 facilimg">
+                <div>
                     <img src="img/facil_flower001.png" alt="">
                 </div>
             </div>
@@ -109,27 +140,81 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="img/facil_flower001.png" alt="">
+                                <img src="img/facil_bird001.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/facil_flower002.png" alt="">
+                                <img src="img/facil_bird002.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/facil_flower003.png" alt="">
+                                <img src="img/facil_bird003.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/facil_flower004.jpg" alt="">
+                                <img src="img/facil_bird004.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/facil_flower005.jpg" alt="">
+                                <img src="img/facil_bird005.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_joy001.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_joy002.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_joy003.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_joy004.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_joy005.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_zoo001.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_zoo002.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_zoo003.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_zoo004.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facil_zoo005.jpg" alt="">
                             </a>
                         </li>
                     </ul>
@@ -172,30 +257,32 @@
             </div>
         </article>
 
-        <article class="box3">
+        <article class="box3 guide">
             <div class="box3-1">
                 <h2 class="title">가이드맵</h2>
             </div>
-            <div class="box3-2">
+            <div class="box3-2 guidetxt">
                 <ul>
-                    <li>오월드가이드맵</li>
+                    <li><span>오월드가이드맵</span></li>
                     <li>나이트유니버스가이드맵</li>
                 </ul>
             </div>
-            <div class="box3-3">
+            <div class="box3-3 guideMap">
                 <div class="guideimg">
                     <img src="img/guide_world.png" alt="">
                 </div>
-                <button>가이드맵 자세히 보기</button>
-                <button>운휴정보</button> 
+                <div class="buttonBox">
+                    <button>가이드맵 자세히 보기</button>
+                    <button>운휴정보</button>
+                </div>
             </div>
         </article>
 
-        <article class="box4">
+        <article class="box4 notice">
             <div class="box4-1">
                 <h2 class="title">공지사항</h2>
             </div>
-            <div class="box4-2">
+            <div class="box4-2 notice_list">
                 <ul>
                     <li>
                         <a href="#">
@@ -204,7 +291,7 @@
                                 안녕하세요, 대전오월드입니다. <br>
                                 2023년 오월드 불꽃쇼 5월 운영 관련하여 안내드립니다. □ 운영일 : 5/5, 5/6, 5/13, 5/20, 5/27, 5/28 (총 6회)
                             </div>
-                            <span>04/25</span>
+                            <span>04/<em>25</em></span>
                         </a>
                     </li>
                     <li>
@@ -214,7 +301,7 @@
                                 안녕하세요, 대전오월드입니다. <br>
                                 2023년 대전오월드 어린이날 연장운영 및 5월 야간개장 관련하여 안내드리오니, 이용에 참고하여 주시기 바랍니다.
                             </div>
-                            <span>04/21</span>
+                            <span>04/<em>21</em></span>
                         </a>
                     </li>
                     <li>
@@ -222,23 +309,23 @@
                             <div class="noticetxt">
                                 <h3>플라워랜드 식음매장 및 교복대여점 오픈 안내</h3>
                                 안녕하세요, 대전오월드입니다. <br>
-                                플라워랜드 내 식음매장과 교복대여점 오픈 관련하여 안내드리오니, 고객 여러분의 많은 이용 부탁드립니다. 감사합니다.
+                                플라워랜드 내 식음매장과 교복대여점 오픈 관련하여 안내드리오니, 고객 여러분의 많은 이용 부탁드립니다.
                             </div>
-                            <span>01/18</span>
+                            <span>01/<em>18</em></span>
                         </a>
                     </li>
             </div>
         </article>
 
-        <article class="box5">
+        <article class="box5 banner">
             <div class="box5-1">
-                <div class="banner">
+                <div class="bannerimg">
                     <a href="#"><img src="img/banner.png" alt=""></a>
                 </div>
             </div>
         </article>
 
-        <article class="box6">
+        <article class="box6 gallery">
             <div class="box6-1">
                 <h2 class="title">갤러리</h2>
             </div>
@@ -266,18 +353,18 @@
             </div>
         </article>
 
-        <article class="box7">
+        <article class="box7 road">
             <div class="box7-1">
                 <h2 class="title">오시는길</h2>
             </div>
-            <div class="box7-2">
+            <div class="box7-2 map">
                 지도
             </div>
-            <div class="box7-3">
+            <div class="box7-3 roadtxt">
                 <div>
                     <a href="#">
                         <h3>교통편 
-                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </h3>
                     </a>
                     <a href="#"><span>버스 이용시</span></a>
@@ -309,7 +396,7 @@
             </div>
         </article>
 
-        <article class="box8">
+        <article class="box8 snsBox">
             <h3>SNS</h3>
             <ul>
                 <li>페이스북</li>

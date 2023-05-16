@@ -126,10 +126,48 @@ body {font-family: 'Nanum Gothic', sans-serif;
         margin-top: 20px;}
 
 
+        
+/* 주변관광안내 설정 */
+.tour {background-color: rgba(241, 90, 37, 0.1);
+    padding: 20px;}
+.tour p {margin-top: -20px;
+    margin-bottom: 20px;}
+
+.tour ul {display: flex;}
+.tour ul li {padding: 20px;
+        color: #bbb;}
+
+.tour .imgBox {background-color: #474747;
+            margin-top: 20px;
+            position: relative;
+            height: 380px;}
+.tour .imgBox>div {display: flex;
+                    align-items: center;
+                    position: absolute;
+                    height: 380px;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    display: none;}
+.tour .imgBox>div.on {display: flex;}
+.tour .imgBox a {display: block;
+                padding: 20px 40px;
+                background-color: #f15a25;
+                color: #fff;
+                font-size: 18px;}
+.tour .imgBox img {position: absolute;
+                right: -100px;
+                top: 50px;}
+
+
+
+
+
 
 /* 박스 상하여백 설정 */
 .box3 {padding-bottom: 20px;}
 .box4 {padding-bottom: 40px;}
+.box5 {padding-bottom: 40px;}
 
 
 
@@ -160,7 +198,7 @@ body {font-family: 'Nanum Gothic', sans-serif;
 /* 1140px 이상 ////////// */
 @media(min-width:1140px) {
 
-    header,.box3-2,.box4-1,.box5 {width: 1100px;
+    header,.box3-2,.box4-1,.box5, .box6 {width: 1100px;
             margin: 0 auto;}
     /* 와이드 사이즈가 있으면 마진으로 중앙정렬(박스 전체 움직이는 거, 내부에 있는 아이들 조절 안 됨),
     저스티파이콘텐츠는 플렉스로 언급한 애들만 가는 거(내부 아이들 조절)

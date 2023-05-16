@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab바 연습</title>
+</head>
+<body>
+    
+<div class="box1">
+    <ul class="listTitle">
+        <li class="on">공지사항</li>
+        <li>자주하는질문</li>
+    </ul>
+    <div class="listBox">
+        <ul class="on">
+            <li><a href="#">Lorem ipsum dolor sit </a></li>
+            <li><a href="#">amet consectetur adipisicing elit. Vitae quis commodi, ullam cumque tenetur exercitati</a></li>
+            <li><a href="#">onem omnis ea accusamus pariatur, alias assumenda. Aut expedita molesti</a></li>
+            <li><a href="#">ae voluptate sit quis aperiam nisi voluptatem.</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Lorem ipsum dolor sit </a></li>
+            <li><a href="#">amet consectetur adipisicing elit. Vitae quis commodi, ullam cumque tenetur exercitati</a></li>
+            <li><a href="#">onem omnis ea accusamus pariatur, alias assumenda. Aut expedita molesti</a></li>
+            <li><a href="#">ae voluptate sit quis aperiam nisi voluptatem.</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<style>
+
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #eee;
+    text-decoration: none;}
+
+.box1 .listTitle {display: flex;}
+.box1 .listTitle li {padding: 10px 20px;
+                    background-color: salmon;
+                    color: #fff;
+                    margin-right: 3px;}
+.box1 .listTitle li.on {background-color: sandybrown;
+                    color: #000;}
+.box1 .listBox {background-color: sandybrown;
+                padding: 20px;
+                height: 120px;
+                position: relative;}
+.box1 .listBox ul {position: absolute;
+                left: 20px;
+                top: 20px;
+                display: none;}
+.box1 .listBox ul.on {display: block;}
+.box1 .listBox ul:nth-child(1) {background-color: blue;}
+.box1 .listBox ul:nth-child(2) {background-color: red;}
+
+.box1 .listBox ul li {height: 30px;}
+.box1 .listBox ul li a {}
+
+
+</style>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        // listTitle의 li를 클릭했을 때, 각 순번에 맞는 listBox의 ul이 보여라
+
+        $('.listTitle li').click(function(){
+
+            // 변수만들기(순번찾기)
+            let a =$(this).index()
+            console.log(a)
+
+        $('.listBox ul').hide()
+        $('.listBox ul').eq(a).show()
+
+
+        })
+
+    })
+
+
+</script>
+
+</body>
+</html>
