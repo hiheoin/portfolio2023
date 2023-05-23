@@ -1,6 +1,20 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'); */
+@font-face {font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;}
+@font-face {font-family: 'twayair';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;}
+    @font-face {font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;}
+
+
 
 
 /* 전체설정 */
@@ -29,25 +43,26 @@ body {font-family: 'Nanum Gothic', sans-serif;
                     50%,
                     30%,
                     30%,
-                    30%,
-                    25%;
-    background-position: 0 2900px,
-                    600px 5200px,
+                    25%,
+                    30%;
+    background-position: 0 3250px,
+                    600px 5650px,
                     1500px 680px,
-                    -200px 1650px,
-                    1500px 2550px,
-                    -100px 3700px,
-                    1200px 4450px,
-                    -50px 5500px;}
+                    -200px 1950px,
+                    1500px 2750px,
+                    -100px 4050px,
+                    1150px 4900px,
+                    -100px 5900px;}
 
 
 header {height: 100%;
-    width: 15%;}
+    width: 15%;
+    z-index: 12;}
 .boxE {z-index: 11;}
 .boxF {z-index: 10;}
-.box2,.box3,.box4,.box6,.box7,.box8,footer {width: 85%;
-        margin-left: 15%;
-        padding: 0 40px;
+.box2,.box3,.box4,.box6,.box7,.box8,footer {width: 88%;
+        margin-left: 12%;
+        padding: 0 80px;
         box-sizing: border-box;
         position: relative;
         z-index: 9;}
@@ -108,6 +123,7 @@ header {height: 100%;
             color: #513155;
             padding: 22px 30px;
             font-weight: bold;}
+.gnb ul li a {color: #513155;}
 .gnb ul li:hover {opacity: 0.8;}
 
 
@@ -125,6 +141,7 @@ header {height: 100%;
                 color: #513155;
                 padding: 14px 5px;
                 text-align: center;}
+.direct ul li a {color: #513155;}
 .direct ul li:hover {opacity: 0.8;}
 .direct i {padding-right: 5px;}
 
@@ -136,6 +153,7 @@ header {height: 100%;
     background-color: rgba(900, 900, 900, 0.7);
     border-radius: 0 30% 0 0;
     box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);}
+.time a {}
 .time ul {width: 98%;
         height: 80%;
         padding-top: 10PX;}
@@ -153,26 +171,25 @@ header {height: 100%;
 
 
 /* 인포 설정 */
+.boxE {width: 85%;
+        margin-left: 15%;}
 .info {display: flex;
-        width: 100%;
-        margin-left: 280px;
-        flex-wrap: wrap;}
-.info div {width: 130px;
-            height: 130px;
-            background-color: #C79FCC;
-            border-radius: 100%;
-            margin: 30px 60px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            color: #FEF066;}
-.info div:nth-child(5) {background-color: #FEF066;
+        width: 100%;}
+.info div {margin: 30px 60px;}
+.info div:nth-child(5) em {background-color: #FEF066;
                         color: #8E3F98;}
-
 .info div em {width: 100%;
             font-size: 20px;
-            font-style: normal;}
+            font-style: normal;
+            width: 130px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            border-radius: 50rem;
+            background-color: #C79FCC;
+            justify-content: center;
+            font-weight: bold;
+            color: #FEF066;}
 .info aside {width: 450px;
             height: 130px;
             margin: 30px 60px;
@@ -188,18 +205,47 @@ header {height: 100%;
                 text-align: right;
                 margin-top: 30px;}
 
-.info div:hover {background-color: #8E3F98;}
-.info div:nth-child(5):hover {background-color: #ffe600;}
+.info div em:hover {background-color: #8E3F98;}
+.info div:nth-child(5) em:hover {background-color: #FEE600;}
+
+/* info.on 설정 */
+.boxE.on {width: 500px;}
+.info.on {display: flex;
+    width: 500px;
+    flex-wrap: wrap;}
+    
+.info.on div {margin: 15px 20px;}
+.info.on div em {width: 78px;
+    height: 78px;
+    background-color: #C79FCC;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #FEF066;
+    font-size: 18px;
+    font-style: normal;}
+.info.on aside {display: none;}
+
+.info.on div:nth-child(5) em {background-color: #FEF066;
+                color: #8E3F98;}
+
+
+.info.on div em:hover {background-color: #8E3F98;}
+.info.on div:nth-child(5) em:hover {background-color: #FEE600;}
+
 
 /* info_mini 설정 */
-.info_mini {display: flex;
-    width: 100%;
-    margin-left: 280px;
-    flex-wrap: wrap;}
+/* .info_mini {display: flex;
+        width: 100%;
+        margin-left: 280px;
+        flex-wrap: wrap;
+        display: none;}
 .info_mini div {width: 78px;
         height: 78px;
         background-color: #C79FCC;
-        border-radius: 100%;
+        border-radius: 50%;
         margin: 15px 20px;
         text-align: center;
         display: flex;
@@ -215,7 +261,7 @@ header {height: 100%;
         font-style: normal;}
 
 .info_mini div:hover {background-color: #8E3F98;}
-.info_mini div:nth-child(1):hover {background-color: #ffe600;}
+.info_mini div:nth-child(1):hover {background-color: #FEE600;} */
 
 
 
@@ -231,7 +277,10 @@ header {height: 100%;
         top: 50%;
         margin-top: -170px;
         font-size: 120px;
-        font-family: 'Black Han Sans', sans-serif;
+        /* 구글폰트 
+        font-family: 'Black Han Sans', sans-serif;*/
+        /* 눈누 - 완주대둔산체 */
+        font-family: 'TTWanjudaedunsancheB';
         text-align: right;
         color: #FEE600;
         text-shadow: #0000003d 5px 5px 5px;}
@@ -242,7 +291,7 @@ header {height: 100%;
 
 
 /* 시설안내 설정 */
-.facil {
+.facil {width: 88%;
     /* position: relative;
     height: 100%; */}
 
@@ -250,40 +299,59 @@ header {height: 100%;
 .box2-1 {border-left: 8px solid #8E3F98;
             padding-left: 12px;
             margin-left: 10px;
-            color: #8E3F98;}
+            color: #8E3F98;
+            font-family: 'twayair';
+            letter-spacing: 2px;
+            font-size: 18px;}
 
+.faciltxt {width: 450px;
+            margin: 0 auto;}
 .faciltxt ul {display: flex;
             flex-wrap: wrap;
             margin-top: 20px;
-        justify-content: center;}
+            justify-content: center;}
 .faciltxt ul li {background-color: #C79FCC;
                 color: #FEF066;
                 letter-spacing: 1px;
                 font-weight: bold;
-                padding: 12px 25px;
+                padding: 12px 0;
                 display: flex;
-                align-items: center;}
+                align-items: center;
+                width: 25%;
+                justify-content: center;}
+.faciltxt ul li:hover {background-color: #8E3F98;
+                    color: #FEE600;
+                    cursor: pointer;}
 .faciltxt ul li span {}
 .faciltxt ul li:nth-child(1) {border-radius: 20px 0 0 0;}
 .faciltxt ul li:nth-child(4) {border-radius: 0 20px 0 0;}
-.facilimg {text-align: center;}
+.facilimg {position: relative;
+        width: 532px;
+        height: 520px;
+        left: 50%;
+        margin-left: -266px;}
 .facilimg img {width: 532px;
             height: 520px;
-            border-radius: 40px 40px 220px 220px;}
-.facil .trailer {width: 786px;
-                height: 280px;
+            border-radius: 40px 40px 220px 220px;
+            position: absolute;}
+.facil .trailer {/*3개 합 와이드값*/
+                width: 786px;
+                height: 430px;
                 overflow: hidden;
                 margin: 0 auto;
-                position: relative;}
+                position: relative;
+                margin-top: -60px;}
 .facil .trailer ul {display: flex;
+                /*5개 합 와이드값*/
                 width: 1422px;
+                height: 1400px;
                 flex-wrap: wrap;
                 position: absolute;
                 left: 50%;
                 margin-left: -711px;}
 
-.facil .trailer ul li {margin: 0 15px;}
-.facil .trailer ul li a {width: 198px;
+.facil .trailer ul li {margin: 0 40px;}
+.facil .trailer ul li div {width: 198px;
                         height: 198px;
                         display: block;
                         border-radius: 50%;
@@ -302,36 +370,40 @@ header {height: 100%;
 
 .box2-4 {position: relative;}
 .box2-4 .left {position: absolute;
-            left: 230px;
+            left: 250px;
             top: 10px;
-            transform: rotate(20deg);}
+            transform: rotate(35deg);}
 .box2-4 .right {position: absolute;
-            right: 230px;
+            right: 250px;
             top: 10px;
-            transform: rotate(-20deg);}
+            transform: rotate(-35deg);}
 
-.facil .trailer ul li {margin: 0 40px;}
-.facil .trailer ul li:nth-child(3) a {width: 230px;
+
+.facil .trailer ul li:nth-child(3) div {width: 230px;
                             height: 230px;
-                            margin-top: 50px;}
+                            margin-top: 100px;}
+.facil .trailer ul li:nth-child(2) div {margin-top: 70px;}
+.facil .trailer ul li:nth-child(4) div {margin-top: 70px;}
 
-
-
-
+/* 트레일러 설정 */
+/* .facilimg li {display: none;} */
 
 
 /* 가이드맵 설정 */
-.guide {height: 100vh;}
+.guide {height: 100%;}
 .box3-1 {border-left: 8px solid #8E3F98;
-        padding-left: 12px;
-        margin-left: 10px;
-        color: #8E3F98;}
-.guidetxt {display: flex;
-            justify-content: center;}
+    padding-left: 12px;
+    margin-left: 10px;
+    color: #8E3F98;
+    font-family: 'twayair';
+    letter-spacing: 2px;
+    font-size: 18px;}
+
+.guidetxt {width: 1000px;
+    margin: 0 auto;}
 .guidetxt ul {display: flex;
-            flex-wrap: wrap;
             margin-top: 40px;
-            margin-left: 280px;}
+            margin-left: 300px;}
 .guidetxt ul li {background-color: #C79FCC;
             color: #FEF066;
             font-weight: bold;
@@ -339,17 +411,23 @@ header {height: 100%;
             padding: 12px 55px;
             display: flex;
             align-items: center;}
+.guidetxt ul li:hover {background-color: #8E3F98;
+        color: #FEE600;
+        cursor: pointer;}
 .guideMap {height: 90%;}
 .guideMap .guideimg {width: 983px;
                 height: 678px;
                 position: relative;
                 margin: 0 auto;}
-.guideMap .guideimg img {position: absolute;
+.guideMap .guideimg>ul {display: none;}
+.guideMap .guideimg>ul.on {display: block;}
+.guideMap .guideimg>ul img {position: absolute;
                         height: 100%;}
-.guideMap .guideimg img:nth-child(2) {margin-left: 40px;
+.guideMap .guideimg>ul:nth-child(2) li img {margin-left: 40px;
                                     border-radius: 20px;}
 .buttonBox {width: 400px;
         margin: 25px auto;}
+.guideMap button a {color: #513155;}
 .guideMap button {height: 47px;
                 border: none;
                 background-color: #FEF066;
@@ -359,26 +437,55 @@ header {height: 100%;
                 border-radius: 30px;
                 padding: 0 30px;
                 margin: 0 20px;}
-.guideMap button:hover {background-color: #ffe600;}
+.guideMap button:hover {background-color: #ffe600;
+                        cursor: pointer;}
 
 .guidetxt ul li:nth-child(1) {border-radius: 20px 0 0 0;}
 .guidetxt ul li:nth-child(2) {border-radius: 0 20px 0 0;}
 
 
+        /* 가이드맵 아이콘 설정 */
+.guideimg_close {width: 100%;
+                height: 100%;}
+.guideimg_close ul {width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 90;}
+.guideimg_close ul li {}
+.guideimg_close ul li img {}
+.guideimg_close ul li:nth-child(1) {position: absolute;
+                                right: 410px;
+                                bottom: 175px;}
+.guideimg_close ul li:nth-child(2) {position: absolute;
+                                    bottom: 5px;
+                                    right: 295px;}
+.guideimg_close ul li:nth-child(3) {position: absolute;
+                                    bottom: 215px;
+                                    right: 290px;}
+
+
+
 
 /* 공지사항 설정 */
-.notice {}
+.notice {width: 85%;}
 .box4-1 {border-left: 8px solid #8E3F98;
-        padding-left: 12px;
-        margin-left: 10px;
-        color: #8E3F98;}
-.notice_list {margin-left: 100px;}
+    padding-left: 12px;
+    margin-left: 10px;
+    color: #8E3F98;
+    font-family: 'twayair';
+    letter-spacing: 2px;
+    font-size: 18px;}
+
+.notice_list {width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;}
 .notice_list ul {padding: 30px;}
-.notice_list ul li {margin: 60px 30px;
-                    width: 80%;}
+.notice_list ul li {margin: 60px 60px;
+                    width: 100%;}
 .notice_list ul li a {display: flex;
                     justify-content: space-between;}
-.notice_list ul li a:hover {transform: scale(1.03);}
+.notice_list ul li a:hover {transform: scale(1.01);}
 
 .noticetxt {}
 .noticetxt h3 {margin-bottom: 10px;
@@ -409,17 +516,22 @@ header {height: 100%;
 
 
 /* 갤러리 설정 */
-.gallery {height: 100vh;
+.gallery {height: 100%;
         width: 85%;}
 .box6-1 {border-left: 8px solid #8E3F98;
     padding-left: 12px;
     margin-left: 10px;
-    color: #8E3F98;}
+    color: #8E3F98;
+    font-family: 'twayair';
+    letter-spacing: 2px;
+    font-size: 18px;}
+
 
 .box6-2 {position: relative;
         height: 630px;
         margin: 140px 0;}
-.gallery .trailer {}
+.gallery .trailer {display: flex;
+                    justify-content: center;}
 .gallery .trailer ul {display: flex;
                     position: absolute;
                     justify-content: center;
@@ -433,42 +545,50 @@ header {height: 100%;
 .gallery .trailer ul li:nth-child(2) img {border-radius: 60px 0 0 0;
                                 width: 320px;
                                 height: 320px;
-                                margin-left: 270px;}
+                                margin-left: 350px;}
 .gallery .trailer ul li:nth-child(3) img {border-radius: 0 0 60px 0;
                                 width: 390px;
                                 height: 260px;
                                 position: absolute;
                                 bottom: -75px;
-                                left: 54%;}
+                                left: 50%;}
 .gallerytxt {width: 130px;
             background-color: #C79FCC;
             color: #fff;
             font-size: 14px;
             padding: 5px 2px;
             text-align: right;
-            letter-spacing: 5px;
+            letter-spacing: 7px;
             line-height: 20px;
             position: absolute;
-            right: 50px;
+            right: 0;
             top: 200px;
             margin-right: 100px;}
 .gallery_round {width: 350px;
                 height: 350px;
                 position: absolute;
-                right: 10px;
+                right: -75px;
                 top: -175px;}
     
 
 /* 오시는길 설정 */
-.road {height: 100vh;
+.road {height: 100%;
         position: relative;}
 .box7-1 {border-left: 8px solid #8E3F98;
     padding-left: 12px;
     margin-left: 10px;
     color: #8E3F98;
-}
-.road .map {width: 500px;
+    font-family: 'twayair';
+    letter-spacing: 2px;
+    font-size: 18px;
+    }
+
+.road .map {margin: 40px auto;
+            margin-top: 70px;
+            width: 1200px;
             height: 600px;}
+.road iframe {border: 10px double #C79FCC;
+                border-radius: 30px;}
 .road .roadtxt {margin-left: 150px;}
 .road .roadtxt div {display: flex;}
 .road .roadtxt div a {color: #513155;
@@ -483,8 +603,8 @@ header {height: 100%;
 .road .roadtxt div a span:hover {color: #51315596;}
 
 .box7-4 {position: absolute;
-        right: 150px;
-        top: 150px;}
+        right: 100px;
+        top: 250px;}
 .popup {}
 .popup div {position: relative;
             width: 500px;}
@@ -500,7 +620,7 @@ header {height: 100%;
 
 /* SNS 설정 */
 .snsBox {display: flex;
-        width: 85%;
+        width: 88%;
         height: 40px;
         background-color: #C79FCC;
         padding-left: 80px;
@@ -508,23 +628,23 @@ header {height: 100%;
         border-radius: 40px;}
 .snsBox h3 {color: #fff;
             font-size: 22px;
-            font-weight: bold;}
+            font-weight: bold;
+            margin-left: 100px;}
 .snsBox ul {display: flex;
-    }
+            margin-left: 30px;}
 .snsBox ul li a {color: #fff;
                 padding: 0 60px;
-                font-size: 16px;
-            }
-
+                font-size: 16px;}
+.snsBox ul li a:hover {color: #ffffffaf;}
 
 
 /* footer 설정 */
-footer {width: 85%;
-        height: 200px;
+footer {height: 200px;
         background-color: #989898;
         display: flex;
         align-items: center;
-        justify-content: space-between;}
+        justify-content: space-between;
+        border-radius: 40px 40px 0 0;}
 footer p {color: #fff;
         letter-spacing: 5px;
         font-size: 14px;
@@ -534,8 +654,9 @@ footer img {margin-right: 180px;}
 
 
 /* 박스 상하여백 */
-.box2,.box3,.box4,.box6,.box7 {margin-top: 80px;}
-
+.box2,.box3,.box4,.box6,.box7 {margin-top: 150px;
+                            padding-top: 50px;}
+.box8 {margin-top: 100px;}
 
 /* 백그라운드 데코 */
 /* .back {width: 100%;
@@ -594,22 +715,27 @@ footer img {margin-right: 180px;}
     header {position: fixed;}
 
     .boxE {position: fixed;
-        bottom: 0;}
-
-    .boxF {position: fixed;
             bottom: 0;
-            right: 15px;}
+            right: 0;}
+
+    .boxE.on {position: fixed;
+            bottom: 0;
+            right: 0;}
+
+    /* .boxF {position: fixed;
+            bottom: 0;
+            right: 15px;} */
 
 }
 
 
 
-/* 1140px 이상 ////////// 
-@media(min-width:1140px) {
+/* 1140px 이상 ////////// */
+/* @media(min-width:1440px) {
 
-    .box2, .box3, .box4, .box6, .box7 {width: 1100px;
-            
-            margin-left: 250px;}
+.box2, .box3, .box4, .box5 ,.box6, .box7 {width: 85%;
+                                    margin: 60px auto;
+                                    margin-left: 15%;}
 
 
-}*/
+} */

@@ -17,6 +17,8 @@
 
     <script>
 
+
+// 로고 제이쿼리
         $(document).ready(function(){
 
             $(window).scroll(function(){
@@ -32,11 +34,96 @@
                 else{
                     $('.logo').removeClass('on')
                 }
-
-
             })
-            
         })
+
+
+// info 제이쿼리
+$(document).ready(function(){
+
+    $(window).scroll(function(){
+
+        let sc = $(this).scrollTop()
+                let ot = $('.box2').offset().top
+                console.log(ot)
+                if(sc>=ot){
+                $("#fee").text("요금")
+                $("#res").text("예약")
+                $("#cos").text("고객")
+                $("#owo").text("O!")
+                $('.info').addClass('on')
+                $('.boxE').addClass('on')
+                }
+                else{
+                $("#fee").text("요금안내")
+                $("#res").text("예약안내")
+                $("#cos").text("고객지원")
+                $("#owo").text("O!WORLD?")
+                $('.info').removeClass('on')
+                $('.boxE').removeClass('on')
+                }
+            })
+    })
+
+
+// 탭 트레일러
+$(document).ready(function(){
+
+    // 시설안내
+        // faciltxt의 li를 클릭했을 때, 각 순번에 맞는 trailer의 ul이 보여라
+
+$('#faciltxt li').click(function(){
+
+    // 변수만들기(순번찾기)
+    let a =$(this).index()
+    console.log(a)
+
+$('.trailer ul').hide()
+$('.trailer ul').eq(a).show()
+
+})
+
+
+// 
+// $('.trailer li').click(function(){
+
+// let i = $(this).index()
+
+// $('.facilimg li').hide()
+// $('.facilimg li').eq(i).show()
+
+// })
+
+
+
+
+
+    // 가이드맵
+
+$('#guidetxt li').click(function(){
+
+// 변수만들기(순번찾기)
+let a =$(this).index()
+
+$('.guideimg ul').hide()
+$('.guideimg ul').eq(a).show()
+
+})
+
+    // 가이드맵 - 운휴정보
+$('#close').click(function(){
+
+$('.guideimg_close ul').show()
+
+        
+})
+
+
+})
+        
+
+
+        
     </script>
 </head>
 <body>
@@ -51,10 +138,10 @@
             <div class="boxB">
                 <nav class="gnb">
                     <ul>
-                        <li>O! World?</li>
-                        <li>이용안내</li>
-                        <li>시설안내</li>
-                        <li>즐길거리</li>
+                        <li><a href="#">O! World?</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">시설안내</a></li>
+                        <li><a href="#">즐길거리</a></li>
                     </ul>
                 </nav>
             </div>
@@ -63,57 +150,59 @@
                     <ul>
                         <li>
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            가이드맵
+                            <a href="#">가이드맵</a>
                         </li>
                         <li>
                             <i class="fa fa-moon-o" aria-hidden="true"></i>
-                            나이트 유니버스
+                            <a href="#">나이트 유니버스</a>
                         </li>
                         <li>
                             <i class="fa fa-bullseye" aria-hidden="true"></i>
-                            레이저 태그 스포츠
+                            <a href="#">레이저 태그 스포츠</a>
                         </li>
                         <li>
                             <i class="fa fa-globe" aria-hidden="true"></i>
-                            오월드 메타버스
+                            <a href="#">오월드 메타버스</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="boxD">
                 <div class="time">
-                        <ul>
-                            <li>오월드 운영시간 <span>09:30 ~ 18:00</span></li>
-                            <li>나이트 유니버스 운영시간 <span>18:00 ~ 21:00</span></li>
-                            <li>사파리 운영시간 <span>09:45 ~ 17:30</span></li>
-                        </ul>
+                        <a href="#">
+                            <ul>
+                                <li>오월드 운영시간 <span>09:30 ~ 18:00</span></li>
+                                <li>나이트 유니버스 운영시간 <span>18:00 ~ 21:00</span></li>
+                                <li>사파리 운영시간 <span>09:45 ~ 17:30</span></li>
+                            </ul>
+                        </a>
                 </div>
             </div>
     </header>
 
-    <div class="boxE">
-        <div class="info">
-            <div><em>요금안내</em></div>
-            <div><em>예약안내</em></div>
-            <div><em>고객지원</em></div>
+    <div class="boxE on">
+        <div class="info on">
+            <div><a href="#"><em id="fee">요금안내</em></a></div>
+            <div><a href="#"><em id="res">예약안내</em></a></div>
+            <div><a href="#"><em id="cos">고객지원</em></a></div>
             <aside class="infotxt">
                 <h3><span>WELCOME</span> O!WORLD </h3>
                 <p>일상에서 벗어나 신비의 세계로, <br> 오월드와 함께해요!</p>
             </aside>
-            <div><em>O!WORLD?</em></div>
+            <div><a href="#"><em id="owo">O!WORLD?</em></a></div>
         </div>
     </div>
 
 
     
-    <div class="boxF">
+    <!-- <div class="boxF">
         <div class="info_mini">
             <div><em>O!</em></div>
             <div><em>요금</em></div>
             <div><em>예약</em></div>
             <div><em>고객</em></div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -144,7 +233,7 @@
                         <span>오월드</span>,
                     <br> 그
                         <span>찬란한</span> 두근거림!
-                </p>
+                    </p>
                 </div>
             </div>
         </article>
@@ -154,7 +243,7 @@
                 <h2 class="title">시설안내</h2>
             </div>
             <div class="box2-2 faciltxt">
-                <ul>
+                <ul id="faciltxt">
                     <li><span>버드랜드</span></li>
                     <li><span>조이랜드</span></li>
                     <li><span>주랜드</span></li>
@@ -163,117 +252,146 @@
             </div>
             <div class="box2-3 facilimg">
                 <div>
-                    <img src="img/facil_flower001.png" alt="">
+                    <ul>
+                        <li>
+                            <img src="img/facil_bird001.jpg" alt="">
+                            <img src="img/facil_bird002.jpg" alt="">
+                            <img src="img/facil_bird003.jpg" alt="">
+                            <img src="img/facil_bird004.jpg" alt="">
+                            <img src="img/facil_bird005.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/facil_joy001.jpg" alt="">
+                            <img src="img/facil_joy002.jpg" alt="">
+                            <img src="img/facil_joy003.jpg" alt="">
+                            <img src="img/facil_joy004.jpg" alt="">
+                            <img src="img/facil_joy005.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/facil_zoo001.jpg" alt="">
+                            <img src="img/facil_zoo002.jpg" alt="">
+                            <img src="img/facil_zoo003.jpg" alt="">
+                            <img src="img/facil_zoo004.jpg" alt="">
+                            <img src="img/facil_zoo005.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/facil_flower002.png" alt="">
+                            <img src="img/facil_flower003.png" alt="">
+                            <img src="img/facil_flower004.jpg" alt="">
+                            <img src="img/facil_flower005.jpg" alt="">
+                            <img src="img/facil_flower001.png" alt="">
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="box2-4">
                 <div class="trailer">
                     <ul>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_bird001.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_bird002.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_bird003.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_bird004.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_bird005.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_joy001.png" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="img/facil_joy002.png" alt="">
-                            </a>
+                            <div>
+                                <img src="img/facil_joy002.jpg" alt="">
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="img/facil_joy003.png" alt="">
-                            </a>
+                            <div>
+                                <img src="img/facil_joy003.jpg" alt="">
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_joy004.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_joy005.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_zoo001.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_zoo002.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_zoo003.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_zoo004.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_zoo005.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="on">
                         <li>
-                            <a href="#">
-                                <img src="img/facil_flower001.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/facil_flower002.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_flower003.png" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
+                                <img src="img/facil_flower002.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/facil_flower001.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
                                 <img src="img/facil_flower004.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <div>
                                 <img src="img/facil_flower005.jpg" alt="">
-                            </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -293,19 +411,31 @@
                 <h2 class="title">가이드맵</h2>
             </div>
             <div class="box3-2 guidetxt">
-                <ul>
+                <ul id="guidetxt">
                     <li><span>오월드가이드맵</span></li>
                     <li>나이트유니버스가이드맵</li>
                 </ul>
             </div>
             <div class="box3-3 guideMap">
                 <div class="guideimg">
-                    <img src="img/guide_world.png" alt="">
-                    <img src="img/guide_night.png" alt="">
+                    <ul class="on">
+                        <li><img src="img/guide_world.png" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/guide_night.png" alt=""></li>
+                    </ul>
+                    <div class="guideimg_close">
+                        <ul>
+                            <li><a href="#"><img src="img/guide_icon001.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/guide_icon002.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/guide_icon003.png" alt=""></a></li>
+                        </ul>
+                    </div>
                 </div>
+                
                 <div class="buttonBox">
-                    <button>가이드맵 자세히 보기</button>
-                    <button>운휴정보</button>
+                    <button><a href="#">가이드맵 자세히 보기</a></button>
+                    <button id="close">운휴정보</button>
                 </div>
             </div>
         </article>
@@ -393,7 +523,7 @@
                 <h2 class="title">오시는길</h2>
             </div>
             <div class="box7-2 map">
-                지도
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.976462699885!2d127.39433747633745!3d36.28862099636938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654e61dd45625d%3A0xd9e0f93060ed6a4e!2z64yA7KCE7Jik7JuU65Oc!5e0!3m2!1sko!2skr!4v1684387814760!5m2!1sko!2skr" width="1200" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="box7-3 roadtxt">
                 <div>
