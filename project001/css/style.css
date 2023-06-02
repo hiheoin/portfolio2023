@@ -534,24 +534,78 @@ header {height: 100%;
                     justify-content: center;}
 .gallery .trailer ul {display: flex;
                     position: absolute;
-                    justify-content: center;
-                    width: 1530px;}
-.gallery .trailer ul li {display: block;
-                    overflow: hidden;}
+                    justify-content: center;}
+.gallery .trailer ul li {display: block;}
 .gallery .trailer ul li img {}
-.gallery .trailer ul li:nth-child(1) img {border-radius: 0 60px 0 60px;
-                                width: 548px;
-                                height: 548px;}
-.gallery .trailer ul li:nth-child(2) img {border-radius: 60px 0 0 0;
-                                width: 320px;
-                                height: 320px;
-                                margin-left: 350px;}
-.gallery .trailer ul li:nth-child(3) img {border-radius: 0 0 60px 0;
-                                width: 390px;
-                                height: 260px;
+
+.gallery .trailer ul:nth-child(1) {width: 548px;
+                                height: 548px;
+                                overflow: hidden;
                                 position: absolute;
-                                bottom: -75px;
-                                left: 50%;}
+                                top: 0;
+                                left: 100px;}
+.gallery .trailer ul:nth-child(1) li {position: absolute;
+                                        top: 0;
+                                        left: 100px;}
+.gallery .trailer ul:nth-child(1) li:nth-child(1) {top: 0;
+                                                    left: 0;}
+.gallery .trailer ul:nth-child(1) li:nth-child(2) {top: 0;
+                                                left: -648px;}
+.gallery .trailer ul:nth-child(1) li:nth-child(3) {top: 0;
+                                                left: -648px;}
+
+.gallery .trailer ul:nth-child(2) {width: 320px;
+                                height: 320px;
+                                overflow: hidden;
+                                position: absolute;
+                                top: 0;
+                                left: 1015px;}
+.gallery .trailer ul:nth-child(2) li {position: absolute;
+                                    top: 0;
+                                    left: 1015px;}
+.gallery .trailer ul:nth-child(2) li:nth-child(1) {top: 0;
+                                        left: 0;}
+.gallery .trailer ul:nth-child(2) li:nth-child(2) {top: 0;
+                                        left: -320px;}
+.gallery .trailer ul:nth-child(2) li:nth-child(3) {top: 0;
+                                        left: -320px;}
+
+
+.gallery .trailer ul:nth-child(3) {width: 390px;
+                                    height: 260px;
+                                    overflow: hidden;
+                                    position: absolute;
+                                    top: 400px;
+                                    left: 50%;}
+.gallery .trailer ul:nth-child(3) li {position: absolute;
+                                    top: 400px;
+                                    left: 50%;}
+.gallery .trailer ul:nth-child(3) li:nth-child(1) {top: 0;
+                                                left: 0;
+                                                opacity: 1;}
+.gallery .trailer ul:nth-child(3) li:nth-child(2) {top: 0;
+                                                left: 0;
+                                                opacity: 0;}
+.gallery .trailer ul:nth-child(3) li:nth-child(3) {top: 0;
+                                                left: 0;
+                                                opacity: 0;}
+                                
+
+.gallery .trailer ul:nth-child(1) img {border-radius: 0 60px 0 60px;
+                                    width: 548px;
+                                    height: 548px;
+                                    }
+.gallery .trailer ul:nth-child(2) img {border-radius: 60px 0 0 0;
+                                    width: 320px;
+                                    height: 320px;
+                                    }
+.gallery .trailer ul:nth-child(3) img {border-radius: 0 0 60px 0;
+                                    width: 390px;
+                                    height: 260px;
+                                    }
+
+
+
 .gallerytxt {width: 130px;
             background-color: #C79FCC;
             color: #fff;

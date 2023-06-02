@@ -492,20 +492,20 @@ $('.guideimg_close ul').show()
                 <h2 class="title">갤러리</h2>
             </div>
             <div class="box6-2">
-                <div class="trailer">
-                    <ul>
+                <div class="trailer" >
+                    <ul id="trailer1">
                         <li><img src="img/gallery_001.png" alt=""></li>
-                        <li><img src="img/gallery_002.png" alt=""></li>
-                        <li><img src="img/gallery_003.png" alt=""></li>
-                    </ul>
-                    <ul>
                         <li><img src="img/gallery_004.jpg" alt=""></li>
-                        <li><img src="img/gallery_005.jpg" alt=""></li>
-                        <li><img src="img/gallery_006.jpg" alt=""></li>
-                    </ul>
-                    <ul>
                         <li><img src="img/gallery_007.jpg" alt=""></li>
+                    </ul>
+                    <ul id="trailer2">
+                        <li><img src="img/gallery_002.png" alt=""></li>
+                        <li><img src="img/gallery_005.jpg" alt=""></li>
                         <li><img src="img/gallery_008.jpg" alt=""></li>
+                    </ul>
+                    <ul id="trailer3">
+                        <li><img src="img/gallery_003.png" alt=""></li>
+                        <li><img src="img/gallery_006.jpg" alt=""></li>
                         <li><img src="img/gallery_009.jpg" alt=""></li>
                     </ul>
                 </div>
@@ -586,6 +586,56 @@ $('.guideimg_close ul').show()
 
 
 
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            let a1 = 0;
+
+            setInterval(function(){
+
+                a1++;
+                if(a1==3)a1=0;
+
+                $('#trailer1 li').eq(a1-1).css({'left':'0'}).stop().animate({'left':'548px'},1500);
+                $('#trailer1 li').eq(a1).css({'left':'-548px'}).stop().animate({'left':'0'},1500);
+
+            },5000)
+            
+            let a2 = 0;
+
+            setInterval(function(){
+
+                a2++;
+                if(a2==3)a2=0;
+
+                $('#trailer2 li').eq(a2-1).css({'left':'0'}).stop().animate({'left':'320px'},1500);
+                $('#trailer2 li').eq(a2).css({'left':'-320px'}).stop().animate({'left':'0'},1500);
+
+            },5000)
+
+            let a3 = 0;
+
+            setInterval(function(){
+
+                a3++;
+                if(a3==3)a3=0;
+
+                $('#trailer3 li').eq(a3-1).css({'opacity':'1'}).stop().animate({'opacity':'0'},700);
+                $('#trailer3 li').eq(a3).css({'opacity':'0'}).stop().animate({'opacity':'1'},700);
+
+            },5000)
+
+
+
+        })
+
+
+
+
+    </script>
 
 
 
