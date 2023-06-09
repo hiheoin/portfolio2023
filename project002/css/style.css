@@ -1,5 +1,16 @@
 @charset 'utf-8';
 
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+/* 
+font-family: 'Prata', serif;
+font-family: 'DM Serif Display', serif;
+font-family: 'Inter', sans-serif;
+*/
+
+
 * {margin: 0;
     padding: 0;}
 ul,ol {list-style: none;}
@@ -7,3 +18,93 @@ a {color: #000;
     text-decoration: none;}
 img {vertical-align: bottom;}
 
+/* 레이아웃 설정 */
+header {background-color: #ddd;}
+section {background-color: aqua;}
+article:nth-child(1) {background-color: #ccc;}
+article:nth-child(2) {background-color: #bbb;}
+article:nth-child(3) {background-color: #ccc;}
+article:nth-child(4) {background-color: #bbb;}
+article:nth-child(5) {background-color: #ccc;}
+article:nth-child(6) {background-color: #bbb;}
+article:nth-child(7) {background-color: #ccc;}
+footer {background-color: #bbb;}
+
+body {background-color: #000;}
+
+/* 헤더 설정 */
+header {width: 100%;
+        height: 140px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        background-color: #fff;
+        z-index: 999;}
+
+header .logo {width: 560px;}
+header .logo h1 {}
+header .logo h1 img{}
+
+header .gnb {}
+header .gnb ul {display: flex;}
+header .gnb ul li {background-color: #ddd;
+                padding: 20px 50px;
+                font-size: 20px;
+                font-family: 'Prata', serif;}
+
+header .icon {position: absolute;
+            right: 2%;
+            top: 5%;
+            display: flex;}
+header .icon div {}
+header .icon div img{}
+
+
+/* section 설정 */
+section {}
+section article {width: 100%;
+                height: 100vh;}
+section article:nth-child(4) {height: 200vh;}
+section article:nth-child(5) {height: 200vh;}
+section article:nth-child(7) {height: 82px;}
+
+
+/* hero 설정 */
+.hero {position: relative;}
+
+.hero>div:nth-child(1) {background-color: #000;
+                        color: #fff;
+                        width: 95%;
+                        height: 105px;
+                        position: absolute;
+                        right: 0;
+                        top: 25%;
+                        font-size: 60px;
+                        font-family: 'DM Serif Display', serif;}
+.hero>div:nth-child(1) span {display: block;
+                            padding: 0 90px;
+                            margin-top: 10px;}
+
+
+.hero>div:nth-child(2) {background-color: #000;
+                        border-radius: 1000px 0 0 1000px;
+                        width: 80%;
+                        height: 85%;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;}
+.hero>div:nth-child(2)>div{ width: 390px;
+                            height: 100%;
+                            background-color: #ddd;
+                            margin: 0 auto;}
+.hero>div:nth-child(2)>div img {width: 100%;
+                                height: 100%;}
+
+.hero>div:nth-child(3) {position: absolute;}
+
+
+/* new 설정 */
+.new {}
