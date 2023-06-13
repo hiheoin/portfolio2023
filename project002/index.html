@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +12,24 @@
     <script src="https://kit.fontawesome.com/fdff7e00bc.js" crossorigin="anonymous"></script>
     <!-- 제이쿼리 CDN -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <!-- 외부스크립트 -->
     <script src="js/javascript.js"></script>
-    
+
 </head>
+
 <body>
-    
+
     <header>
         <div class="logo">
-            <h1><img src="img/logo_top.png" alt=""></h1>
+            <h1>로고</h1>
         </div>
         <div class="gnb">
             <ul>
-                <li>PENHALIGON'S</li>
-                <li>SHOP</li>
-                <li>COLLECTION</li>
-                <li>OUR WORLD</li>
+                <li><a href="#">PENHALIGON'S</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">COLLECTION</a></li>
+                <li><a href="#">OUR WORLD</a></li>
             </ul>
         </div>
         <div class="icon">
@@ -38,23 +41,245 @@
 
     <section>
         <article class="hero">
-            <div><span>CAIRO</span></div>
-            <div>
+            <div class="hero_t">
+                <div><span>HALFETI</span></div>
                 <div>
-                    <img src="img/main_hero1.png" alt="">
+                    <div>
+                        <img src="img/main_hero1.png" alt="">
+                    </div>
                 </div>
             </div>
-            <div></div>
+            <div class="hero_t on">
+                <div><span>CAIRO</span></div>
+                <div>
+                    <div class="on">
+                        <img src="img/main_hero2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hero_t">
+                <div><span>EMPRESSA</span></div>
+                <div>
+                    <div>
+                        <img src="img/main_hero3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div><span></span></div>
         </article>
-        <article class="new">new</article>
-        <article class="cairo">cairo</article>
-        <article class="collec">collection</article>
-        <article class="heri">heritage</article>
-        <article class="pro">profiling</article>
-        <article class="snsBox">sns</article>
+
+        <article class="new">
+            <div class="title">
+                <h2>NEW</h2>
+            </div>
+            <div class="title_mini"><span>FRAGRANCE</span></div>
+            <div class="none">PENHALIGON'S</div>
+            <div class="none2">PENHALIGON'S</div>
+            <div class="imgBox">
+                <div>
+                    <img src="img/main_new1.png" alt="">
+                    <span>CONSTANTINOPLE</span>
+                </div>
+                <div>
+                    <img src="img/main_new2.png" alt="">
+                    <span>HALFETI CEDAR</span>
+                </div>
+                <div class="on">
+                    <img src="img/main_new3.png" alt="">
+                    <span>LOTHAIR</span>
+                </div>
+                <div>
+                    <img src="img/main_new4.png" alt="">
+                    <span>LEGACY of PETRA</span>
+                </div>
+                <div>
+                    <img src="img/main_new5.png" alt="">
+                    <span>ARTEMISIA</span>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="cairo">
+            <div class="title">
+                <h2>PENHALIGON'S</h2>
+            </div>
+            <div class="box">
+                <img src="img/main_penhaligons2.png" alt="">
+                <p>
+                    Penhaligon’s pries open the apothecary tables of ancient Egypt, but to no avail. The empty-handed
+                    journey back from Cairo allows us time to smell the roses. We decide to use the city of Cairo as a
+                    muse - Cairo instantly enthrals, yet reveals deeper treasures over time.
+                </p>
+            </div>
+        </article>
+
+        <article class="collec">
+            <div class="title">
+                <h2>COLLECTION</h2>
+            </div>
+            <div class="group">
+                <div class="group_1">
+                    <h3>TRADE ROUTES</h3>
+                    <div class="back"></div>
+                    <div class="frag">
+                        <ul>
+                            <li><img src="img/main_collection_trade1.png" alt=""></li>
+                            <li><img src="img/main_collection_trade2.png" alt=""></li>
+                            <li><img src="img/main_collection_trade3.png" alt=""></li>
+                            <li><img src="img/main_collection_trade4.png" alt=""></li>
+                            <li><img src="img/main_collection_trade5.png" alt=""></li>
+                            <li><img src="img/main_collection_trade6.png" alt=""></li>
+                            <li><img src="img/main_collection_trade7.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <p>What gifts will the ships bring home? Journey to a bygone era of exploration and daring discovery
+                        with these exotic perfumes. Trade Routes is infused with the vast array of decadent ingredients
+                        that arrived into the London docks at the end of the 19th century.</p>
+                </div>
+                <div class="group_2">
+                    <h3>PORTRAITS</h3>
+                    <div class="back"></div>
+                    <div class="frag">
+                        <ul>
+                            <li><img src="img/main_collection_port1.png" alt=""></li>
+                            <li><img src="img/main_collection_port2.png" alt=""></li>
+                            <li><img src="img/main_collection_port3.png" alt=""></li>
+                            <li><img src="img/main_collection_port4.png" alt=""></li>
+                            <li><img src="img/main_collection_port5.png" alt=""></li>
+                            <li><img src="img/main_collection_port6.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <p>Discover a fragrance family quite unlike any other, where nothing is quite as it seems. Portraits
+                        is a tribute to the good old English spirit: stiff upper lip, caustic humour, and a knack for
+                        provocation.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="heri">
+            <div class="title">
+                <h2>BRAND HERITAGE</h2>
+            </div>
+            <div class="back_txt">
+                <p>PENHALIGON'S</p>
+                <p>PENHALIGON'S</p>
+                <p>PENHALIGON'S</p>
+                <p>PENHALIGON'S</p>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="img/main_heritage1.png" alt="">
+                    <p>
+                        <span>1837</span>
+                        William H. Penhaligon
+                    </p>
+                </div>
+                <div>
+                    <img src="img/main_heritage2.png" alt="">
+                    <p>
+                        <span>1872</span>
+                        1ST FRAGRANCE ‘Hammam Bouquet’
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>1903</span>
+                        1ST ‘ROYAL WARRANT’
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>1956</span>
+                        2ND ‘ROYAL WARRANT’
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>1988</span>
+                        EXTRA ‘ROYAL WARRANT’
+                    </p>
+                </div>
+                <div>
+                    <img src="img/main_heritage3.png" alt="">
+                </div>
+                <div>
+                    <img src="img/main_heritage4.png" alt="">
+                </div>
+                <div>
+                    <img src="img/main_heritage5.png" alt="">
+                    <p>
+                        <span>2014</span>
+                        1ST ‘TRADE ROUTES’ COLLECTION
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>2016</span>
+                        1ST ‘PORTRAITS’ COLLECTION
+                    </p>
+                    <img src="img/main_heritage6.png" alt="">
+                </div>
+            </div>
+        </article>
+
+        <article class="pro">
+            <div class="title">
+                <h2>FRAGRANCE PROFILING</h2>
+            </div>
+            <div class="group">
+                <strong>Welcome to Fragrance Profiling, pull up a chair</strong>
+                <span>
+                    This is a place where keen noses have long come to have their curiosity satisfied. Simply answer a few questions
+                    <br>and Penhaligon's will formulate a selection of fragrances that we believe will tickle your fancy - and expect some
+                    <br>other serendipitous surprises curated to your taste too.
+                    <br><br>
+                    <em>What's more, you can pick two fragrance samples to be delivered to your door; you need only pay postage.</em>
+                </span>
+                <p>Shall we begin</p>
+            </div>
+        </article>
+
+        <article class="snsBox">
+            <ul class="set">
+                <li>
+                    <p>
+                        <span>LANGUAGE</span>
+                        ENGLISH
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>LOCATION</span>
+                        UNITED KINGDOM / GBP
+                    </p>
+                </li>
+            </ul>
+            <ul class="sns">
+                <li><img src="img/icon_insta.png" alt=""></li>
+                <li><img src="img/icon_tiktok.png" alt=""></li>
+                <li><img src="img/icon_face.png" alt=""></li>
+                <li><img src="img/icon_twit.png" alt=""></li>
+                <li><img src="img/icon_pinter.png" alt=""></li>
+            </ul>
+        </article>
     </section>
 
 
-    <footer>footer</footer>
+    <footer>
+        <div class="txt">
+            <ul>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Website Use</li>
+                <li>Cookie Policy</li>
+                <li>Returns & Refunds</li>
+                <li>Sitemap</li>
+            </ul>
+            <p>© 2023 Penhaligon's Ltd</p>
+        </div>
+        <div class="logo"><img src="img/logo_footer.png" alt=""></div>
+    </footer>
 </body>
+
 </html>

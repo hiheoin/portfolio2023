@@ -3,11 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 /* 
 font-family: 'Prata', serif;
 font-family: 'DM Serif Display', serif;
 font-family: 'Inter', sans-serif;
+font-family: 'IM Fell Great Primer SC', serif;
 */
 
 
@@ -20,15 +23,15 @@ img {vertical-align: bottom;}
 
 /* 레이아웃 설정 */
 header {background-color: #ddd;}
-section {background-color: aqua;}
-article:nth-child(1) {background-color: #ccc;}
-article:nth-child(2) {background-color: #bbb;}
-article:nth-child(3) {background-color: #ccc;}
-article:nth-child(4) {background-color: #bbb;}
-article:nth-child(5) {background-color: #ccc;}
-article:nth-child(6) {background-color: #bbb;}
-article:nth-child(7) {background-color: #ccc;}
-footer {background-color: #bbb;}
+section {background-color: #000;}
+article:nth-child(1) {background-color: #fff;}
+article:nth-child(2) {background-color: #000;}
+article:nth-child(3) {background-color: #000;}
+article:nth-child(4) {background-color: #000;}
+article:nth-child(5) {background-color: #000;}
+article:nth-child(6) {background-color: #000;}
+article:nth-child(7) {background-color: #000;}
+footer {background-color: #000;}
 
 body {background-color: #000;}
 
@@ -44,23 +47,33 @@ header {width: 100%;
         background-color: #fff;
         z-index: 999;}
 
-header .logo {width: 560px;}
-header .logo h1 {}
-header .logo h1 img{}
+header .logo {width: 600px;
+                height: 140px;}
+header .logo h1 {width: 100%;
+                height: 100%;
+                background-image: url(../img/logo_top.png);
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                text-indent: -9999px;}
 
 header .gnb {}
 header .gnb ul {display: flex;}
-header .gnb ul li {background-color: #ddd;
-                padding: 20px 50px;
-                font-size: 20px;
+header .gnb li {padding: 20px 50px;}
+header .gnb ul li a {font-size: 20px;
                 font-family: 'Prata', serif;}
 
 header .icon {position: absolute;
             right: 2%;
-            top: 5%;
+            top: 12%;
             display: flex;}
-header .icon div {}
-header .icon div img{}
+header .icon div {padding: 5px 10px;
+                    width: 27px;
+                    height: 27px;}
+header .icon div:nth-child(2) {width: 25px;
+                                height: 25px;}
+header .icon div img{width: 100%;
+                    height: 100%;}
 
 
 /* section 설정 */
@@ -68,43 +81,542 @@ section {}
 section article {width: 100%;
                 height: 100vh;}
 section article:nth-child(4) {height: 200vh;}
-section article:nth-child(5) {height: 200vh;}
+section article:nth-child(5) {height: 300vh;}
 section article:nth-child(7) {height: 82px;}
 
 
 /* hero 설정 */
-.hero {position: relative;}
+.hero {position: relative;
+    overflow: hidden;}
 
-.hero>div:nth-child(1) {background-color: #000;
+.hero .hero_t {display: none;}
+
+.hero .hero_t>div:nth-child(1) {background-color: #000;
                         color: #fff;
-                        width: 95%;
+                        width: 90%;
                         height: 105px;
                         position: absolute;
                         right: 0;
                         top: 25%;
                         font-size: 60px;
                         font-family: 'DM Serif Display', serif;}
-.hero>div:nth-child(1) span {display: block;
-                            padding: 0 90px;
+.hero .hero_t>div:nth-child(1) span {display: block;
+                            padding: 0 70px;
                             margin-top: 10px;}
 
 
-.hero>div:nth-child(2) {background-color: #000;
+.hero .hero_t>div:nth-child(2) {background-color: #000;
                         border-radius: 1000px 0 0 1000px;
-                        width: 80%;
+                        width: 75%;
                         height: 85%;
                         position: absolute;
                         right: 0;
-                        bottom: 0;}
-.hero>div:nth-child(2)>div{ width: 390px;
+                        bottom: 0;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;}
+.hero .hero_t>div:nth-child(2)>div {width: 390px;
                             height: 100%;
-                            background-color: #ddd;
-                            margin: 0 auto;}
-.hero>div:nth-child(2)>div img {width: 100%;
+                            margin: 0 auto;
+                            transition: all 1.5s;}
+.hero .hero_t>div:nth-child(2)>div img {width: 100%;
                                 height: 100%;}
 
-.hero>div:nth-child(3) {position: absolute;}
+.hero .hero_t.on {display: block;}
+
+.hero .hero_t.on>div:nth-child(2)>div.on {transform: scale(1.3)
+                                            translateX(-120px)
+                                            translateY(75px);}
+                            
+/* 제이쿼리로 스크롤 올리거나 내리면 .hero .hero_t에서 on값 사라지게 하고, 스크롤하면 .hero .hero_t랑 .hero .hero_t.on>div:nth-child(2)>div에 on값 생기게*/
+
+
+
+.hero>div:nth-child(4) {position: absolute;
+                        width: 2px;
+                        height: 500px;
+                        background-color: #fff;
+                        right: 100px;
+                        top: 30%;
+                        z-index: 998;}
+.hero>div:nth-child(4) span {background-image: url(../img/icon_p_b.png);
+                            position: absolute;
+                            width: 86px;
+                            height: 86px;
+                            left: 50%;
+                            top: 50%;
+                            margin-top: -43px;
+                            margin-left: -43px;
+                            z-index: 999;}
+
+
 
 
 /* new 설정 */
-.new {}
+.new {text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;}
+.new .title {width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;}
+.new .title h2 {background-color: #fff;
+    width: 294px;
+    height: 100%;
+    font-size: 60px;
+    font-weight: normal;
+    font-family: 'DM Serif Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1c1c1c;}
+.new .title_mini {width: 100%;
+                height: 50px;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15px;}
+.new .title_mini span {
+                margin-left: 30px;
+                font-size: 26px;
+                font-weight: 400;
+                font-family: 'Inter', sans-serif;
+                letter-spacing: 30px;
+                color: #1c1c1c;}
+
+.new .none {width: 100%;
+            height: 176px;
+            background-color: #fff;
+            text-indent: -9999px;
+            margin-top: 200px;}
+.new .none2 {width: 100%;
+            height: 10px;
+            background-color: #fff;
+            margin-top: 10px;
+            text-indent: -9999px;}
+
+.new .imgBox {position: absolute;
+            width: 100%;
+            height: 670px;
+            left: 0;
+            top: 18%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;}
+.new .imgBox>div {width: 275px;
+                height: 482px;
+                transition: all 0.8s;}
+.new .imgBox>div img {width: 100%;
+                    height: 100%;}
+.new .imgBox>div span {font-family: 'IM Fell Great Primer SC', serif;
+                        color: #fff;
+                        opacity: 0;
+                        font-size: 22px;
+                        transition: all 0.8s;}
+
+.new .imgBox>div.on {width: 350px;
+                            height: 630px;
+                            margin-top: 150px;}
+.new .imgBox>div.on span {opacity: 1;}
+/* 제이쿼리로 호버하면 .imgBox>div에서 on값 사라지게 하고, 호버한 아이는 on값 생기게*/
+
+/* .new .imgBox>div:hover {width: 350px;
+                    height: 630px;
+                    margin-top: 150px;}
+.new .imgBox>div:hover span {opacity: 1;} */
+
+
+/* cairo 설정 */
+.cairo {text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/main_penhaligons1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;}
+.cairo .title {width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;}
+.cairo .title h2 {background-color: #000;
+        color: #fff;
+        width: 540px;
+        height: 100%;
+        font-size: 60px;
+        font-weight: normal;
+        font-family: 'DM Serif Display', serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+
+.cairo .box {width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 70px;
+            position: relative;
+            }
+.cairo .box img {height: 100%;
+                width: auto;
+                position: absolute;
+                left: -100%;
+                top: 0;
+                transition: all 3.0s;}
+.cairo .box p {width: 523px;
+            height: 100%;
+            position: absolute;
+            right: -100%;
+            top: 0;
+            font-size: 40px;
+            color: #fff;
+            font-family: 'IM Fell Great Primer SC', serif;
+            display: flex;
+            align-items: center;
+            transition: all 3.0s;}
+
+
+
+
+/* collection 설정 */
+.collec {width: 100%;
+        height: 100vh;
+        position: relative;}
+.collec .title {width: 100%;
+                height: 104px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-top: 45px;}
+.collec .title h2 {background-color: #fff;
+                    color: #1c1c1c;
+                    width: 540px;
+                    height: 100%;
+                    font-size: 60px;
+                    font-weight: normal;
+                    font-family: 'DM Serif Display', serif;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;}
+
+.collec .group {width: 100%;
+                height: 100%;}
+
+    /* group1 */
+.collec .group .group_1 {width: 100%;
+                        height: 90vh;
+                        position: relative;
+                        overflow: hidden;}
+.collec .group .group_1 h3 {font-size: 36px;
+                            font-family: 'DM Serif Display', serif;
+                            color: #fff;
+                            font-weight: normal;
+                            padding-left: 7%;
+                            padding-bottom: 15px;}
+
+.collec .group .group_1 .back {width: 100%;
+                            height: 530px;
+                            background-image: url(../img/main_collection_back1.png);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-color: red;}
+.collec .group .group_1 .back img {}
+
+.collec .group .group_1 .frag {position: absolute;
+                                left: 5%;
+                                bottom: -100%;
+                                transition: all 3.0s;}
+.collec .group .group_1 .frag ul {text-align: center;}
+.collec .group .group_1 .frag ul li {background-color: #fff;
+                                    border-radius: 160px;
+                                    position: absolute;
+                                    width: 320px;
+                                    height: 641px;}
+.collec .group .group_1 .frag ul li img{width: 280px;
+                                        height: 580px;
+                                        margin-top: 20px;}
+
+.collec .group .group_1 p {width: 60%;
+                            font-size: 20px;
+                            font-family: 'IM Fell Great Primer SC', serif;
+                            color: #fff;
+                            position: absolute;
+                            right: 8%;
+                            bottom: 15%;}
+
+
+    /* group2 */
+.collec .group .group_2 {width: 100%;
+        height: 90vh;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;}
+.collec .group .group_2 h3 {font-size: 36px;
+            font-family: 'DM Serif Display', serif;
+            color: #fff;
+            font-weight: normal;
+            padding-right: 7%;
+            padding-bottom: 15px;
+            text-align: right;}
+
+.collec .group .group_2 .back {width: 100%;
+            height: 530px;
+            background-image: url(../img/main_collection_back2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: red;}
+.collec .group .group_2 .back img {}
+
+.collec .group .group_2 .frag {position: absolute;
+                            right: 22%;
+                            top: 100%;
+                            transition: all 3.0s;}
+.collec .group .group_2 .frag ul {text-align: center;}
+.collec .group .group_2 .frag ul li {background-color: #fff;
+                    border-radius: 160px;
+                    position: absolute;
+                    width: 320px;
+                    height: 641px;}
+.collec .group .group_2 .frag ul li img{width: 320px;
+                        height: 547px;
+                        margin-top: 30px;}
+
+.collec .group .group_2 p {width: 60%;
+            font-size: 20px;
+            font-family: 'IM Fell Great Primer SC', serif;
+            color: #fff;
+            position: absolute;
+            left: 8%;
+            bottom: 17%;}
+
+
+
+/* heritage 설정 */
+.heri {width: 100%;
+    height: 300vh;
+    position: relative;
+    overflow: hidden;}
+.heri .title {width: 100%;
+            height: 104px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 45px;}
+.heri .title h2 {background-color: #fff;
+                color: #1c1c1c;
+                width: 540px;
+                height: 100%;
+                font-size: 60px;
+                font-weight: normal;
+                font-family: 'DM Serif Display', serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+
+.heri .back_txt {position: relative;
+                width: 100%;
+                height: 300vh;
+                left: 0;
+                top: 0;
+                }
+.heri .back_txt p {position: absolute;
+                    font-size: 400px;
+                    font-weight: 700;
+                    font-family: 'Inter', sans-serif;
+                    color: rgba(227, 227, 227, 0.07);
+                }
+                        
+.heri .back_txt p:nth-child(1) {left: 0;
+                                top: 5%;}
+.heri .back_txt p:nth-child(2) {right: 0;
+                                top: 30%;}
+.heri .back_txt p:nth-child(3) {left: 0;
+                                bottom: 30%;}
+.heri .back_txt p:nth-child(4) {right: 0;
+                                bottom: 5%;}
+
+.heri .group {position: absolute;
+        width: 100%;
+        height: 90%;
+        left: 0;
+        top: 8%;
+        text-align: center;
+        }
+
+.heri .group>div p {color: #fff;
+                font-family: 'IM Fell Great Primer SC', serif;
+                font-weight: normal;
+                font-size: 38px;}
+.heri .group>div p span {display: block;
+                        font-size: 50px;
+                        letter-spacing: 10px;
+                        margin: 20px 0;
+                        margin-bottom: 70px;}
+
+.heri .group>div:nth-child(1) {text-align: center;
+                                position: absolute;
+                                left: 50%;
+                                margin-left: -200px;
+                                top: 0;}
+.heri .group>div:nth-child(1) img {}
+.heri .group>div:nth-child(1) p {}
+
+.heri .group>div:nth-child(2) {display: flex;
+                                align-items: flex-end;
+                                text-align: left;
+                                position: absolute;
+                                left: 5%;
+                                top: 22%;}
+.heri .group>div:nth-child(2) img {margin-right: 20px;}
+.heri .group>div:nth-child(2) p {}
+
+.heri .group>div:nth-child(3) {position: absolute;
+                                right: 5%;
+                                top: 38%;
+                                text-align: right;}
+.heri .group>div:nth-child(3) p {}
+
+.heri .group>div:nth-child(4) {position: absolute;
+                                left: 5%;
+                                top: 48%;
+                                text-align: left;}
+.heri .group>div:nth-child(4) p {}
+
+.heri .group>div:nth-child(5) {position: absolute;
+                                right: 5%;
+                                top: 60%;
+                                text-align: right;}
+.heri .group>div:nth-child(5) p {}
+
+.heri .group>div:nth-child(6) {position: absolute;
+                                left: 40%;
+                                top: 47%;}
+.heri .group>div:nth-child(6) img {}
+
+.heri .group>div:nth-child(7) {position: absolute;
+                                left: 48%;
+                                top: 52%;}
+.heri .group>div:nth-child(7) img {}
+
+.heri .group>div:nth-child(8) {display: flex;
+                                align-items: flex-end;
+                                text-align: left;
+                                position: absolute;
+                                left: 5%;
+                                top: 68%;
+                                }
+.heri .group>div:nth-child(8) img {margin-right: 20px;}
+.heri .group>div:nth-child(8) p {}
+
+.heri .group>div:nth-child(9) {display: flex;
+                            align-items: flex-end;
+                            text-align: right;
+                            position: absolute;
+                            right: 5%;
+                            top: 83%;}
+.heri .group>div:nth-child(9) img {margin-left: 20px;}
+.heri .group>div:nth-child(9) p {}
+
+
+/* profiling 설정 */
+.pro {width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;}
+.pro .title {width: 100%;
+            height: 104px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 120px;}
+.pro .title h2 {background-color: #fff;
+                color: #1c1c1c;
+                width: 890px;
+                height: 100%;
+                font-size: 60px;
+                font-weight: normal;
+                font-family: 'DM Serif Display', serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+
+.pro .group {width: 80%;
+            height: 50%;
+            margin: 0 auto;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/main_profiling.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin-top: 70px;}
+.pro .group strong {font-size: 38px;}
+.pro .group span {font-size: 16px;
+                letter-spacing: 5px;
+                text-align: center;
+                margin: 50px 0;}
+.pro .group span em {font-style: normal;
+    display: block;}
+.pro .group p {border: 1px solid #fff;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #000;
+        padding: 15px 70px;
+        cursor: pointer;}
+
+
+
+/* sns 설정 */
+.snsBox {display: flex;
+        justify-content: space-around;
+        align-items: center;}
+.snsBox .set {color: #fff}
+.snsBox .set li {}
+.snsBox .set li p {}
+.snsBox .set li p span {display: inline-block;
+                        width: 100px;
+                        margin-right: 20px;}
+
+.snsBox .sns {display: flex;}
+.snsBox .sns li {padding: 5px 20px;}
+.snsBox .sns li img {}
+
+
+/* 푸터 설정 */
+footer {width: 100%;
+    height: 340px;
+    color: #fff;}
+
+footer .txt {width: 80%;
+            margin: 0 auto;
+            margin-top: 70px;
+            height: 160px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-family: 'Inter', sans-serif;}
+footer .txt ul {display: flex;}
+footer .txt ul li {padding: 5px 20px;}
+footer .txt p {}
+
+footer .logo {width: 326px;
+            height: 53px;
+            margin: 0 auto;}
+footer .logo img {width: 100%;
+                height: 100%;}
