@@ -6,12 +6,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
+
 /* 
 font-family: 'Prata', serif;
 font-family: 'DM Serif Display', serif;
 font-family: 'Inter', sans-serif;
 font-family: 'IM Fell Great Primer SC', serif;
 */
+
 
 
 * {margin: 0;
@@ -60,12 +62,15 @@ header .logo h1 {width: 100%;
                 cursor: pointer;}
 
 header .gnb {}
-header .gnb ul {display: flex;}
-header .gnb li {padding: 10px 0;}
+header .gnb ul {display: flex;
+                justify-content: flex-end;}
+header .gnb li {width: 22%;
+                padding-bottom: 10px;}
 header .gnb ul li a {font-size: 20px;
                 font-family: 'Prata', serif;
                 color: #1c1c1c;
-                padding: 10px 50px;}
+                display: block;
+                text-align: center;}
 
 header .gnb li:hover a {color: rgba(100, 100, 100, 0.6);}
 
@@ -253,6 +258,7 @@ section article:nth-child(7) {height: 82px;}
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;}
 .cairo .title {width: 100%;
     height: 104px;
@@ -358,13 +364,24 @@ section article:nth-child(7) {height: 82px;}
                                     position: absolute;
                                     width: 320px;
                                     height: 641px;}
+.collec .group .group_1 .frag ul span {width: 60px;
+                                    position: absolute;
+                                    left: 50%;
+                                    margin-left: -30px;
+                                    top: 4%;
+                                    font-size: 25px;
+                                    color: #777;
+                                    font-family: 'IM Fell Great Primer SC', serif;
+                                    animation: ani_click 1.8s infinite;}
 .collec .group .group_1 .frag ul li {position: absolute;
                                     width: 100%;
                                     height: 100%;
+                                    left: 0;
+                                    top: 0;
                                     display: none;}
 .collec .group .group_1 .frag ul li img{width: 280px;
                                         height: 580px;
-                                        margin-top: 20px;}
+                                        margin-top: 30px;}
 
 .collec .group .group_1 p {width: 60%;
                             font-size: 20px;
@@ -376,17 +393,18 @@ section article:nth-child(7) {height: 82px;}
 
 .collec .group .group_1 .frag ul li.on {display: block;}
 
+
     /* group2 */
 .collec .group .group_2 {width: 100%;
-        height: 90vh;
-        position: relative;
-        box-sizing: border-box;
-        overflow: hidden;}
+                        height: 90vh;
+                        position: relative;
+                        box-sizing: border-box;
+                        overflow: hidden;}
 .collec .group .group_2 h3 {font-size: 36px;
                             font-family: 'DM Serif Display', serif;
                             color: #fff;
                             font-weight: normal;
-                            padding-right: 7%;
+                            padding-right: 8%;
                             padding-bottom: 15px;
                             text-align: right;
                             opacity: 0;
@@ -403,22 +421,33 @@ section article:nth-child(7) {height: 82px;}
 .collec .group .group_2 .back img {}
 
 .collec .group .group_2 .frag {position: absolute;
-                            right: 22%;
-                            top: 100%;
-                            transition: all 3.0s;}
+                                right: 5%;
+                                top: 100%;
+                                transition: all 3.0s;
+                                width: 320px;
+                                height: 641px;}
 .collec .group .group_2 .frag ul {text-align: center;
                                     background-color: #fff;
                                     border-radius: 160px;
                                     position: absolute;
-                                    width: 320px;
-                                    height: 641px;}
+                                    width: 100%;
+                                    height: 100%;}
+.collec .group .group_2 .frag ul span {width: 60px;
+                                        position: absolute;
+                                        left: 50%;
+                                        margin-left: -30px;
+                                        top: 4%;
+                                        font-size: 25px;
+                                        color: #777;
+                                        font-family: 'IM Fell Great Primer SC', serif;
+                                        animation: ani_click 1.8s infinite;}
 .collec .group .group_2 .frag ul li {position: absolute;
                                     width: 100%;
                                     height: 100%;
                                     display: none;}
 .collec .group .group_2 .frag ul li img{width: 320px;
                                     height: 547px;
-                                    margin-top: 30px;}
+                                    margin-top: 60px;}
 
 .collec .group .group_2 p {width: 60%;
             font-size: 20px;
@@ -434,6 +463,18 @@ section article:nth-child(7) {height: 82px;}
 .collec .group .group_1 .frag ul li:hover {cursor: url('../img/cursor_hover.png'),auto;
 }
 .collec .group .group_2 .frag ul li:hover {cursor: url('../img/cursor_hover.png'),auto;
+}
+
+
+@keyframes ani_click {
+
+    /* 기본값 */
+    0% {color: #eee;
+        opacity: 1;}
+    /* 바뀌는값 */
+    100% {color: #777;
+        opacity: 0.8;}
+    
 }
 
 
@@ -492,7 +533,7 @@ section article:nth-child(7) {height: 82px;}
 
 .heri .group>div {transition: all 1.3s;}
 
-.heri .group>div p {color: #fff;
+.heri .group>div p {color: #ccc;
                 font-family: 'IM Fell Great Primer SC', serif;
                 font-weight: normal;
                 font-size: 38px;}
@@ -500,7 +541,8 @@ section article:nth-child(7) {height: 82px;}
                         font-size: 50px;
                         letter-spacing: 10px;
                         margin: 20px 0;
-                        margin-bottom: 70px;}
+                        margin-bottom: 70px;
+                        color: #fff;}
 
 .heri .group>div:nth-child(1) {text-align: center;
                                 position: absolute;

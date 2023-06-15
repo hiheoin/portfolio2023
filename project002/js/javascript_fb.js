@@ -13,76 +13,69 @@ $(document).ready(function(){
         - 상단 이동 버튼 클릭하면 맨 위로 이동
     */
 
-    // 피드백 - 스크롤 한 곳으로 모으기!!!!!!!
-    // 마우스휠은 변수 찾아서 aa++;,aa--;로 값 오르고 내리게
-
-
-    // .gnb의 크기 조절 - 화면 와이드값에서 로고 크기 빼고 구하기
-    let wd = $(window).width();
+        let wd = $(window).width();
         $('header .gnb') .width(wd-600)
         $(window).resize(function(){
-// 화면 크기가 바뀔 때마다 와이드값 다시 구하게
+
+
+            
         let wd = $(window).width();
         $('header .gnb') .width(wd-600)
         })
 
-
+    
 
     // 1. hero에서 스크롤을 위로 올렸을 때, .hero>div:nth-child(1)에 on값을 붙여라
+        let aa= 0
     $('.hero').mousewheel(function(event,delta){
 
         if(delta>0){
-            $('.hero>div').removeClass('on')
-            $('.hero>div:nth-child(1)').addClass('on')
+            aa++;
+            if(aa>3)aa=2
 
-            $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
-            $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
-            $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+            console.log(aa)
+            
+            // $('.hero>div').removeClass('on')
+            // $('.hero>div:nth-child(1)').addClass('on')
 
-            $('.hero>div:nth-child(4) span').css({'top':'50%'})
-            $('.hero>div:nth-child(4) span').stop().animate({'top':'0%'},1500)
+            // $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+            // $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+            // $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+
+            //
+            // $('.hero>div:nth-child(4) span').css({'top':'50%'}).stop().animate({'top':'0%'},1500)
         
-            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'})
-            $('.hero .hero_t>div:nth-child(1)').stop().animate({'right':'0'},1500)
+            // 
+            // $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
         
+
         }
         if(delta<0){
-            $('.hero>div').removeClass('on')
-            $('.hero>div:nth-child(2)').addClass('on')
+            event.preventDefault()
+            aa--;
+            console.log(aa)
+            if(aa<=0){aa=0
+                $('#element').off('scroll mousewheel');
 
-            $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
-            $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
-            $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+            }
+            // $('.hero>div').removeClass('on')
+            // $('.hero>div:nth-child(2)').addClass('on')
 
-            $('.hero>div:nth-child(4) span').css({'top':'0'})
-            $('.hero>div:nth-child(4) span').stop().animate({'top':'50%'},1500)
+            // $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+            // $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+            // $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+
+            // $('.hero>div:nth-child(4) span').css({'top':'0'})
+            // $('.hero>div:nth-child(4) span').stop().animate({'top':'50%'},1500)
         
-            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'})
-            $('.hero .hero_t>div:nth-child(1)').stop().animate({'right':'0'},1500)
+            // $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'})
+            // $('.hero .hero_t>div:nth-child(1)').stop().animate({'right':'0'},1500)
+
         }
         
-    
-        
+
     });
 
-
-// 첫 화면에서 스크롤을 내렸을 때, 바로 .new로 이동하게 설정
-
-
-
-// // 스크롤 제한 ON
-// function scroll_on() {
-//     $('.hero').on('scroll touchmove mousewheel', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         return false;
-//     });
-// }
-
-// // 스크롤 제한 OFF
-// function scroll_off() {
-//     $('.hero').off('scroll touchmove mousewheel');
-// }
 
 
     // 2. .new .imgBox>div에 마우스를 올렸을 때, 그 div에 on값이 생겨라
@@ -103,14 +96,14 @@ $(document).ready(function(){
         let col = $('.collec').offset().top
         let sc = $(this).scrollTop()
 
-        console.log(sc)
+        // console.log(sc)
 
-        if(sc>=cai-400){
+        if(sc>=cai-300){
             $('.cairo .box').find('img').css({'left': '15%'})
             $('.cairo .box').find('p').css({'right': '15%'})
         }
 
-        if(sc>=col-350){
+        if(sc>=col-250){
 
             $('.collec .group .group_1 .frag').css({'bottom':'85%'})
             $('.collec .group .group_1 h3').css({'opacity':'1'})
@@ -136,7 +129,7 @@ $(document).ready(function(){
         $('.group_1 .frag ul li').removeClass('on')
         $('.group_1 .frag ul li').eq(num).addClass('on')
 
-        console.log(num)
+        // console.log(num)
     });
 
     $('.group_2 .frag ul').click(function(){
@@ -147,7 +140,7 @@ $(document).ready(function(){
         $('.group_2 .frag ul li').removeClass('on')
         $('.group_2 .frag ul li').eq(num).addClass('on')
 
-        console.log(num)
+        // console.log(num)
     });
 
 
@@ -209,13 +202,13 @@ $(document).ready(function(){
             let new1 = $('.new').offset().top
             let sc = $(this).scrollTop()
 
-            console.log(new1)
+            // console.log(new1)
             
-            if(sc>=new1-700){
+            if(sc>=new1-800){
                 $('.topBtn').css({'display':'block'})
             }
             
-            if(sc<new1-700){
+            if(sc<new1-800){
                 $('.topBtn').css({'display':'none'})
             }
 
