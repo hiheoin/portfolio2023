@@ -219,7 +219,30 @@ $(document).ready(function(){
                 $('.topBtn').css({'display':'none'})
             }
 
-        })
+        });
+
+
+        // // sub _ hal에 도착하면 나타나라
+        // $(window).scroll(function(){
+
+        //     let hal = $('.hal').offset().top
+        //     let sc = $(this).scrollTop()
+
+        //     console.log(hal)
+            
+        //     if(sc>=hal-700){
+        //         $('.topBtn').css({'display':'block'})
+        //     }
+            
+        //     if(sc<hal-700){
+        //         $('.topBtn').css({'display':'none'})
+        //     }
+
+        // })
+
+        
+
+
 
         // 누르면 상단으로 이동해라
     const contents = document.querySelectorAll("h1");
