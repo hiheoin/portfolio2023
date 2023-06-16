@@ -973,11 +973,13 @@ footer .logo img {width: 100%;
                 margin-top: 10px;}
 .other_imgBox li div {border: #000 1px solid;
                     width: 280px;
-                    height: 70%;}
-.other_imgBox li div img {width: 100%;}
+                    height: 80%;}
+.other_imgBox li div img {width: 90%;
+                            height: 100%;
+                            }
 .other_imgBox li span{display: block;
                 padding: 10px 0;
-                margin-top: 50px;
+                margin-top: 30px;
                 background-color: red;}
 
 .other .addBtn {width: 250px;
@@ -1037,7 +1039,8 @@ footer .logo img {width: 100%;
 .detail .about01>div:nth-child(1)>div:nth-child(1) {background-color: #ddd;
                                                     width: 50%;
                                                     height: 100%;}
-.detail .about01>div:nth-child(1)>div:nth-child(1) img {}
+.detail .about01>div:nth-child(1)>div:nth-child(1) img {width: 100%;
+    height: 100%;}
 .detail .about01>div:nth-child(1)>div:nth-child(2) {background-color: cadetblue;
                                                     width: 50%;
                                                     height: 100%;
@@ -1093,7 +1096,8 @@ footer .logo img {width: 100%;
 .detail .about02>div>div:nth-child(2) {background-color: #ddd;
                                     width: 50%;
                                     height: 100%;}
-.detail .about02>div>div:nth-child(2) img {}
+.detail .about02>div>div:nth-child(2) img {width: 100%;
+                                            height: 100%;}
 
 
 .detail .attach {width: 100%;
