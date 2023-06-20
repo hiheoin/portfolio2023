@@ -33,11 +33,11 @@ $(document).ready(function(){
             $('.detail .about01').css({'opacity':'1'})
         }
 
-        if(sc>=det+200){
+        if(sc>=det+300){
             $('.detail .note').css({'opacity':'1'})
         }
 
-        if(sc>=det+450){
+        if(sc>=det+600){
             $('.detail .about02').css({'opacity':'1'})
         }
 
@@ -46,11 +46,27 @@ $(document).ready(function(){
         let int = $('.intro').offset().top
 
         console.log(int)
-        if(sc>=int){
-            $('.another .intro>div:nth-child(1)>div:nth-child(2)').css({'right':600}).stop().animate({'right':0},800)
+        if(sc>=int-100){
+            $('.another .intro>div:nth-child(1)>div:nth-child(2)').css({'right':0})
+        }
+
+        if(sc>=int+800){
+            $('.another .intro>div:nth-child(2)>div:nth-child(1)').css({'left':0})
         }
 
 
+         // 상단으로 이동 버튼
+
+                
+                //console.log(new1)
+    
+                if(sc>=300){
+                    $('.topBtn').css({'display':'block'})
+                }
+
+                if(sc<300){
+                    $('.topBtn').css({'display':'none'})
+                }
 
 
     });
@@ -83,11 +99,58 @@ $(document).ready(function(){
 
     },5000)
 
-
     
 
 
 
+        // 상단 이동 버튼 누르면 상단으로 이동해라
+    const contents = document.querySelectorAll("h1");
+    const firstTop = contents[0].offsetTop;
+
+    $('.topBtn').click(function(){
+
+        window.scroll({top:firstTop,behavior:'smooth'})
+
+    });
+
+
+
+    // .another .another_imgBox>div:nth-child(2)에 마우스가 들어가면 배경은 흐려지고 .another .another_imgBox>div:nth-child(4)가 보여라
+    $('.another .another_imgBox>div:nth-child(2)').mouseenter(function(){
+
+        $('.another .another_imgBox>div:nth-child(2)>img').css({'opacity':'0.6'})
+        $('.another .another_imgBox>div:nth-child(2)>div').css({'display':'block'})
+
+    });
+    
+    $('.another .another_imgBox>div:nth-child(2)').mouseleave(function(){
+
+        $('.another .another_imgBox>div:nth-child(2)>img').css({'opacity':'1'})
+        $('.another .another_imgBox>div:nth-child(2)>div').css({'display':'none'})
+
+    });
+    $('.another .another_imgBox>div:nth-child(3)').mouseenter(function(){
+
+        $('.another .another_imgBox>div:nth-child(3)>img').css({'opacity':'0.6'})
+        $('.another .another_imgBox>div:nth-child(3)>div').css({'display':'block'})
+
+    });
+    
+    $('.another .another_imgBox>div:nth-child(3)').mouseleave(function(){
+
+        $('.another .another_imgBox>div:nth-child(3)>img').css({'opacity':'1'})
+        $('.another .another_imgBox>div:nth-child(3)>div').css({'display':'none'})
+
+    });
+
+
+
+    $('h1').click(function(){
+
+        window.location.href = "../index.html";
+
+    });
+    
 
 
 }); //끝

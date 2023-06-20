@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac</title>
+    
+    <style>
+
+        
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {vertical-align: bottom;}
+
+#wrap {background-color: aquamarine;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+margin-top: 500px;
+margin-bottom: 800px;
+justify-content: flex-end;
+position: relative;}
+#wrap>div {
+    width: 50%;
+    height: 50vh;
+position: absolute;
+left: 0;
+top: 0;
+background-image: url(img/sub_another5.png);
+background-position: center center;
+    background-size: cover;}
+#wrap ul {background-color: salmon;
+    width: 50%;
+    height: 200vh;
+    display: flex;
+    flex-wrap: wrap;}
+#wrap ul li {width: 50%;
+            height: 50%;
+            border: 1px #000 solid;
+        box-sizing: border-box;}
+
+
+    </style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $(window).scroll(function(){
+        let sc = $(this).scrollTop()
+        let wrap = $('#wrap').offset().top
+
+        if(sc>=wrap){
+        $('#wrap>div').css({'top':sc-500})
+        }
+
+        if(sc>=wrap+940){
+        $('#wrap>div').css({'top':940})
+        }
+
+    })
+
+
+
+
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+    <div>g</div>
+    <ul>
+        <li>g</li>
+        <li>g</li>
+        <li>g</li>
+        <li>g</li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -27,26 +27,84 @@ $(document).ready(function(){
         })
 
 
+        // 휠값을 하나씩 줘서, hreo 3개를 각각 올라가고 내려가고 값 지정, 세 번째 히어로에서는 내리면 다음 페이지로 넘어가도록
 
     // 1. hero에서 스크롤을 위로 올렸을 때, .hero>div:nth-child(1)에 on값을 붙여라
-    $('.hero').mousewheel(function(event,delta){
-
+        let aa= 0
+    $('.hero>div:nth-child(2)').mousewheel(function(event,delta){
+        
         if(delta>0){
+                $('.hero>div').removeClass('on')
+                $('.hero>div:nth-child(1)').addClass('on')
+    
+                $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+                $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+                $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+    
+                $('.hero>div:nth-child(4) span').css({'top':'50%'}).stop().animate({'top':'0%'},1500)
+            
+                $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+
+        }
+
+        if(delta<0){
+            event.preventDefault()
+
             $('.hero>div').removeClass('on')
-            $('.hero>div:nth-child(1)').addClass('on')
+            $('.hero>div:nth-child(3)').addClass('on')
 
             $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
             $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
             $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
 
-            $('.hero>div:nth-child(4) span').css({'top':'50%'})
-            $('.hero>div:nth-child(4) span').stop().animate({'top':'0%'},1500)
+            $('.hero>div:nth-child(4) span').css({'top':'50%'}).stop().animate({'top':'100%'},1500)
         
-            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'})
-            $('.hero .hero_t>div:nth-child(1)').stop().animate({'right':'0'},1500)
-        
+            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+
         }
+
+    });
+
+
+    $('.hero>div:nth-child(1)').mousewheel(function(event,delta){
+        
+        if(delta>0){
+                $('.hero>div').removeClass('on')
+                $('.hero>div:nth-child(1)').addClass('on')
+    
+                $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+                $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+                $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+    
+                $('.hero>div:nth-child(4) span').css({'top':'50%'}).stop().animate({'top':'0%'},1500)
+            
+                $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+
+        }
+
         if(delta<0){
+            event.preventDefault()
+
+            $('.hero>div').removeClass('on')
+                $('.hero>div:nth-child(2)').addClass('on')
+    
+                $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+                $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+                $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+    
+                $('.hero>div:nth-child(4) span').css({'top':'0'}).stop().animate({'top':'50%'},1500)
+            
+                $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+
+        }
+
+    });
+
+
+
+    $('.hero>div:nth-child(3)').mousewheel(function(event,delta){
+        
+        if(delta>0){
             $('.hero>div').removeClass('on')
             $('.hero>div:nth-child(2)').addClass('on')
 
@@ -54,15 +112,16 @@ $(document).ready(function(){
             $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
             $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
 
-            $('.hero>div:nth-child(4) span').css({'top':'0'})
-            $('.hero>div:nth-child(4) span').stop().animate({'top':'50%'},1500)
+            $('.hero>div:nth-child(4) span').css({'top':'100%'}).stop().animate({'top':'50%'},1500)
         
-            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'})
-            $('.hero .hero_t>div:nth-child(1)').stop().animate({'right':'0'},1500)
+            $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+
         }
-        
-    
-        
+
+        if(delta<0){
+            $('.hero').off('mousewheel');
+        }
+
     });
 
 
@@ -103,7 +162,7 @@ $(document).ready(function(){
         let col = $('.collec').offset().top
         let sc = $(this).scrollTop()
 
-        console.log(sc)
+        //console.log(sc)
 
         if(sc>=cai-400){
             $('.cairo .box').find('img').css({'left': '15%'})
@@ -120,7 +179,106 @@ $(document).ready(function(){
             $('.collec .group .group_2 h3').css({'opacity':'1'})
         }
 
+
+
+            // 5. 스크롤을 내려서 .heri에 도착하면 .heri .group의 자식 div 9개가 차례대로 나타나게 해라(스크롤 값에 따라)
+
+
+                let heri = $('.heri').offset().top
+
+
+                if(sc>=heri){
+                    $('.heri .group').find('div').eq(0).css({'opacity':1})
+                }
+
+                if(sc>=heri+300){
+                    $('.heri .group').find('div').eq(1).css({'opacity':1})
+                }
+
+                if(sc>=heri+600){
+                    $('.heri .group').find('div').eq(2).css({'opacity':1})
+                }
+
+                if(sc>=heri+700){
+                    $('.heri .group').find('div').eq(5).css({'opacity':1})
+                }
+
+                if(sc>=heri+900){
+                    $('.heri .group').find('div').eq(3).css({'opacity':1})
+                }
+
+                if(sc>=heri+1000){
+                    $('.heri .group').find('div').eq(6).css({'opacity':1})
+                }
+
+                if(sc>=heri+1200){
+                    $('.heri .group').find('div').eq(4).css({'opacity':1})
+                }
+
+                if(sc>=heri+1500){
+                    $('.heri .group').find('div').eq(7).css({'opacity':1})
+                }
+
+                if(sc>=heri+1800){
+                    $('.heri .group').find('div').eq(8).css({'opacity':1})
+                }
+
+                // 반복문으로 쓰기
+
+    
+
+
+
+
+            // 6. 상단으로 이동 버튼
+
+                // new에 도착하면 나타나라
+
+
+                    let new1 = $('.new').offset().top
+
+
+                    //console.log(new1)
+        
+                    if(sc>=new1-700){
+                        $('.topBtn').css({'display':'block'})
+                    }
+
+                    if(sc<new1-700){
+                        $('.topBtn').css({'display':'none'})
+                    }
+
+
+
+
+                // // sub _ hal에 도착하면 나타나라
+                // $(window).scroll(function(){
+
+                //     let hal = $('.hal').offset().top
+                //     let sc = $(this).scrollTop()
+
+                //     console.log(hal)
+        
+                //     if(sc>=hal-700){
+                //         $('.topBtn').css({'display':'block'})
+                //     }
+        
+                //     if(sc<hal-700){
+                //         $('.topBtn').css({'display':'none'})
+                //     }
+
+                // })
+
+
+
+
+
+
+
+
     });
+
+
 
 
 
@@ -136,7 +294,7 @@ $(document).ready(function(){
         $('.group_1 .frag ul li').removeClass('on')
         $('.group_1 .frag ul li').eq(num).addClass('on')
 
-        console.log(num)
+        //console.log(num)
     });
 
     $('.group_2 .frag ul').click(function(){
@@ -147,98 +305,12 @@ $(document).ready(function(){
         $('.group_2 .frag ul li').removeClass('on')
         $('.group_2 .frag ul li').eq(num).addClass('on')
 
-        console.log(num)
+        //console.log(num)
     });
 
 
 
-    // 5. 스크롤을 내려서 .heri에 도착하면 .heri .group의 자식 div 9개가 차례대로 나타나게 해라(스크롤 값에 따라)
     
-    $(window).scroll(function(){
-        let heri = $('.heri').offset().top
-        let sc = $(this).scrollTop()
-
-        if(sc>=heri){
-            $('.heri .group').find('div').eq(0).css({'opacity':1})
-        }
-
-        if(sc>=heri+300){
-            $('.heri .group').find('div').eq(1).css({'opacity':1})
-        }
-
-        if(sc>=heri+600){
-            $('.heri .group').find('div').eq(2).css({'opacity':1})
-        }
-
-        if(sc>=heri+700){
-            $('.heri .group').find('div').eq(5).css({'opacity':1})
-        }
-
-        if(sc>=heri+900){
-            $('.heri .group').find('div').eq(3).css({'opacity':1})
-        }
-
-        if(sc>=heri+1000){
-            $('.heri .group').find('div').eq(6).css({'opacity':1})
-        }
-
-        if(sc>=heri+1200){
-            $('.heri .group').find('div').eq(4).css({'opacity':1})
-        }
-
-        if(sc>=heri+1500){
-            $('.heri .group').find('div').eq(7).css({'opacity':1})
-        }
-
-        if(sc>=heri+1800){
-            $('.heri .group').find('div').eq(8).css({'opacity':1})
-        }
-
-        // 반복문으로 쓰기
-
-        
-    });
-
-
-
-    // 6. 상단으로 이동 버튼
-
-        // new에 도착하면 나타나라
-        $(window).scroll(function(){
-
-            let new1 = $('.new').offset().top
-            let sc = $(this).scrollTop()
-
-            console.log(new1)
-            
-            if(sc>=new1-700){
-                $('.topBtn').css({'display':'block'})
-            }
-            
-            if(sc<new1-700){
-                $('.topBtn').css({'display':'none'})
-            }
-
-        });
-
-
-        // // sub _ hal에 도착하면 나타나라
-        // $(window).scroll(function(){
-
-        //     let hal = $('.hal').offset().top
-        //     let sc = $(this).scrollTop()
-
-        //     console.log(hal)
-            
-        //     if(sc>=hal-700){
-        //         $('.topBtn').css({'display':'block'})
-        //     }
-            
-        //     if(sc<hal-700){
-        //         $('.topBtn').css({'display':'none'})
-        //     }
-
-        // })
 
         
 
@@ -255,6 +327,12 @@ $(document).ready(function(){
     });
 
 
+
+    $('h1').click(function(){
+
+        window.location.href = "../index.html";
+
+    });
     
 
 })

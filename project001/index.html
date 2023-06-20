@@ -46,7 +46,7 @@ $(document).ready(function(){
         let sc = $(this).scrollTop()
                 let ot = $('.box2').offset().top
                 console.log(ot)
-                if(sc>=ot){
+                if(sc>=ot-800){
                 $("#fee").text("요금")
                 $("#res").text("예약")
                 $("#cos").text("고객")
@@ -527,16 +527,16 @@ $('.guideimg_close ul').show()
             </div>
             <div class="box7-3 roadtxt">
                 <div>
-                    <a href="#">
+                    <a href="">
                         <h3>교통편 
                             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </h3>
                     </a>
-                    <a href="#"><span>버스 이용시</span></a>
-                    <a href="#"><span>차량 이용시</span></a>
+                    <a href=""><span>버스 이용시</span></a>
+                    <a href=""><span>차량 이용시</span></a>
                 </div>
                 <div>
-                    <a href="#">
+                    <a href="">
                         <h3>주차안내 
                             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </h3>
@@ -545,7 +545,7 @@ $('.guideimg_close ul').show()
             </div>
             <div class="box7-4">
                 <div class="popup">
-                    <div>
+                    <div class="on">
                         <img src="img/popup_bus.png" alt="">
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </div>
@@ -629,8 +629,43 @@ $('.guideimg_close ul').show()
             },5000)
 
 
+            $('.popup i').click(function(){
 
-        })
+            $('.popup').css({'display':'none'})
+                        
+            // 팝업은 opacity 안 됨. 다른 애들이 영향 받기 때문에
+            });
+
+
+            $('.road .roadtxt div:nth-child(1) a:nth-child(2)').click(function(e){
+                e.preventDefault()
+
+                $('.popup').css({'display':'block'})
+                $('.popup div').removeClass('on')
+                $('.popup div:nth-child(1)').addClass('on')
+
+
+            });
+
+            $('.road .roadtxt div:nth-child(1) a:nth-child(3)').click(function(e){
+                e.preventDefault()
+
+                $('.popup').css({'display':'block'})
+                $('.popup div').removeClass('on')
+                $('.popup div:nth-child(2)').addClass('on')
+
+            });
+
+            $('.road .roadtxt div:nth-child(2) a').click(function(e){
+                e.preventDefault()
+
+                $('.popup').css({'display':'block'})
+                $('.popup div').removeClass('on')
+                $('.popup div:nth-child(3)').addClass('on')
+
+            });
+
+        });
 
 
 

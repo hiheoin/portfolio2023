@@ -661,7 +661,8 @@ header {height: 100%;
         top: 250px;}
 .popup {}
 .popup div {position: relative;
-            width: 500px;}
+            width: 500px;
+            display: none;}
 .popup div img {position: absolute;
             width: 100%;}
 .popup div i {position: absolute;
@@ -670,6 +671,8 @@ header {height: 100%;
             font-size: 30px;
             color: #C79FCC;}
 .popup div i:hover {cursor: pointer;}
+
+.popup div.on {display: block;}
 
 
 /* SNS 설정 */

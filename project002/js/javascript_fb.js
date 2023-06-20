@@ -74,6 +74,67 @@ $(document).ready(function(){
         }
         
 
+                 // 두번째 시도
+        // if(delta>0){
+        //     aa++;
+        //     if(aa>3)aa=2
+
+        //     //console.log(aa)
+            
+        // }
+
+        // if(delta<0){
+        //     event.preventDefault()
+        //     aa--;
+        //     //console.log(aa)
+        //     if(aa<=0){aa=0
+
+        //         $('.hero').off('mousewheel');
+                
+        //         // var handleEvent = function(e) {
+        //         //     e.preventDefault();      // disables scrolling by mouse wheel and touch move
+        //         // };
+                    
+        //         // element.addEventListener('scroll', handleEvent, false);
+        //         // element.addEventListener('mousewheel', handleEvent, false);
+        //         // element.addEventListener('touchmove', handleEvent, false);
+                
+        //         // element.addEventListener('mousewheel', false);
+        //     }
+            
+        // }
+        
+
+                // 첫번째시도
+
+        // if(delta>0){
+        //     $('.hero>div').removeClass('on')
+        //     $('.hero>div:nth-child(1)').addClass('on')
+
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+
+        //     $('.hero>div:nth-child(4) span').css({'top':'50%'}).stop().animate({'top':'0%'},1500)
+        
+        //     $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+        
+        // }
+        // if(delta<0){
+        //     $('.hero>div').removeClass('on')
+        //     $('.hero>div:nth-child(2)').addClass('on')
+
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').removeClass('on')
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').stop().animate({},1500)
+        //     $('.hero .hero_t.on>div:nth-child(2)>div').addClass('on')
+
+        //     $('.hero>div:nth-child(4) span').css({'top':'0'}).stop().animate({'top':'50%'},1500)
+        
+        //     $('.hero .hero_t>div:nth-child(1)').css({'right':'-25%'}).stop().animate({'right':'0'},1500)
+        // }
+        
+
+
     });
 
 
