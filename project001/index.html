@@ -12,119 +12,12 @@
     <!-- 폰트 어썸 CDN-->
     <script src="https://kit.fontawesome.com/fdff7e00bc.js" crossorigin="anonymous"></script>
 
-
+    <!-- 제이쿼리 CDN -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-    <script>
+    <!-- 외부스크립트 연결 -->
+    <script src="js/javascript.js"></script>
 
-
-// 로고 제이쿼리
-        $(document).ready(function(){
-
-            $(window).scroll(function(){
-
-                let sc = $(this).scrollTop()
-                let ot = $('.box2').offset().top
-                console.log(ot)
-
-
-                if(sc>=ot){
-                    $('.logo').addClass('on')
-                }
-                else{
-                    $('.logo').removeClass('on')
-                }
-            })
-        })
-
-
-// info 제이쿼리
-$(document).ready(function(){
-
-    $(window).scroll(function(){
-
-        let sc = $(this).scrollTop()
-                let ot = $('.box2').offset().top
-                console.log(ot)
-                if(sc>=ot-800){
-                $("#fee").text("요금")
-                $("#res").text("예약")
-                $("#cos").text("고객")
-                $("#owo").text("O!")
-                $('.info').addClass('on')
-                $('.boxE').addClass('on')
-                }
-                else{
-                $("#fee").text("요금안내")
-                $("#res").text("예약안내")
-                $("#cos").text("고객지원")
-                $("#owo").text("O!WORLD?")
-                $('.info').removeClass('on')
-                $('.boxE').removeClass('on')
-                }
-            })
-    })
-
-
-// 탭 트레일러
-$(document).ready(function(){
-
-    // 시설안내
-        // faciltxt의 li를 클릭했을 때, 각 순번에 맞는 trailer의 ul이 보여라
-
-$('#faciltxt li').click(function(){
-
-    // 변수만들기(순번찾기)
-    let a =$(this).index()
-    console.log(a)
-
-$('.trailer ul').hide()
-$('.trailer ul').eq(a).show()
-
-})
-
-
-// 
-// $('.trailer li').click(function(){
-
-// let i = $(this).index()
-
-// $('.facilimg li').hide()
-// $('.facilimg li').eq(i).show()
-
-// })
-
-
-
-
-
-    // 가이드맵
-
-$('#guidetxt li').click(function(){
-
-// 변수만들기(순번찾기)
-let a =$(this).index()
-
-$('.guideimg ul').hide()
-$('.guideimg ul').eq(a).show()
-
-})
-
-    // 가이드맵 - 운휴정보
-$('#close').click(function(){
-
-$('.guideimg_close ul').show()
-
-        
-})
-
-
-})
-        
-
-
-        
-    </script>
 </head>
 <body>
 
@@ -252,36 +145,41 @@ $('.guideimg_close ul').show()
             </div>
             <div class="box2-3 facilimg">
                 <div>
-                    <ul>
-                        <li>
-                            <img src="img/facil_bird001.jpg" alt="">
-                            <img src="img/facil_bird002.jpg" alt="">
-                            <img src="img/facil_bird003.jpg" alt="">
-                            <img src="img/facil_bird004.jpg" alt="">
-                            <img src="img/facil_bird005.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/facil_joy001.jpg" alt="">
-                            <img src="img/facil_joy002.jpg" alt="">
-                            <img src="img/facil_joy003.jpg" alt="">
-                            <img src="img/facil_joy004.jpg" alt="">
-                            <img src="img/facil_joy005.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/facil_zoo001.jpg" alt="">
-                            <img src="img/facil_zoo002.jpg" alt="">
-                            <img src="img/facil_zoo003.jpg" alt="">
-                            <img src="img/facil_zoo004.jpg" alt="">
-                            <img src="img/facil_zoo005.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/facil_flower002.png" alt="">
-                            <img src="img/facil_flower003.png" alt="">
-                            <img src="img/facil_flower004.jpg" alt="">
-                            <img src="img/facil_flower005.jpg" alt="">
-                            <img src="img/facil_flower001.png" alt="">
-                        </li>
+                    <ul class="facilimg_tra1">
+                        <li><img src="img/facil_bird001.jpg" alt=""></li>
+                        <li><img src="img/facil_bird002.jpg" alt=""></li>
+                        <li><img src="img/facil_bird003.jpg" alt=""></li>
+                        <li><img src="img/facil_bird004.jpg" alt=""></li>
+                        <li><img src="img/facil_bird005.jpg" alt=""></li>
+                        
                     </ul>
+
+                    <ul class="facilimg_tra2">
+                        <li><img src="img/facil_joy005.jpg" alt=""></li>
+                        <li><img src="img/facil_joy002.jpg" alt=""></li>
+                        <li><img src="img/facil_joy003.jpg" alt=""></li>
+                        <li><img src="img/facil_joy001.jpg" alt=""></li>
+                        <li><img src="img/facil_joy004.jpg" alt=""></li>
+                        
+                    </ul>
+
+                    <ul class="facilimg_tra3">
+                        <li><img src="img/facil_zoo001.jpg" alt=""></li>
+                        <li><img src="img/facil_zoo002.jpg" alt=""></li>
+                        <li><img src="img/facil_zoo003.jpg" alt=""></li>
+                        <li><img src="img/facil_zoo004.jpg" alt=""></li>
+                        <li><img src="img/facil_zoo005.jpg" alt=""></li>
+                        
+                    </ul>
+
+                    <ul class="facilimg_tra4">
+                        <li><img src="img/facil_flower003.png" alt=""></li>
+                        <li><img src="img/facil_flower002.png" alt=""></li>
+                        <li><img src="img/facil_flower001.png" alt=""></li>
+                        <li><img src="img/facil_flower004.jpg" alt=""></li>
+                        <li><img src="img/facil_flower005.jpg" alt=""></li>
+                    </ul>
+                    
                 </div>
             </div>
             <div class="box2-4">
@@ -293,17 +191,17 @@ $('.guideimg_close ul').show()
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div id="aaa">
                                 <img src="img/facil_bird002.jpg" alt="">
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div id="bbb">
                                 <img src="img/facil_bird003.jpg" alt="">
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div id="ccc">
                                 <img src="img/facil_bird004.jpg" alt="">
                             </div>
                         </li>
@@ -316,7 +214,7 @@ $('.guideimg_close ul').show()
                     <ul>
                         <li>
                             <div>
-                                <img src="img/facil_joy001.png" alt="">
+                                <img src="img/facil_joy005.jpg" alt="">
                             </div>
                         </li>
                         <li>
@@ -331,12 +229,12 @@ $('.guideimg_close ul').show()
                         </li>
                         <li>
                             <div>
-                                <img src="img/facil_joy004.jpg" alt="">
+                                <img src="img/facil_joy001.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div>
-                                <img src="img/facil_joy005.jpg" alt="">
+                                <img src="img/facil_joy004.jpg" alt="">
                             </div>
                         </li>
                     </ul>
@@ -426,9 +324,18 @@ $('.guideimg_close ul').show()
                     </ul>
                     <div class="guideimg_close">
                         <ul>
-                            <li><a href="#"><img src="img/guide_icon001.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/guide_icon002.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/guide_icon003.png" alt=""></a></li>
+                            <li>
+                                <img src="img/guide_icon001.png" alt="">
+                                <p>6/21 점검</p>
+                            </li>
+                            <li>
+                                <img src="img/guide_icon002.png" alt="">
+                                <p>동절기 : 미운행</p>
+                            </li>
+                            <li>
+                                <img src="img/guide_icon003.png" alt="">
+                                <p>6/21 정상운행</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -587,90 +494,6 @@ $('.guideimg_close ul').show()
 
 
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-
-        $(document).ready(function(){
-
-            let a1 = 0;
-
-            setInterval(function(){
-
-                a1++;
-                if(a1==3)a1=0;
-
-                $('#trailer1 li').eq(a1-1).css({'left':'0'}).stop().animate({'left':'548px'},1500);
-                $('#trailer1 li').eq(a1).css({'left':'-548px'}).stop().animate({'left':'0'},1500);
-
-            },5000)
-            
-            let a2 = 0;
-
-            setInterval(function(){
-
-                a2++;
-                if(a2==3)a2=0;
-
-                $('#trailer2 li').eq(a2-1).css({'left':'0'}).stop().animate({'left':'320px'},1500);
-                $('#trailer2 li').eq(a2).css({'left':'-320px'}).stop().animate({'left':'0'},1500);
-
-            },5000)
-
-            let a3 = 0;
-
-            setInterval(function(){
-
-                a3++;
-                if(a3==3)a3=0;
-
-                $('#trailer3 li').eq(a3-1).css({'opacity':'1'}).stop().animate({'opacity':'0'},700);
-                $('#trailer3 li').eq(a3).css({'opacity':'0'}).stop().animate({'opacity':'1'},700);
-
-            },5000)
-
-
-            $('.popup i').click(function(){
-
-            $('.popup').css({'display':'none'})
-                        
-            // 팝업은 opacity 안 됨. 다른 애들이 영향 받기 때문에
-            });
-
-
-            $('.road .roadtxt div:nth-child(1) a:nth-child(2)').click(function(e){
-                e.preventDefault()
-
-                $('.popup').css({'display':'block'})
-                $('.popup div').removeClass('on')
-                $('.popup div:nth-child(1)').addClass('on')
-
-
-            });
-
-            $('.road .roadtxt div:nth-child(1) a:nth-child(3)').click(function(e){
-                e.preventDefault()
-
-                $('.popup').css({'display':'block'})
-                $('.popup div').removeClass('on')
-                $('.popup div:nth-child(2)').addClass('on')
-
-            });
-
-            $('.road .roadtxt div:nth-child(2) a').click(function(e){
-                e.preventDefault()
-
-                $('.popup').css({'display':'block'})
-                $('.popup div').removeClass('on')
-                $('.popup div:nth-child(3)').addClass('on')
-
-            });
-
-        });
-
-
-
-
-    </script>
 
 
 
