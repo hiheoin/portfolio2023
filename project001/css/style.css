@@ -114,17 +114,53 @@ header {height: 100%;
     border-radius: 30px 30px;
     margin-left: 15px;
     box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);}
-.gnb ul {display: flex;
+.gnb>ul {display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding-top: 5px;}
-.gnb ul li {font-size: 20px;
+.gnb>ul>li {font-size: 20px;
             color: #513155;
+            width: 100%;
+            text-align: center;
             padding: 22px 30px;
             font-weight: bold;}
-.gnb ul li a {color: #513155;}
-.gnb ul li:hover {opacity: 0.8;}
+.gnb>ul>li a {color: #513155;}
+.gnb>ul>li:hover a {opacity: 0.7;}
+
+
+/* 2뎁스 설정 */
+.gnb>ul>li {position: relative;}
+.gnb>ul>li>ul {position: absolute;
+                display: none;
+                width: 190px;
+                left: 205px;
+                top: 0;
+                background-color: rgba(900, 900, 900, 0.7);
+                border-radius: 30px 30px;
+                box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);}
+.gnb>ul>li:hover>ul {display: block;}
+.gnb>ul>li>ul>li {font-size: 16px;
+                    color: #513155;
+                    padding: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #513155;
+                    cursor: pointer;}
+.gnb>ul>li>ul>li:hover {opacity: 0.7;}
+
+/* .gnb>ul>li>a{display: block;
+                width: 150px;
+                background-color: #222;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 50px;
+                border-bottom: #b9fb05 1px solid;
+                margin-bottom: 3px;} */
+                
 
 
 
