@@ -21,7 +21,7 @@ $(document).ready(function(){
     let wd = $(window).width();
         $('header .gnb') .width(wd-600)
         $(window).resize(function(){
-// 화면 크기가 바뀔 때마다 와이드값 다시 구하게
+        // 화면 크기가 바뀔 때마다 와이드값 다시 구하게
         let wd = $(window).width();
         $('header .gnb') .width(wd-600)
         })
@@ -270,12 +270,6 @@ $(document).ready(function(){
                 // })
 
 
-
-
-
-
-
-
     });
 
 
@@ -310,10 +304,6 @@ $(document).ready(function(){
 
 
 
-    
-
-        
-
 
 
         // 누르면 상단으로 이동해라
@@ -328,11 +318,7 @@ $(document).ready(function(){
 
 
 
-    $('h1').click(function(){
 
-        window.location.href = "../index.html";
-
-    });
     
 
-})
+}); //끝

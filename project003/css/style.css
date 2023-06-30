@@ -1,0 +1,154 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {vertical-align: bottom;}
+
+body {width: 100%;
+    height: 100vh;}
+
+section {width: 100%;
+        height: 100%;}
+
+
+/* index1 설정 */
+.intro {background-image: url(../img/main_back.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;}
+.intro>div {height: 100%;
+            text-align: center;}
+.intro>div>img {height: 100%;}
+
+        /* 플레이 버튼 */
+.intro span {width: 4%;
+            position: fixed;
+            left: 48.1%;
+            bottom: 19%;
+            z-index: 2;
+            cursor: pointer;
+            animation: ani 0.7s linear infinite;}
+.intro span img {width: 100%;
+                height: 100%;}
+
+
+.intro ul {width: 4%;
+            height: auto;
+            position: fixed;
+            right: 18%;
+            top: 15%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;}
+.intro ul li {width: 90%;
+                height: 100%;
+                margin-bottom: 40%;
+                cursor: pointer;}
+.intro ul li:nth-child(4) {width: 110%;
+                            height: auto;}
+.intro ul li img {width: 100%;
+                height: 100%;}
+
+.intro span:hover {transform: scale(1.1);}
+.intro ul li:hover {transform: scale(1.1);}
+
+@keyframes ani {
+    0% {transform: scale(1);
+        opacity: 0.6;}
+    100% {transform: scale(1.1);
+        opacity: 1;}
+}
+
+
+/* index2 설정 */
+
+        /* 내비 설정 */
+header {position: fixed;
+        height: 7%;
+        width: 34%;
+        left: -14%;
+        bottom: 55%;
+        /* background-color: red; */
+        transform: rotate(-90deg);
+        border-bottom: 7px #fff solid;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 999;}
+header ul {height: 100%;
+            width: 94%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: salmon; */}
+            
+header ul li {height: 100%;
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            /* background-color: aqua; */
+            text-align: center;
+            margin: 1px;}
+header ul li a {height: 100%;
+                width: 100%;
+                color: #fff;
+                font-size: 36px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+            /* background-color: #fff; */
+            }
+
+.btn {position: fixed;
+    left: 3%;
+    bottom: 3%;
+    width: 8%;
+    height: auto;
+    z-index: 1000;}
+.btn img {width: 45%;
+        height: auto;
+        }
+
+
+
+.main {background-image: url(../img/main_back.png);
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;}
+.back {width: 100%;
+        height: 100%;
+        position: relative;}
+.back>div:nth-child(1) {height: 100%;
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;}
+.back>div:nth-child(2) {width: 40%;
+                        height: auto;
+                        position: fixed;
+                        right: -3%;
+                        bottom: -5%;}
+.back>div:nth-child(3) {width: 13%;
+                        height: auto;
+                        position: fixed;
+                        right: -2%;
+                        bottom: -4%;}
+.back>div:nth-child(1) img {height: 100%;}
+.back>div:nth-child(2) img {width: 100%;}
+.back>div:nth-child(3) img {width: 100%;}
+
+
+
+
+/* sub1 설정 */
+/* sub2 설정 */
+/* sub3 설정 */
+/* sub4 설정 */

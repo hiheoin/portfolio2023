@@ -217,8 +217,12 @@ $(document).ready(function(){
             a2++;
             if(a2==3)a2=0;
 
-            $('#trailer2 li').eq(a2-1).css({'left':'0'}).stop().animate({'left':'320px'},1500);
-            $('#trailer2 li').eq(a2).css({'left':'-320px'}).stop().animate({'left':'0'},1500);
+            // $('#trailer2 li').eq(a2-1).css({'right':'0'}).stop().animate({'right':'320px'},1500);
+            // $('#trailer2 li').eq(a2).css({'right':'-320px'}).stop().animate({'right':'0'},1500);
+            $('#trailer2 li').eq(a2-1).css({'opacity':'1'}).stop().animate({'opacity':'0'},1500);
+            $('#trailer2 li').eq(a2).css({'opacity':'0'}).stop().animate({'opacity':'1'},1500);
+
+
 
     },5000);
 

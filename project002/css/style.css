@@ -54,12 +54,14 @@ header .logo {width: 600px;
                 height: 140px;}
 header .logo h1 {width: 100%;
                 height: 100%;
-                background-image: url(../img/logo_top.png);
+                /*background-image: url(../img/logo_top.png);
                 background-position: center center;
                 background-size: contain;
-                background-repeat: no-repeat;
-                text-indent: -9999px;
-                cursor: pointer;}
+                background-repeat: no-repeat;*/}
+header .logo h1 a {width: 100%;
+                    height: 100%;}
+header .logo h1 img {width: 100%;
+                        height: 100%;}
 
 header .gnb {}
 header .gnb ul {display: flex;
@@ -778,12 +780,14 @@ footer .logo img {width: 100%;
             height: 140px;}
 .sub_header .logo h1 {width: 100%;
             height: 100%;
-            background-image: url(../img/logo_top_white.png);
+            /*background-image: url(../img/logo_top_white.png);
             background-position: center center;
             background-size: contain;
-            background-repeat: no-repeat;
-            text-indent: -9999px;
-            cursor: pointer;}
+            background-repeat: no-repeat;*/}
+.sub_header .logo h1 a {width: 100%;
+                        height: 100%;}
+.sub_header .logo h1 img {width: 100%;
+                            height: 100%;}
 
 .sub_header .gnb {}
 .sub_header .gnb ul {display: flex;
