@@ -1,7 +1,12 @@
 @charset 'UTF-8';
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@font-face {font-family: 'DungGeunMo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 
 /* 전체설정 */
 * {margin: 0;
@@ -15,10 +20,11 @@ body {width: 100%;
     height: 100vh;}
 
 section {width: 100%;
-        height: 100%;}
+        height: 100%;
+        overflow: hidden;}
 
 
-/* index1 설정 */
+/* index1 설정 ///////////////////////////// */
 .intro {background-image: url(../img/main_back.png);
         background-position: center center;
         background-size: cover;
@@ -70,10 +76,10 @@ section {width: 100%;
 }
 
 
-/* index2 설정 */
+/* index2 설정 ///////////////////////////// */
 
         /* 내비 설정 */
-header {position: fixed;
+.main_header {position: fixed;
         height: 7%;
         width: 34%;
         left: -14%;
@@ -85,28 +91,29 @@ header {position: fixed;
         justify-content: center;
         box-sizing: border-box;
         z-index: 999;}
-header ul {height: 100%;
+.main_header ul {height: 100%;
             width: 94%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             /* background-color: salmon; */}
             
-header ul li {height: 100%;
+.main_header ul li {height: 100%;
             width: 25%;
             box-sizing: border-box;
             padding: 15px;
             /* background-color: aqua; */
             text-align: center;
             margin: 1px;}
-header ul li a {height: 100%;
+.main_header ul li a {height: 100%;
                 width: 100%;
                 color: #fff;
                 font-size: 36px;
                 font-family: 'Oswald', sans-serif;
                 font-weight: bold;
-            /* background-color: #fff; */
-            }
+            /* background-color: #fff; */}
+
+.main_header ul li:hover a {color: #003A90;}
 
 .btn {position: fixed;
     left: 3%;
@@ -114,10 +121,26 @@ header ul li a {height: 100%;
     width: 8%;
     height: auto;
     z-index: 1000;}
+.btn a {position: relative;}
 .btn img {width: 45%;
         height: auto;
-        }
-
+        cursor: pointer;}
+.btn img:hover {transform: scale(0.95);
+                opacity: 0.9;}
+.btn span {width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        left: -10%;
+        bottom: 350%;
+        background-color: #fff;
+        border: 1px solid #000;
+        box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.8);
+        text-align: center;
+        display: none;
+        font-size: 14px;}
+.btn a:nth-child(2) span {width: 170%;}
+.btn a:hover span {display: block;}
 
 
 .main {background-image: url(../img/main_back.png);
@@ -127,28 +150,894 @@ header ul li a {height: 100%;
 .back {width: 100%;
         height: 100%;
         position: relative;}
-.back>div:nth-child(1) {height: 100%;
+        /* 파란 네모 배경 */
+.back>div:nth-child(1) {width: 40%;
+                        height: auto;
                         position: fixed;
                         left: 0;
-                        bottom: 0;}
+                        bottom: 0;
+                        z-index: 2;}
+.back>div:nth-child(1) img {width: 100%;}
+        /* 코너 찢어진 종이 & 락 글씨 */
 .back>div:nth-child(2) {width: 40%;
                         height: auto;
                         position: fixed;
                         right: -3%;
-                        bottom: -5%;}
+                        bottom: -5%;
+                        z-index: 2;}
+.back>div:nth-child(2) img {width: 100%;}
 .back>div:nth-child(3) {width: 13%;
                         height: auto;
                         position: fixed;
                         right: -2%;
-                        bottom: -4%;}
-.back>div:nth-child(1) img {height: 100%;}
-.back>div:nth-child(2) img {width: 100%;}
+                        bottom: -4%;
+                        z-index: 2;}
 .back>div:nth-child(3) img {width: 100%;}
 
+.back_2 {width: 100%;
+        height: 100%;
+        position: relative;}
+        /* 필름 위 */
+.back_2>div:nth-child(1) {height: 130%;
+                        width: auto;
+                        position: fixed;
+                        right: -5%;
+                        top: -2%;
+                        z-index: 1;}
+.back_2>div:nth-child(1) img {height: 100%;}
+        /* 필름 아래 */
+.back_2>div:nth-child(2) {height: 130%;
+                        width: auto;
+                        position: fixed;
+                        right: -14%;
+                        top: 0;
+                        z-index: 0;}
+.back_2>div:nth-child(2) img {height: 100%;}
+        /* 테이프 검정 */
+.back_2>div:nth-child(3) {height: 15%;
+                            width: auto;
+                            position: fixed;
+                            left: 30%;
+                            top: 25%;
+                            z-index: 0;}
+.back_2>div:nth-child(3) img {height: 100%;}
+        /* 테이프 노랑 */
+.back_2>div:nth-child(4) {width: 15%;
+                        height: auto;
+                        position: fixed;
+                        right: 20%;
+                        bottom: 0;
+                        z-index: 1;}
+.back_2>div:nth-child(4) img {width: 100%;}
+        /* 아이팟 */
+.back_2>div:nth-child(5) {width: 21%;
+                        height: auto;
+                        position: fixed;
+                        right: 17%;
+                        bottom: 5%;
+                        z-index: 0;}
+.back_2>div:nth-child(5) img {width: 100%;}
+        /* lp */
+.back_2>div:nth-child(6) {width: 13%;
+                        height: auto;
+                        position: fixed;
+                        right: 11%;
+                        bottom: 5%;
+                        z-index: 1;}
+.back_2>div:nth-child(6) img {width: 100%;}
+        /* 포스터 */
+.back_2>div:nth-child(7) {width: 35%;
+                        height: auto;
+                        position: fixed;
+                        right: 35%;
+                        bottom: -72%;
+                        z-index: 1;
+                        transform: rotate(20deg);
+                        transition: all 0.8s;}
+.back_2>div:nth-child(7) img {width: 100%;}
+.back_2>div:nth-child(7):hover {right: 25%;
+                                bottom: -15%;}
+        /* 하트 */
+.back_2>div:nth-child(8) {width: 6%;
+                        height: auto;
+                        position: fixed;
+                        right: 7%;
+                        top: 32%;
+                        z-index: 2;}
+.back_2>div:nth-child(8) img {width: 100%;
+                                height: 100%;}
 
+.main_jh {width: 100%;
+        height: 100%;
+        position: relative;}
+        /* 서핑 */
+.main_jh>div:nth-child(1) {width: 23%;
+                            height: auto;
+                            position: fixed;
+                            left: 23.6%;
+                            top: -5%;
+                            z-index: 3;
+                            transform: rotate(2deg);}
+.main_jh>div:nth-child(1) img {width: 100%;}
+        /* 노트 */
+.main_jh>div:nth-child(2) {width: 15%;
+                            height: auto;
+                            position: fixed;
+                            left: 10%;
+                            top: 20%;
+                            z-index: 3;}
+.main_jh>div:nth-child(2) img {width: 100%;}
+        /* 폴라로이드 */
+.main_jh>div:nth-child(3) {height: 60%;
+                            width: 24%;
+                            position: fixed;
+                            left: 20%;
+                            bottom: 7%;
+                            z-index: 3;}
+.main_jh>div:nth-child(3) img {height: 100%;
+                                width: 100%;}
+        /* 클립 */
+.main_jh>div:nth-child(4) {height: 14%;
+                            width: auto;
+                            position: fixed;
+                            left: 26%;
+                            top: 24%;
+                            z-index: 6;}
+.main_jh>div:nth-child(4) img {height: 100%;
+                                width: 100%;}
+        /* 낙서-원 */
+.main_jh>div:nth-child(5) {width: 20%;
+                        height: auto;
+                        position: fixed;
+                        left: 24%;
+                        top: 30%;
+                        z-index: 5;}
+.main_jh>div:nth-child(5) img {height: 100%;
+                        width: 100%;}
+        /* 낙서-화살표(폴라) */
+.main_jh>div:nth-child(6) {width: 15%;
+                            height: auto;
+                            position: fixed;
+                            left: 40%;
+                            top: 40%;
+                            z-index: 0;}
+.main_jh>div:nth-child(6) img {height: 100%;
+                            width: 100%;}
+        /* 낙서-화살표(포스터) */
+.main_jh>div:nth-child(7) {width: 3.5%;
+                            height: auto;
+                            position: fixed;
+                            right: 40%;
+                            bottom: 18%;
+                            z-index: 0;}
+.main_jh>div:nth-child(7) img {height: 100%;
+                            width: 100%;}
+
+
+.txtArt {width: 50%;
+        height: 100%;
+        position: relative;}
+        /* c */
+.txtArt>div:nth-child(1) {width: 5%;
+                            height: auto;
+                            position: fixed;
+                            left: 8%;
+                            bottom: 15%;
+                            z-index: 6;}
+.txtArt>div:nth-child(1) img {height: 100%;
+                            width: 100%;}
+        /* h */
+.txtArt>div:nth-child(2) {width: 6%;
+            height: auto;
+            position: fixed;
+            left: 11%;
+            bottom: 15%;
+            z-index: 6;}
+.txtArt>div:nth-child(2) img {height: 100%;
+            width: 100%;}
+        /* o */
+.txtArt>div:nth-child(3) {width: 5%;
+            height: auto;
+            position: fixed;
+            left: 15%;
+            bottom: 12%;
+            z-index: 6;}
+.txtArt>div:nth-child(3) img {height: 100%;
+            width: 100%;}
+        /* i */
+.txtArt>div:nth-child(4) {width: 4%;
+            height: auto;
+            position: fixed;
+            left: 18.5%;
+            bottom: 11%;
+            z-index: 6;}
+.txtArt>div:nth-child(4) img {height: 100%;
+            width: 100%;}
+        /* j */
+.txtArt>div:nth-child(5) {width: 7%;
+            height: auto;
+            position: fixed;
+            left: 18.5%;
+            bottom: 7%;
+            z-index: 6;}
+.txtArt>div:nth-child(5) img {height: 100%;
+            width: 100%;}
+        /* u */
+.txtArt>div:nth-child(6) {width: 5%;
+            height: auto;
+            position: fixed;
+            left: 23%;
+            bottom: 7%;
+            z-index: 6;}
+.txtArt>div:nth-child(6) img {height: 100%;
+            width: 100%;}
+        /* n */
+.txtArt>div:nth-child(7) {width: 5%;
+            height: auto;
+            position: fixed;
+            left: 26%;
+            bottom: 10%;
+            z-index: 6;}
+.txtArt>div:nth-child(7) img {height: 100%;
+            width: 100%;}
+        /* g */
+.txtArt>div:nth-child(8) {width: 6%;
+            height: auto;
+            position: fixed;
+            left: 28%;
+            bottom: 6%;
+            z-index: 6;}
+.txtArt>div:nth-child(8) img {height: 100%;
+            width: 100%;}
+        /* h */
+.txtArt>div:nth-child(9) {width: 6%;
+            height: auto;
+            position: fixed;
+            left: 31%;
+            bottom: 10%;
+            z-index: 5;}
+.txtArt>div:nth-child(9) img {height: 100%;
+            width: 100%;}
+        /* o */
+.txtArt>div:nth-child(10) {width: 4%;
+            height: auto;
+            position: fixed;
+            left: 36%;
+            bottom: 8%;
+            z-index: 6;}
+.txtArt>div:nth-child(10) img {height: 100%;
+            width: 100%;}
+        /* o */
+.txtArt>div:nth-child(11) {width: 6%;
+            height: auto;
+            position: fixed;
+            left: 33%;
+            bottom: 10%;
+            z-index: 6;}
+.txtArt>div:nth-child(11) img {height: 100%;
+            width: 100%;}
+        /* n */
+.txtArt>div:nth-child(12) {width: 6%;
+            height: auto;
+            position: fixed;
+            left: 37%;
+            bottom: 10%;
+            z-index: 5;}
+.txtArt>div:nth-child(12) img {height: 100%;
+            width: 100%;}
+
+.txtArt>div:hover {transform: rotate(15deg);}
+
+    /*  텍스트 설정 */
+.main .txt {font-family: 'Covered By Your Grace', cursive;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 110px;}
+
+.main .txt>div:nth-child(1) {width: 25%;
+                        height: 33%;
+                        position: fixed;
+                        right: 20%;
+                        top: 17%;
+                        /* background-color: red; */
+                        color: #fff;
+                        z-index: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;}
+.main .txt>div:nth-child(1) span {display: block;
+                            position: fixed;
+                            right: 32%;
+                            top: 13%;
+                            z-index: 1;
+                            transform: rotate(-12deg);}
+.main .txt>div:nth-child(1) em {display: block;
+                            position: fixed;
+                            right: 20%;
+                            top: 14%;
+                            z-index: 1;
+                            transform: rotate(5deg);}
+.main .txt>div:nth-child(1) b {display: block;
+                        font-size: 140px;
+                        color: #F5C02C;}
+.main .txt>div:nth-child(1) p {position: fixed;
+                        right: 26%;
+                        top: 37%;
+                        z-index: 1;}
+.main .txt>div:nth-child(1):hover span {color: #F5C02C}
+.main .txt>div:nth-child(1):hover em {color: #F5C02C}
+.main .txt>div:nth-child(1):hover b {color: #fff;}
+.main .txt>div:nth-child(1):hover p {color: #F5C02C}
+
+.main .txt>div:nth-child(2) {position: fixed;
+                        width: 5%;
+                        height: auto;
+                        bottom: 22%;
+                        right: 45%;
+                        font-size: 50px;
+                        z-index: 0;
+                        color: #fff;
+                        transform: rotate(15deg);}
 
 
 /* sub1 설정 */
+        /* 서브1 내비 */
+.sub1_header {position: fixed;
+        height: 7%;
+        width: 40%;
+        left: -17%;
+        bottom: 49%;
+        /* background-color: red; */
+        transform: rotate(-90deg);
+        border-bottom: 7px #003A90 solid;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 999;}
+.sub1_header>ul {height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: salmon; */}
+
+.sub1_header>ul>li:nth-child(1) {height: 100%;
+            width: 20%;
+            box-sizing: border-box;
+            padding: 15px;
+            /* background-color: aqua; */
+            text-align: left;
+            margin: 1px;}
+.sub1_header>ul>li:nth-child(1)>ul {width: 100%;
+                                height: 100%;}
+.sub1_header>ul>li:nth-child(1)>ul>li {width: 100%;
+                                        height: 100%;}
+.sub1_header>ul>li:nth-child(1)>ul>li>a {height: 100%;
+                                        width: 100%;
+                                        font-size: 36px;
+                                        font-family: 'Oswald', sans-serif;
+                                        font-weight: bold;
+                                        color: #003A90;
+                                        -webkit-text-stroke: 1px #003A90;}
+
+.sub1_header>ul>li:nth-child(2) {height: 100%;
+                width: 65%;
+                box-sizing: border-box;
+                padding: 15px;
+                /* background-color: aqua; */
+                text-align: center;
+                margin: 1px;}
+.sub1_header>ul>li:nth-child(2)>ul {width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;}
+.sub1_header>ul>li:nth-child(2)>ul>li {width: 33%;
+                        height: 100%;}
+.sub1_header>ul>li:nth-child(2)>ul>li>a {height: 100%;
+                width: 100%;
+                color: #fff;
+                -webkit-text-stroke: 2px #003A90;
+                font-size: 36px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+            /* background-color: #fff; */}
+
+.profile {width: 100%;
+        height: 100%;
+        background-image: url(../img/profile_back.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;}
+.profile .img {width: 100%;
+                height: 100%;
+                position: relative;}
+        /* 로고 */
+.profile .img>div:nth-child(1) {width: 50%;
+                        height: auto;
+                        position: absolute;
+                        right: 0;
+                        top: -10%;
+                        z-index: 0;}
+.profile .img>div:nth-child(1) img {width: 100%;}
+        /* 선글라스 정훈 */
+.profile .img>div:nth-child(2) {width: 30%;
+                                height: auto;
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 1;}
+.profile .img>div:nth-child(2) img {width: 100%;}
+        /* 중심잡기 정훈 */
+.profile .img>div:nth-child(3) {width: 20%;
+                height: auto;
+                position: absolute;
+                right: 20%;
+                bottom: -5%;
+                z-index: 1;}
+.profile .img>div:nth-child(3) img {width: 100%;}
+       /* 접힌 정훈 */
+.profile .img>div:nth-child(4) {width: 25%;
+                                height: auto;
+                                position: absolute;
+                                right: -5%;
+                                top: -5%;
+                                z-index: 1;}
+.profile .img>div:nth-child(4) img {width: 100%;}
+       /* 종이 밑 */
+.profile .img>div:nth-child(5) {width: 40%;
+                                height: auto;
+                                position: absolute;
+                                right: 0;
+                                bottom: -10%;
+                                z-index: 2;}
+.profile .img>div:nth-child(5) img {width: 100%;}
+        /* 종이 위 */
+.profile .img>div:nth-child(6) {width: 30%;
+                                height: auto;
+                                position: absolute;
+                                right: -5%;
+                                bottom: -10%;
+                                z-index: 3;}
+.profile .img>div:nth-child(6) img {width: 100%;}
+        /* 옆 정훈 */
+.profile .img>div:nth-child(7) {width: 30%;
+                                height: auto;
+                                position: absolute;
+                                left: -10%;
+                                bottom: 10%;
+                                z-index: 0;}
+.profile .img>div:nth-child(7) img {width: 100%;}
+
+
+.profile .txt {position: fixed;
+                left: 9%;
+                top: 13%;
+                width: 40%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;}
+.profile .txt span:nth-child(1) {text-align: right;}
+.profile .txt span:nth-child(1) em {display: block;
+                                font-family: 'DungGeunMo';
+                                font-style: normal;
+                                font-size: 33px;
+                                color: #003A90;
+                                padding: 10px 0;}
+
+.profile .txt span:nth-child(2) {text-align: left;}
+.profile .txt span:nth-child(2) em {display: block;
+                                font-family: 'DungGeunMo';
+                                font-style: normal;
+                                font-size: 33px;
+                                color: #002151;
+                                padding: 10px 0;
+                                letter-spacing: -3px;}
+.profile .txt span:nth-child(2) a {color: #002151;
+                                border-bottom: #002151 2px solid;}
+
+
 /* sub2 설정 */
+        /* 서브2 내비 */
+.sub2_header {position: fixed;
+                height: 7%;
+                width: 40%;
+                left: -17%;
+                bottom: 49%;
+                /* background-color: red; */
+                transform: rotate(-90deg);
+                border-bottom: 7px #1C311E solid;
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
+                z-index: 999;}
+.sub2_header>ul {height: 100%;
+                    width: 95%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* background-color: salmon; */}
+        
+.sub2_header>ul>li:nth-child(1) {height: 100%;
+                    width: 20%;
+                    box-sizing: border-box;
+                    padding: 15px;
+                    /* background-color: aqua; */
+                    text-align: left;
+                    margin: 1px;}
+.sub2_header>ul>li:nth-child(1)>ul {width: 100%;
+                                        height: 100%;}
+.sub2_header>ul>li:nth-child(1)>ul>li {width: 100%;
+                                                height: 100%;}
+.sub2_header>ul>li:nth-child(1)>ul>li>a {height: 100%;
+                                                width: 100%;
+                                                font-size: 36px;
+                                                font-family: 'Oswald', sans-serif;
+                                                font-weight: bold;
+                                                color: #fff;
+                                                -webkit-text-stroke: 2px #1C311E;}
+        
+.sub2_header>ul>li:nth-child(2) {height: 100%;
+                        width: 30%;
+                        box-sizing: border-box;
+                        padding: 15px;
+                        /* background-color: aqua; */
+                        text-align: center;
+                        margin: 1px;}
+.sub2_header>ul>li:nth-child(2)>ul {width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;}
+.sub2_header>ul>li:nth-child(2)>ul>li {width: 33%;
+                                height: 100%;}
+.sub2_header>ul>li:nth-child(2)>ul>li>a {height: 100%;
+                        width: 100%;
+                        color: #1C311E;
+                        -webkit-text-stroke: 1px #1C311E;
+                        font-size: 36px;
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: bold;
+                    /* background-color: #fff; */}
+.sub2_header>ul>li:nth-child(3) {height: 100%;
+                        width: 45%;
+                        box-sizing: border-box;
+                        padding: 15px;
+                        /* background-color: aqua; */
+                        text-align: center;
+                        margin: 1px;}
+.sub2_header>ul>li:nth-child(3)>ul {width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;}
+.sub2_header>ul>li:nth-child(3)>ul>li {width: 33%;
+                                height: 100%;}
+.sub2_header>ul>li:nth-child(3)>ul>li>a {height: 100%;
+                        width: 100%;
+                        color: #fff;
+                        -webkit-text-stroke: 2px #1C311E;
+                        font-size: 36px;
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: bold;
+                    /* background-color: #fff; */}
+
+.song {width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url(../img/song_lp_mhB.png);
+        background-size: contain;
+        background-position: left center;
+        background-repeat: repeat;}
+        
+.song .lp {width: 100%;
+        height: 100%;}
+
+.song .lp>div {width: 100%;
+                height: 100%;
+                position: relative;
+                display: none;}
+.song .lp>div>div:nth-child(1) {height: 100%;
+                                position: absolute;
+                                left: 15%;
+                                top: 0;
+                                animation: ani1 18s linear infinite;}
+.song .lp>div>div:nth-child(1) img {height: 100%;
+                                        }
+.song .lp>div>div:nth-child(1) ul {position: absolute;
+                                z-index: 999;
+                                width: 25%;
+                                height: auto;
+                                left: 40%;
+                                top: 49%;}
+.song .lp>div>div:nth-child(1) ul li {width: 70%;
+                                        font-size: 12px;
+                                        font-family: 'Lexend Exa', sans-serif;
+                                        padding: 2px;
+                                        cursor: pointer;
+                                        border-bottom: 1px #1C311E solid;
+                                        color: #1C311E;}
+.song .lp>div>div:nth-child(1) ul li:nth-child(1) {border: none;
+                                                margin-bottom: 3px;
+                                                cursor: auto;}
+
+.song .lp>div>div:nth-child(2) {height: 100%;
+                                position: absolute;
+                                right: 0;
+                                top: 0;}
+.song .lp>div>div:nth-child(2) img {height: 100%;}
+
+.song .lp>div.on {display: block;}
+
+.song .lp>div>div:nth-child(3) {position: absolute;
+                                right: 14%;
+                                bottom: 2%;
+                                z-index: 999;
+                                width: 22%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;}
+.song .lp>div>div:nth-child(3) span {font-family: 'Covered By Your Grace', cursive;
+                                color: #fff;
+                                font-size: 55px;
+                                -webkit-text-stroke: #1C311E 2px;
+                                cursor: pointer;}
+
+                                /* 스크립트에서 .song .lp>div>div:nth-child(3) span 클릭하면 color와 lp 종류, 백그라운드 바뀌게 설정 */
+
+
+@keyframes ani1 {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(360deg);} 
+        }
+
+
+.song .stic {width: 50%;
+                height: 150%;
+                position: relative;}
+        
+.song .stic>div {}
+
+.song .stic>div:nth-child(1) {width: 25%;
+                                position: fixed;
+                                left: 10%;
+                                top: -50%;}
+.song .stic>div:nth-child(1) img {width: 100%;}
+
+.song .stic>div:nth-child(2) {position: fixed;
+                                width: 8%;
+                                height: auto;
+                                left: 8%;
+                                bottom: 15%;}
+
+.song .stic>div>div {display: none;}
+.song .stic>div>div.on {display: block;}
+
+.song .stic>div:nth-child(2)>div:nth-child(1) {width: 100%;
+                                                height: auto;
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                cursor: pointer;}
+.song .stic>div:nth-child(2)>div:nth-child(1) img {width: 100%;}
+.song .stic>div:nth-child(2)>div:nth-child(2) {width: 100%;
+                                                height: auto;
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                cursor: pointer;}
+.song .stic>div:nth-child(2)>div:nth-child(2) img {width: 100%;}
+
+
+
 /* sub3 설정 */
+        /* 서브3 내비 */
+.sub3_header {position: fixed;
+        height: 7%;
+        width: 40%;
+        left: -17%;
+        bottom: 49%;
+        /* background-color: red; */
+        transform: rotate(-90deg);
+        border-bottom: 7px #003A90 solid;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 999;}
+.sub3_header>ul {height: 100%;
+            width: 92%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            /* background-color: salmon; */}
+
+.sub3_header>ul>li:nth-child(1) {height: 100%;
+            width: 50%;
+            box-sizing: border-box;
+            padding: 15px;
+            padding-left: 0;
+            /* background-color: aqua; */
+            text-align: left;
+            margin: 1px;}
+.sub3_header>ul>li:nth-child(1)>ul {width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;}
+.sub3_header>ul>li:nth-child(1)>ul>li {width: 40%;
+                                        height: 100%;}
+.sub3_header>ul>li:nth-child(1)>ul>li>a {height: 100%;
+                                        width: 100%;
+                                        font-size: 36px;
+                                        font-family: 'Oswald', sans-serif;
+                                        font-weight: bold;
+                                        color: #fff;
+                                        -webkit-text-stroke: 2px #003A90;}
+
+.sub3_header>ul>li:nth-child(2) {height: 100%;
+                width: 30%;
+                box-sizing: border-box;
+                padding: 15px;
+                padding-right: 50px;
+                /* background-color: aqua; */
+                text-align: center;
+                margin: 1px;}
+.sub3_header>ul>li:nth-child(2)>ul {width: 100%;
+                        height: 100%;}
+.sub3_header>ul>li:nth-child(2)>ul>li {width: 100%;
+                        height: 100%;}
+.sub3_header>ul>li:nth-child(2)>ul>li>a {height: 100%;
+                width: 100%;
+                color: #003A90;
+                -webkit-text-stroke: 1px #003A90;
+                font-size: 36px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+            /* background-color: #fff; */}
+.sub3_header>ul>li:nth-child(3) {height: 100%;
+                width: 20%;
+                box-sizing: border-box;
+                padding: 15px;
+                /* background-color: aqua; */
+                text-align: center;
+                margin: 1px;}
+.sub3_header>ul>li:nth-child(3)>ul {width: 100%;
+                        height: 100%;}
+.sub3_header>ul>li:nth-child(3)>ul>li {width: 100%;
+                        height: 100%;}
+.sub3_header>ul>li:nth-child(3)>ul>li>a {height: 100%;
+                width: 100%;
+                color: #fff;
+                -webkit-text-stroke: 2px #003A90;
+                font-size: 36px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+            /* background-color: #fff; */}
+
+.photo {width: 100%;
+        height: 100%;
+        position: relative;}
+
+.photo .photo001 {width: 100%;
+        height: 100%;
+        background-image: url(../img/photo001_back.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;}
+
+.photo001 .back {width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;}
+.photo001 .back>div:nth-child(1) {width: 33%;
+                                position: absolute;
+                                left: 32.5%;
+                                bottom: 2.5%;
+                                z-index: 0;}
+.photo001 .back>div:nth-child(1) img {width: 100%;}
+.photo001 .back>div:nth-child(2) {width: 33%;
+                                position: absolute;
+                                left: 33%;
+                                bottom: 3%;
+                                z-index: 0;}
+.photo001 .back>div:nth-child(2) img {width: 100%;}
+.photo001 .back>div:nth-child(3) {width: 20%;
+                                position: absolute;
+                                left: 4%;
+                                bottom: -12%;
+                                z-index: 0;}
+.photo001 .back>div:nth-child(3) img {width: 100%;}
+.photo001 .back>div:nth-child(4) {width: 35%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                z-index: 0;}
+.photo001 .back>div:nth-child(4) img {width: 100%;}
+
+.photo001 .front {width: 100%;
+                height: 100vh;
+                position: absolute;
+                left: 0;
+                top: 0;}
+.photo001 .front>div:nth-child(1) {width: 40%;
+                                position: absolute;
+                                right: -15%;
+                                top: 5%;
+                                z-index: 2;}
+.photo001 .front>div:nth-child(1) img {width: 100%;}
+.photo001 .front>div:nth-child(2) {width: 30%;
+                                position: absolute;
+                                right: 0;
+                                top: 30%;
+                                z-index: 1;}
+.photo001 .front>div:nth-child(2) img {width: 100%;}
+.photo001 .front>div:nth-child(3) {width: 20%;
+                                position: absolute;
+                                right: -3%;
+                                bottom: 10%;
+                                z-index: 2;}
+.photo001 .front>div:nth-child(3) img {width: 100%;}
+.photo001 .front>div:nth-child(4) {width: 15%;
+                                position: absolute;
+                                right: 15%;
+                                bottom: -2%;
+                                z-index: 2;}
+.photo001 .front>div:nth-child(4) img {width: 100%;}
+
+.photo001 .cam {width: 100%;
+                height: 100vh;
+                position: absolute;
+                left: 0;
+                bottom: 0;}
+.photo001 .cam>div:nth-child(1) {width: 3%;
+                                position: absolute;
+                                left: 29.1%;
+                                bottom: 44.6%;
+                                cursor: pointer;}
+.photo001 .cam>div:nth-child(1) img{width: 100%;}
+.photo001 .cam>div:nth-child(2) {width: 30%;
+                                position: absolute;
+                                left: 7%;
+                                bottom: 8%;}
+.photo001 .cam>div:nth-child(2) img {width: 100%;}
+.photo001 .cam>div:nth-child(3) {width: 4%;
+                                position: fixed;
+                                left: 27%;
+                                bottom: 51%;}
+.photo001 .cam>div:nth-child(3) img {width: 100%;}
+.photo001 .cam>div:nth-child(4) {width: 15%;
+                        height: auto;
+                        left: 20%;
+                        bottom: 54%;
+                        color: #fff;
+                        position: fixed;
+                        font-size: 60px;
+                        z-index: 0;
+                        transform: rotate(15deg);
+                        font-family: 'Covered By Your Grace', cursive;
+                        animation: ani2 0.8s linear infinite;}
+
+@keyframes ani2 {
+                0% {transform: scale(1) rotate(15deg);
+                        opacity: 0.5;
+                        }
+                100% {transform: scale(1.05) rotate(15deg);
+                        opacity: 1;}
+                }
+
+
+.photo .photo002 {width: 100%;
+                height: 100%;
+                background-image: url(../img/photo002_back.png);
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;}
+
+
+
+
+
 /* sub4 설정 */
