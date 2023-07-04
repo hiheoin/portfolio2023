@@ -2,11 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @font-face {font-family: 'DungGeunMo';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
         font-weight: normal;
         font-style: normal;}
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 
 /* 전체설정 */
 * {margin: 0;
@@ -33,6 +35,13 @@ section {width: 100%;
 .intro>div {height: 100%;
             text-align: center;}
 .intro>div>img {height: 100%;}
+/* .intro>div>div {height: 50%;
+                width: 50%;
+                background-color: #fff;
+                position: fixed;
+                left: 20%;
+                top: 40%;
+        z-index: 0;} */
 
         /* 플레이 버튼 */
 .intro span {width: 4%;
@@ -178,13 +187,42 @@ section {width: 100%;
         height: 100%;
         position: relative;}
         /* 필름 위 */
-.back_2>div:nth-child(1) {height: 130%;
-                        width: auto;
+.back_2>div:nth-child(1) {height: 1250px;
+                        width: 260px;
                         position: fixed;
-                        right: -5%;
+                        right: -1%;
                         top: -2%;
-                        z-index: 1;}
-.back_2>div:nth-child(1) img {height: 100%;}
+                        z-index: 1;
+                        transform: rotate(8deg);}
+.back_2>div:nth-child(1)>div:nth-child(1) {height: 100%;
+                                        width: 100%;
+                                        position: absolute;
+                                        right: -1%;
+                                        top: 0;
+                                        z-index:1;
+                                        animation: film 60s linear infinite;}
+.back_2>div:nth-child(1)>div:nth-child(1) img {height: 100%;}
+.back_2>div:nth-child(1)>div:nth-child(2) {height: 100%;
+                                                width: 100%;
+                                                position: absolute;
+                                                right: -1%;
+                                                top: 1250px;
+                                                z-index:1;
+                                                animation: film2 60s linear infinite;}
+.back_2>div:nth-child(1)>div:nth-child(2) img {height: 100%;}
+
+@keyframes film {
+        0% {top: 0;}
+        100% {top: -1250px;}
+}
+
+@keyframes film2 {
+        0% {top: 1250px;}
+        100% {top: 0;}
+}
+
+.back_2>div:nth-child(1):hover>div {animation-play-state: paused;}
+
         /* 필름 아래 */
 .back_2>div:nth-child(2) {height: 130%;
                         width: auto;
@@ -194,13 +232,16 @@ section {width: 100%;
                         z-index: 0;}
 .back_2>div:nth-child(2) img {height: 100%;}
         /* 테이프 검정 */
-.back_2>div:nth-child(3) {height: 15%;
+.back_2>div:nth-child(3) {height: 20%;
                             width: auto;
                             position: fixed;
                             left: 30%;
-                            top: 25%;
-                            z-index: 0;}
+                            top: 24%;
+                            z-index: 0;
+                        transition: all 0.8s;}
 .back_2>div:nth-child(3) img {height: 100%;}
+.back_2>div:nth-child(3):hover {left: 33%;}
+
         /* 테이프 노랑 */
 .back_2>div:nth-child(4) {width: 15%;
                         height: auto;
@@ -225,6 +266,7 @@ section {width: 100%;
                         bottom: 5%;
                         z-index: 1;}
 .back_2>div:nth-child(6) img {width: 100%;}
+/* lp, 노란 테이프 호버값은 아이팟 mouseenter로 제이쿼리 */
         /* 포스터 */
 .back_2>div:nth-child(7) {width: 35%;
                         height: auto;
@@ -243,9 +285,11 @@ section {width: 100%;
                         position: fixed;
                         right: 7%;
                         top: 32%;
-                        z-index: 2;}
+                        z-index: 2;
+                        transition: all 1s;}
 .back_2>div:nth-child(8) img {width: 100%;
                                 height: 100%;}
+.back_2>div:nth-child(8):hover {transform: rotate(360deg);}
 
 .main_jh {width: 100%;
         height: 100%;
@@ -439,7 +483,7 @@ section {width: 100%;
                         height: 33%;
                         position: fixed;
                         right: 20%;
-                        top: 17%;
+                        top: 15%;
                         /* background-color: red; */
                         color: #fff;
                         z-index: 0;
@@ -450,13 +494,13 @@ section {width: 100%;
 .main .txt>div:nth-child(1) span {display: block;
                             position: fixed;
                             right: 32%;
-                            top: 13%;
+                            top: 10%;
                             z-index: 1;
                             transform: rotate(-12deg);}
 .main .txt>div:nth-child(1) em {display: block;
                             position: fixed;
                             right: 20%;
-                            top: 14%;
+                            top: 11%;
                             z-index: 1;
                             transform: rotate(5deg);}
 .main .txt>div:nth-child(1) b {display: block;
@@ -464,7 +508,7 @@ section {width: 100%;
                         color: #F5C02C;}
 .main .txt>div:nth-child(1) p {position: fixed;
                         right: 26%;
-                        top: 37%;
+                        top: 34%;
                         z-index: 1;}
 .main .txt>div:nth-child(1):hover span {color: #F5C02C}
 .main .txt>div:nth-child(1):hover em {color: #F5C02C}
@@ -479,7 +523,26 @@ section {width: 100%;
                         font-size: 50px;
                         z-index: 0;
                         color: #fff;
-                        transform: rotate(15deg);}
+                        transform: rotate(15deg);
+                        animation: ani2 0.8s linear infinite;}
+
+.cursorF {position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+                border: 5px solid #fff;
+                box-sizing: border-box;
+                left: 0;
+                margin-left: -100px;
+                top: 0;
+                margin-top: -100px;
+                z-index: 999;
+                /* transition: width, height, border-color 0.5s; */
+                transition-property: width, height, border-color, transform;
+                transition-duration: 0.8s;
+                background-image: url(../ex_img/a.jpg);
+                background-attachment: fixed;
+                background-size: cover;}
 
 
 /* sub1 설정 */
@@ -752,7 +815,7 @@ section {width: 100%;
                                 height: auto;
                                 left: 40%;
                                 top: 49%;}
-.song .lp>div>div:nth-child(1) ul li {width: 70%;
+.song .lp>div>div:nth-child(1) ul li {width: 75%;
                                         font-size: 12px;
                                         font-family: 'Lexend Exa', sans-serif;
                                         padding: 2px;
@@ -922,10 +985,14 @@ section {width: 100%;
 
 .photo .photo001 {width: 100%;
         height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
         background-image: url(../img/photo001_back.png);
         background-position: center center;
         background-size: cover;
-        background-repeat: no-repeat;}
+        background-repeat: no-repeat;
+        opacity: 0;}
 
 .photo001 .back {width: 100%;
                 height: 100%;
@@ -1028,16 +1095,352 @@ section {width: 100%;
                         opacity: 1;}
                 }
 
-
+/* 스크롤을 내릴수록 사진이 하나씩 날아오게 */
 .photo .photo002 {width: 100%;
                 height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
                 background-image: url(../img/photo002_back.png);
                 background-position: center center;
                 background-size: cover;
-                background-repeat: no-repeat;}
+                background-repeat: no-repeat;
+                opacity: 0;}
+
+        /* 우측 중앙 사진부터 반시계 방향으로 설정 */
+.photo002>div:nth-child(1) {width: 15%;
+                                position: fixed;
+                                right: 15%;
+                                top: 20%;}
+.photo002>div:nth-child(1) img {width: 100%;}
+.photo002>div:nth-child(2) {width: 17%;
+                                position: fixed;
+                                right: 28%;
+                                top: 6%;}
+.photo002>div:nth-child(2) img {width: 100%;}
+.photo002>div:nth-child(3) {width: 14%;
+                                position: fixed;
+                                left: 27.5%;
+                                top: 2%;}
+.photo002>div:nth-child(3) img {width: 100%;}
+.photo002>div:nth-child(4) {width: 14%;
+                                position: fixed;
+                                left: 15%;
+                                top: 18%;}
+.photo002>div:nth-child(4) img {width: 100%;}
+.photo002>div:nth-child(5) {width: 17%;
+                                position: fixed;
+                                left: 23%;
+                                bottom: 4%;}
+.photo002>div:nth-child(5) img {width: 100%;}
+.photo002>div:nth-child(6) {width: 17%;
+                                position: fixed;
+                                left: 40%;
+                                top: 25%;}
+.photo002>div:nth-child(6) img {width: 100%;}
+.photo002>div:nth-child(7) {width: 30%;
+                                position: fixed;
+                                right: 17%;
+                                bottom: 7%;}
+.photo002>div:nth-child(7) img {width: 100%;}
 
 
+.photo002>div:nth-child(8) {width: 15%;
+                                position: fixed;
+                                right: 11%;
+                                top: 4%;}
+.photo002>div:nth-child(8) img {width: 100%;}
+.photo002>div:nth-child(9) {width: 15%;
+                                position: fixed;
+                                right: 24%;
+                                top: 18%;}
+.photo002>div:nth-child(9) img {width: 100%;}
+.photo002>div:nth-child(10) {width: 15%;
+                                position: fixed;
+                                right: 37%;
+                                top: 10%;}
+.photo002>div:nth-child(10) img {width: 100%;}
+.photo002>div:nth-child(11) {width: 15%;
+                                position: fixed;
+                                left: 18%;
+                                top: 8%;}
+.photo002>div:nth-child(11) img {width: 100%;}
+.photo002>div:nth-child(12) {width: 23%;
+                                position: fixed;
+                                left: 12%;
+                                bottom: 5%;}
+.photo002>div:nth-child(12) img {width: 100%;}
+.photo002>div:nth-child(13) {width: 17%;
+                                position: fixed;
+                                right: 40%;
+                                bottom: 4%;}
+.photo002>div:nth-child(13) img {width: 100%;}
+.photo002>div:nth-child(14) {width: 15%;
+                                position: fixed;
+                                right: 17%;
+                                bottom: 6%;}
+.photo002>div:nth-child(14) img {width: 100%;}
+.photo002>div:nth-child(15) {width: 20%;
+                                position: fixed;
+                                left: 30%;
+                                top: 20%;}
+.photo002>div:nth-child(15) img {width: 100%;}
+.photo002>div:nth-child(16) {width: 20%;
+                                position: fixed;
+                                right: 5%;
+                                bottom: 3%;}
+.photo002>div:nth-child(16) img {width: 100%;}
 
+/* .photo001의 .cam div:nth-child(1) 클릭하면 .photo002에 on 붙여라 */
+.photo article.on {opacity: 1;}
+.photo002>div:hover {transform: scale(1.1);
+                        z-index: 999;}
 
 
 /* sub4 설정 */
+                /* 서브4 내비 */
+.sub4_header {position: fixed;
+        height: 7%;
+        width: 40%;
+        left: -17%;
+        bottom: 49%;
+        /* background-color: red; */
+        transform: rotate(-90deg);
+        border-bottom: 7px #003A90 solid;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 999;}
+.sub4_header>ul {height: 100%;
+            width: 95%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            /* background-color: salmon; */}
+
+.sub4_header>ul>li:nth-child(1) {height: 100%;
+            width: 65%;
+            box-sizing: border-box;
+            padding: 15px;
+            padding-left: 0;
+            /* background-color: aqua; */
+            text-align: left;
+            margin: 1px;}
+.sub4_header>ul>li:nth-child(1)>ul {width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                text-align: center;}
+.sub4_header>ul>li:nth-child(1)>ul>li {width: 33.3333%;
+                                        height: 100%;}
+.sub4_header>ul>li:nth-child(1)>ul>li>a {height: 100%;
+                                        width: 100%;
+                                        font-size: 36px;
+                                        font-family: 'Oswald', sans-serif;
+                                        font-weight: bold;
+                                        color: #fff;
+                                        -webkit-text-stroke: 2px #003A90;}
+
+.sub4_header>ul>li:nth-child(2) {height: 100%;
+                                width: 35%;
+                                box-sizing: border-box;
+                                padding: 15px;
+                                padding-right: 50px;
+                                /* background-color: aqua; */
+                                text-align: center;
+                                margin: 1px;}
+.sub4_header>ul>li:nth-child(2)>ul {width: 100%;
+                                        height: 100%;}
+.sub4_header>ul>li:nth-child(2)>ul>li {width: 100%;
+                                        height: 100%;}
+.sub4_header>ul>li:nth-child(2)>ul>li>a {height: 100%;
+                                        width: 100%;
+                                        color: #003A90;
+                                        -webkit-text-stroke: 1px #003A90;
+                                        font-size: 36px;
+                                        font-family: 'Oswald', sans-serif;
+                                        font-weight: bold;
+                                        /* background-color: #fff; */}
+
+.menu {width: 30%;
+        height: 5%;
+        position: fixed;
+        right: 0;
+        top: 5%;
+        /* background-color: #F5C02C; */
+        border-bottom: 7px #003A90 solid;
+        display: flex;
+        justify-content: center;
+        z-index: 999;}
+.menu ul {display: flex;
+        width: 80%;
+        height: 100%;
+        /* background-color: #fff; */
+        justify-content: space-around;
+        align-items: center;}
+.menu ul li {font-size: 32px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        color: #fff;
+        -webkit-text-stroke: 2px #003A90;
+        /* background-color: #003A90; */
+        cursor: pointer;}
+
+.menu ul li.on {color: #003A90;
+        -webkit-text-stroke: 1px #003A90;}
+
+
+.archive {width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #C7D3E5;}
+
+.archive .fix {width: 200%;
+        height: 100%;
+        position: relative;}
+.archive .fix .txtSlide {display: flex;
+                        width: 100%;
+                        height: 40%;
+                        align-items: center;
+                        position: relative;}
+.archive .fix .txtSlide>div:nth-child(1) {width: 1900px;
+                                        font-size: 120px;
+                                        color: rgba(0, 58, 144, 0.1);
+                                        font-family: 'Rammetto One', cursive;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 28%;
+                                        animation: txtSlide 30s linear infinite;}
+.archive .fix .txtSlide>div:nth-child(2) {width: 1900px;
+                                        font-size: 120px;
+                                        color: rgba(0, 58, 144, 0.1);
+                                        font-family: 'Rammetto One', cursive;
+                                        position: absolute;
+                                        left: -1900px;
+                                        top: 28%;
+                                        animation: txtSlide2 30s linear infinite;}
+.archive .fix>div:nth-child(2) {width: 25%;
+                                position: fixed;
+                                right: 0;
+                                bottom: -5%;}
+.archive .fix>div:nth-child(2) img {width: 100%;}
+
+@keyframes txtSlide {
+        0% {left: 0;}
+        100% {left: -1900px;}
+}
+@keyframes txtSlide2 {
+        0% {left: 1900px;}
+        100% {left: 0;}
+}
+
+.archive .concert {width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: none;
+                overflow-x: scroll;}
+.archive .concert ul {position: absolute;
+                        width: 100%;
+                        height: 70%;
+                        left: 30%;
+                        top: 20%;
+                        display: flex;
+                        align-items: center;}
+.archive .concert ul li {width: 100%;
+                        height: 100%;
+                        /* background-color: #003A90; */
+                        text-align: center;}
+.archive .concert ul li>div:nth-child(1) {width: 100%;
+                                        height: 85%;
+                                        display: flex;
+                                        align-items: center;}
+.archive .concert ul li>div:nth-child(1) img {width: 100%;}
+.archive .concert ul li>div:nth-child(2) {font-family: 'Paytone One', sans-serif;
+                                        border-bottom: 7px solid #AE1E24;
+                                        padding: 10px 0;
+                                        opacity: 0;}
+.archive .concert ul li>div:nth-child(2) span {font-size: 20px;
+                                                color: #B54F53;}
+.archive .concert ul li>div:nth-child(2) p {font-size: 28px;
+                                                color: #AE1E24;
+                                                -webkit-text-stroke: 1px #000;}
+
+.archive .concert ul li:hover div:nth-child(1) {transform: scale(1.05);}
+.archive .concert ul li:hover div:nth-child(2) {opacity: 1;}
+
+
+.archive .lyric {width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 27%;
+                top: 15%;
+                display: none;}
+
+.archive .lyric .txt {width: 49%;
+                        height: 60%;
+                        
+                        position: relative;}
+.archive .lyric .txt ul {position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        left: 3%;
+                        top: 10%;
+                        display: none;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        font-family: 'DungGeunMo';
+                        font-size: 20px;
+                        color: #1a1a1a;}
+.archive .lyric .txt ul li:nth-child(1) {margin-bottom: 10px;
+                                        font-size: 24px;}
+.archive .lyric .txt ul li:nth-child(2) {line-height: 26px;}
+
+.archive .lyric .frame {width: 52%;
+        height: 80%;
+        position: absolute;
+        left: 0;
+        top: 0;}
+.archive .lyric .frame div:nth-child(1) {height: 100%;}
+.archive .lyric .frame div:nth-child(1) img {height: 100%;}
+.archive .lyric .frame div:nth-child(2) {width: 15%;
+                                        background-color: #b9b9b9;
+                                        position: absolute;
+                                        left: 7%;
+                                        bottom: 10%;
+                                        }
+.archive .lyric .frame div:nth-child(2) ul {display: flex;
+                                        width: 100%;}
+.archive .lyric .frame div:nth-child(2) li {width: 55%;}
+.archive .lyric .frame div:nth-child(2) li img {width: 100%;}
+
+
+.archive .video {width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 27%;
+                top: 15%;
+                display: none;}
+.archive .video .frame {width: 52%;
+                        height: 80%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;}
+.archive .video .frame div:nth-child(1) {height: 100%;}
+.archive .video .frame div:nth-child(1) img {height: 100%;}
+.archive .video .frame div:nth-child(2) {width: 22%;
+                                        position: absolute;
+                                        left: 39%;
+                                        bottom: 5%;
+                                        }
+.archive .video .frame div:nth-child(2) ul {display: flex;
+                                        width: 100%;}
+.archive .video .frame div:nth-child(2) li {width: 55%;}
+.archive .video .frame div:nth-child(2) li img {width: 100%;}
+                
+
+.archive .lyric .txt ul.on {display: block;}
+.archive article.on {display: block;}
