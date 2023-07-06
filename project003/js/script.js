@@ -21,16 +21,6 @@ $(document).ready(function(){
             $('.index002').css({'width':'100vw','height':'100vh','left':'0','transform':'scale(1.0)','z-index':1})
         });
 
-        // .cursorF가 마우스를 따라다녀라(프로필 영역)
-        $(window).mousemove(function(e){
-
-            let x = e.pageX
-            let y = e.pageY
-    
-            $('.cursorF').css({'left':x,'top':y})
-    
-        });
-
         // index002에서 .back_2>div:nth-child(5)에 호버하면 6도 움직이게
         $('.back_2>div:nth-child(5)').mouseenter(function(){
             $(this).addClass('on')
@@ -50,6 +40,41 @@ $(document).ready(function(){
             $('.back>div:nth-child(3)').removeClass('on')
         })
 
+        // index002에서 폴라로이드에 마우스엔터하면 글자들 움직여라
+        $('.main_jh>div:nth-child(5)').mouseenter(function(){
+            $('.txtArt>div').eq(0).addClass('left')
+            $('.txtArt>div').eq(2).addClass('left')
+            $('.txtArt>div').eq(4).addClass('left')
+            $('.txtArt>div').eq(6).addClass('left')
+            $('.txtArt>div').eq(8).addClass('left')
+            $('.txtArt>div').eq(10).addClass('left')
+            $('.txtArt>div').eq(12).addClass('left')
+
+            $('.txtArt>div').eq(1).addClass('right')
+            $('.txtArt>div').eq(3).addClass('right')
+            $('.txtArt>div').eq(5).addClass('right')
+            $('.txtArt>div').eq(7).addClass('right')
+            $('.txtArt>div').eq(9).addClass('right')
+            $('.txtArt>div').eq(11).addClass('right')
+        });
+        $('.main_jh>div:nth-child(5)').mouseleave(function(){
+            $('.txtArt>div').removeClass('left')
+            $('.txtArt>div').removeClass('right')
+        })
+
+
+        // .cursorF가 마우스를 따라다녀라(프로필 영역)
+        $(window).mousemove(function(e){
+
+            let x = e.pageX
+            let y = e.pageY
+    
+            $('.cursorF').css({'left':x,'top':y})
+            $('.cursorP').css({'left':x,'top':y})
+    
+        });
+
+    
 
         // song에서 prev버튼을 누르면 이전 div에 on, next를 누르면 다음 div에 on
             // addClass 사용
@@ -80,51 +105,131 @@ $(document).ready(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_so002B.png)'})
                 $('.song .lp>div').eq(4).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#1C311E'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#1C311E','-webkit-text-stroke': '1px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_jsB.png)'})
                 $('.song .lp>div').eq(1).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#DE8F01'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #DE8F01'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#DE8F01','-webkit-text-stroke': '1px #DE8F01'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #DE8F01'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#FBD733'})
             });
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_mhB.png)'})
                 $('.song .lp>div').eq(0).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#1C311E'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#1C311E','-webkit-text-stroke': '1px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_so001B.png)'})
                 $('.song .lp>div').eq(2).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#003A90'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #003A90'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#003A90','-webkit-text-stroke': '1px #003A90'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #003A90'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_jsB.png)'})
                 $('.song .lp>div').eq(1).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#DE8F01'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #DE8F01'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#DE8F01','-webkit-text-stroke': '1px #DE8F01'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #DE8F01'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#FBD733'})
             });
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_hnB.png)'})
                 $('.song .lp>div').eq(3).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#AE2C34'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #AE2C34'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#AE2C34','-webkit-text-stroke': '1px #AE2C34'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #AE2C34'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#fff'})
             });
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_so001B.png)'})
                 $('.song .lp>div').eq(2).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#003A90'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #003A90'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#003A90','-webkit-text-stroke': '1px #003A90'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #003A90'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_so002B.png)'})
                 $('.song .lp>div').eq(4).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#1C311E'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#1C311E','-webkit-text-stroke': '1px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_hnB.png)'})
                 $('.song .lp>div').eq(3).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#AE2C34'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #AE2C34'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#AE2C34','-webkit-text-stroke': '1px #AE2C34'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #AE2C34'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#fff'})
             });
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').css({'background-image':'url(../img/song_lp_mhB.png)'})
                 $('.song .lp>div').eq(0).addClass('on')
+                // 헤더 색 변경
+                $('.sub2_header').css({'border-color':'#1C311E'})
+                $('.sub2_header>ul>li:nth-child(1)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(2)>ul>li>a').css({'color':'#1C311E','-webkit-text-stroke': '1px #1C311E'})
+                $('.sub2_header>ul>li:nth-child(3)>ul>li>a').css({'color':'#fff','-webkit-text-stroke': '2px #1C311E'})
+                // 엘피 트랙리스트 색 변경
+                $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
+                $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
             });
             
         // song에서 스탑/플레이버튼을 누르면 lp회전이 멈추고 재생
@@ -385,7 +490,7 @@ $(document).ready(function(){
             })
 
 
-        // profile에서 클릭 가능한 영역에 들어가면 cursorF 보더가 파란색으로 바뀌게
+        // profile에서 클릭 가능한 영역에 들어가면 cursorF 보더가 바뀌게
         $('.profile .txt span:nth-child(2) span').mouseenter(function(){
             $('.cursorF').addClass('on')
         });
@@ -410,9 +515,58 @@ $(document).ready(function(){
         $('.profile .img>div:nth-child(3)').mouseleave(function(){
             $('.cursorF').removeClass('big')
         });
+            // 팝업영역에서 보더값 사라지게
+        $('.profile .popUp>div').mouseenter(function(){
+            $('.cursorF').addClass('out')
+        });
+        $('.profile .popUp>div').mouseleave(function(){
+            $('.cursorF').removeClass('out')
+        });
         
         // .profile .txt>span:nth-child(2) span 세 개 중에 하나 누르면 팝업이 나타나게
-        
+        $('.profile .txt .jan').click(function(){
+            $('.profile .popUp').addClass('on')
+            $('.popUp>div').removeClass('on')
+            $('.popUp>div').eq(0).addClass('on')
+        });
+        $('.profile .txt .insta').click(function(){
+            $('.profile .popUp').addClass('on')
+            $('.popUp>div').removeClass('on')
+            $('.popUp>div').eq(1).addClass('on')
+        });
+        $('.profile .txt .you').click(function(){
+            $('.profile .popUp').addClass('on')
+            $('.popUp>div').removeClass('on')
+            $('.popUp>div').eq(2).addClass('on')
+        });
+        $('.popUp .close').click(function(){
+            
+            $('.popUp>div').removeClass('on')
+            $('.profile .popUp').removeClass('on')
+        });
+
+
+        // .video에서 .archive .video .frame 의 .prev/.next 누를 때마다 영상 바뀌게
+        let v = 0;
+        $('.video .frame .prev').click(function(){
+            v--;
+            if(v==-1)v=4;
+
+            $('.video .vid>div').removeClass('on')
+            $('.video .vid>div').eq(v).addClass('on')
+        });
+        $('.video .frame .next').click(function(){
+            v++;
+            if(v==5)v=0;
+            
+            $('.video .vid>div').removeClass('on')
+            $('.video .vid>div').eq(v).addClass('on')
+        });
+
+
+
+        // .video에서 .play 누를 때마다 멈췄다가 재생
+
 
 
 }); // 끝
