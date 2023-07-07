@@ -325,6 +325,13 @@ $(document).ready(function(){
                     play==1;
                 });
 
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
             });
 
         
@@ -566,7 +573,26 @@ $(document).ready(function(){
 
 
         // .video에서 .play 누를 때마다 멈췄다가 재생
+        let vid = 0;
+        $('.video .frame .btn').click(function(){
+            
+            vid++;
+            if(vid==2)vid=0;
 
+            console.log(vid)
+            
+            if(vid==1){
+                $('.vid>div.on video').get(0).play()
+                $('.video .frame .btn img').removeClass('on')
+                $('.video .frame .btn img').eq(1).addClass('on')
+            }
+            if(vid==0){
+                $('.vid>div.on video').get(0).pause()
+                $('.video .frame .btn img').removeClass('on')
+                $('.video .frame .btn img').eq(0).addClass('on')
+            }
+            
+        });
 
 
 }); // 끝
