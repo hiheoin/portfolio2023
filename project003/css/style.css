@@ -587,7 +587,7 @@ section {width: 100%;
                 /* transition: width, height, border-color 0.5s; */
                 transition-property: border-radius, width, height, border-color;
                 transition-duration: 0.8s;
-                background-image: url(../ex_img/f.jpg);
+                background-image: url(../img/f.jpg);
                 background-attachment: fixed;
                 background-position: center center;
                 background-size: cover;}
@@ -1028,6 +1028,12 @@ section {width: 100%;
         background-size: contain;
         background-position: left center;
         background-repeat: repeat;}
+
+.song.mh {background-image: url(../img/song_lp_mhB.png);}
+.song.js {background-image: url(../img/song_lp_jsB.png);}
+.song.soone {background-image: url(../img/song_lp_so001B.png);}
+.song.hn {background-image: url(../img/song_lp_hnB.png);}
+.song.sotwo {background-image: url(../img/song_lp_so002B.png);}
         
 .song .lp {width: 100%;
         height: 100%;}

@@ -103,7 +103,11 @@ $(document).ready(function(){
 
             $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_so002B.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('sotwo')
                 $('.song .lp>div').eq(4).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#1C311E'})
@@ -116,7 +120,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_jsB.png)'})
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('js')
                 $('.song .lp>div').eq(1).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#DE8F01'})
@@ -129,7 +137,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_mhB.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('soone')
+                $('.song').addClass('mh')
                 $('.song .lp>div').eq(0).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#1C311E'})
@@ -142,7 +154,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_so001B.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('sotwo')
+                $('.song').addClass('soone')
                 $('.song .lp>div').eq(2).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#003A90'})
@@ -155,7 +171,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_jsB.png)'})
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('js')
                 $('.song .lp>div').eq(1).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#DE8F01'})
@@ -168,7 +188,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_hnB.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('hn')
                 $('.song .lp>div').eq(3).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#AE2C34'})
@@ -181,7 +205,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_so001B.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('sotwo')
+                $('.song').addClass('soone')
                 $('.song .lp>div').eq(2).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#003A90'})
@@ -194,7 +222,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_so002B.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('sotwo')
                 $('.song .lp>div').eq(4).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#1C311E'})
@@ -207,7 +239,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_hnB.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('mh')
+                $('.song').removeClass('soone')
+                $('.song').addClass('hn')
                 $('.song .lp>div').eq(3).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#AE2C34'})
@@ -220,7 +256,11 @@ $(document).ready(function(){
             });
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
-                $('.song').css({'background-image':'url(../img/song_lp_mhB.png)'})
+                $('.song').removeClass('js')
+                $('.song').removeClass('hn')
+                $('.song').removeClass('sotwo')
+                $('.song').removeClass('soone')
+                $('.song').addClass('mh')
                 $('.song .lp>div').eq(0).addClass('on')
                 // 헤더 색 변경
                 $('.sub2_header').css({'border-color':'#1C311E'})
