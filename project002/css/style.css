@@ -247,7 +247,7 @@ section article:nth-child(7) {height: 82px;}
 .new .imgBox>div:hover span {opacity: 1;} */
 
 
-.new .imgBox>div:hover {cursor: url('../img/cursor_hover.png'),auto;
+.new .imgBox>div:hover a {cursor: url('../img/cursor_hover.png'),auto;
 }
 
 
@@ -664,9 +664,10 @@ section article:nth-child(7) {height: 82px;}
                 margin: 50px 0;}
 .pro .group span em {font-style: normal;
     display: block;}
-.pro .group p {border: 1px solid #fff;
+.pro .group a p {border: 1px solid #fff;
         font-size: 20px;
         font-weight: bold;
+        color: #fff;
         background-color: #000;
         padding: 15px 70px;
         cursor: pointer;

@@ -94,7 +94,7 @@ section {width: 100%;
 }
 
 .index002 {height: 80%;
-        width: 65%;
+        width: 66%;
         overflow: hidden;
         position: fixed;
         left: 17%;
@@ -570,8 +570,10 @@ section {width: 100%;
                         font-size: 50px;
                         z-index: 0;
                         color: #fff;
-                        transform: rotate(15deg);
-                        animation: ani2 0.8s linear infinite;}
+                        transform: rotate(15deg);}
+
+.main .txt .pull {animation: ani2 0.8s linear infinite;}
+.main .txt .pull2.on {animation: ani2 0.8s linear infinite;}
 
 .cursorF {position: absolute;
                 width: 300px;
@@ -1745,7 +1747,6 @@ section {width: 100%;
 
 .archive .lyric .txt {width: 49%;
                         height: 60%;
-                        
                         position: relative;}
 .archive .lyric .txt ul {position: absolute;
                         width: 100%;
@@ -1821,8 +1822,9 @@ section {width: 100%;
                         position: absolute;
                         left: 1.9%;
                         top: 6.82%;
+                        overflow: hidden;
                         }
-.archive .video .vid>div {width: 100%;
+.archive .video .vid>div {width: 95%;
                         height: 100%;
                         background-color: #fff;
                         position: absolute;

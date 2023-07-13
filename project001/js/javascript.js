@@ -37,6 +37,10 @@ $(document).ready(function(){
     });
 
 
+    $('.logo').click(function(){
+        $(window).scrollTop(0)
+    })
+
 
 
 
@@ -143,7 +147,10 @@ $(document).ready(function(){
 
         // })
 
+        // $('.facil_arrow .left').click(function(){
 
+
+        // });
 
 
 

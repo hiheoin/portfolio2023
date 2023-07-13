@@ -19,6 +19,7 @@ $(document).ready(function(){
         $('.intro div span').click(function(){
             $('.intro').css({'transform':'scale(3.0)','z-index':0,'top':'20%'})
             $('.index002').css({'width':'100vw','height':'100vh','left':'0','transform':'scale(1.0)','z-index':1})
+            $('.main .txt .pull2').addClass('on')
         });
 
         // index002에서 .back_2>div:nth-child(5)에 호버하면 6도 움직이게
@@ -117,7 +118,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('sotwo')
@@ -134,7 +173,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#FBD733'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -151,7 +228,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -168,7 +283,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('sotwo')
@@ -185,7 +338,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#FBD733'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -202,7 +393,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#fff'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -219,7 +448,45 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -236,7 +503,46 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+            $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                
+                $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -253,7 +559,46 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#fff'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#fff'})
+            
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                
+                $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
             });
+            });
+
             $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
                 $('.song .lp>div').removeClass('on')
                 $('.song').removeClass('js')
@@ -270,8 +615,46 @@ $(document).ready(function(){
                 // 엘피 트랙리스트 색 변경
                 $('.song .lp>div>div:nth-child(1) ul li').css({'color':'#272424'})
                 $('.song .lp>div>div:nth-child(1) ul li b').css({'color':'#272424'})
+            
+
+                // 플레이/스탑 버튼
+                let play = 0;
+                $('.song .stic>div:nth-child(2)').click(function(){
+
+                play++;
+                if(play==2)play=0;
+
+                console.log(play)
+
+                $('.song .stic>div>div').removeClass('on')
+                $('.song .stic>div>div').eq(play-1).addClass('on')
+
+                // 1 정지 0 재생
+                if(play==1){
+                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
+                    }
+                if(play==0){
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    }
+
+                $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+                $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
+                    // 플레이버튼으로 리셋
+                    $('.song .stic>div>div').removeClass('on')
+                    $('.song .stic>div>div').eq(1).addClass('on')
+                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
+                    
+                });
+            });
             });
             
+        // 첫화면 스탑/플레이
         // song에서 스탑/플레이버튼을 누르면 lp회전이 멈추고 재생
             // addClass사용
             let play = 0;
@@ -299,78 +682,61 @@ $(document).ready(function(){
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(1)>div:nth-child(3) span').eq(1).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(0).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(2)>div:nth-child(3) span').eq(1).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(0).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(3)>div:nth-child(3) span').eq(1).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(0).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(4)>div:nth-child(3) span').eq(1).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(0).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
                 $('.song .lp>div:nth-child(5)>div:nth-child(3) span').eq(1).click(function(){
                     // 플레이버튼으로 리셋
                     $('.song .stic>div>div').removeClass('on')
                     $('.song .stic>div>div').eq(1).addClass('on')
                     $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    play==1;
                 });
-
-                if(play==1){
-                    $('.song .lp>div.on>div:nth-child(1)').addClass('on')
-                    }
-                if(play==0){
-                    $('.song .lp>div.on>div:nth-child(1)').removeClass('on')
-                    }
 
             });
 
@@ -593,40 +959,21 @@ $(document).ready(function(){
         });
 
 
-        // .video에서 .archive .video .frame 의 .prev/.next 누를 때마다 영상 바뀌게
-        let v = 0;
-        $('.video .frame .prev').click(function(){
-            v--;
-            if(v==-1)v=4;
-
-            $('.video .vid>div').removeClass('on')
-            $('.video .vid>div').eq(v).addClass('on')
-        });
-        $('.video .frame .next').click(function(){
-            v++;
-            if(v==5)v=0;
-            
-            $('.video .vid>div').removeClass('on')
-            $('.video .vid>div').eq(v).addClass('on')
-        });
-
-
-
-        // .video에서 .play 누를 때마다 멈췄다가 재생
-        let vid = 0;
+        // 첫화면에서만 .video에서 .play 누를 때마다 멈췄다가 재생
+        let vid2 = 0;
         $('.video .frame .btn').click(function(){
             
-            vid++;
-            if(vid==2)vid=0;
+            vid2++;
+            if(vid2==2)vid2=0;
 
-            console.log(vid)
+            console.log(vid2)
             
-            if(vid==1){
+            if(vid2==1){
                 $('.vid>div.on video').get(0).play()
                 $('.video .frame .btn img').removeClass('on')
                 $('.video .frame .btn img').eq(1).addClass('on')
             }
-            if(vid==0){
+            if(vid2==0){
                 $('.vid>div.on video').get(0).pause()
                 $('.video .frame .btn img').removeClass('on')
                 $('.video .frame .btn img').eq(0).addClass('on')
@@ -634,5 +981,78 @@ $(document).ready(function(){
             
         });
 
+
+        // .video에서 .archive .video .frame 의 .prev/.next 누를 때마다 영상 바뀌게
+        let v = 0;
+        $('.video .frame .prev').click(function(){
+            v--;
+            if(v==-1)v=4;
+            // 플레이버튼 리셋, 전 영상 정지
+            $('.vid>div.on video').get(0).pause()
+            $('.video .frame .btn img').removeClass('on')
+            $('.video .frame .btn img').eq(0).addClass('on')
+            // 순번에 맞는 영상
+            $('.video .vid>div').removeClass('on')
+            $('.video .vid>div').eq(v).addClass('on')
+
+            // .video에서 .play 누를 때마다 멈췄다가 재생
+            let vid = 0;
+            $('.video .frame .btn').click(function(){
+                
+                vid++;
+                if(vid==2)vid=0;
+    
+                console.log(vid)
+                
+                if(vid==1){
+                    $('.vid>div.on video').get(0).play()
+                    $('.video .frame .btn img').removeClass('on')
+                    $('.video .frame .btn img').eq(1).addClass('on')
+                }
+                if(vid==0){
+                    $('.vid>div.on video').get(0).pause()
+                    $('.video .frame .btn img').removeClass('on')
+                    $('.video .frame .btn img').eq(0).addClass('on')
+                }
+                
+            });
+
+
+        });
+        $('.video .frame .next').click(function(){
+            v++;
+            if(v==5)v=0;
+            $('.vid>div.on video').get(0).pause()
+            $('.video .frame .btn img').removeClass('on')
+            $('.video .frame .btn img').eq(0).addClass('on')
+            $('.video .vid>div').removeClass('on')
+            $('.video .vid>div').eq(v).addClass('on')
+            
+            // .video에서 .play 누를 때마다 멈췄다가 재생
+            let vid = 0;
+            $('.video .frame .btn').click(function(){
+                
+                vid++;
+                if(vid==2)vid=0;
+    
+                console.log(vid)
+                
+                if(vid==1){
+                    $('.vid>div.on video').get(0).play()
+                    $('.video .frame .btn img').removeClass('on')
+                    $('.video .frame .btn img').eq(1).addClass('on')
+                }
+                if(vid==0){
+                    $('.vid>div.on video').get(0).pause()
+                    $('.video .frame .btn img').removeClass('on')
+                    $('.video .frame .btn img').eq(0).addClass('on')
+                }
+                
+            });
+        });
+
+
+
+        
 
 }); // 끝

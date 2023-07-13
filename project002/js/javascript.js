@@ -153,7 +153,6 @@ $(document).ready(function(){
     });
 
 
-
     // 3. 스크롤을 내려서 .cairo가 나타나면 이미지는 왼쪽에서, 텍스트는 오른쪽에서 날아와라
     // .collection 나타나면 h3 opacity 변해라
     $(window).scroll(function(){

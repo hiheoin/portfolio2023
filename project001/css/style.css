@@ -91,7 +91,8 @@ header {height: 100%;
         background-repeat: no-repeat;
         background-position: center center;
         text-indent: -9999px;
-        box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);}
+        box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);
+        cursor: pointer;}
 
     
 .logo.on {background-image: url(../img/logo002.png);
@@ -322,6 +323,8 @@ header {height: 100%;
         text-shadow: #0000003d 5px 5px 5px;}
 .hero p span {color: #fff;}
 
+.hero:hover p {color: #fff;}
+.hero:hover p span {color: #FEE600;}
 
 
 
