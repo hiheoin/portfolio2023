@@ -1818,7 +1818,6 @@ section {width: 100%;
 .archive .video .frame div:nth-child(2) li:nth-child(2) img.on {display: block;}
 .archive .video>div:nth-child(2) {width: 47.6%;
                                 height: 55.7%;
-                        background-color: #fff;
                         position: absolute;
                         left: 1.9%;
                         top: 6.82%;
@@ -1826,7 +1825,6 @@ section {width: 100%;
                         }
 .archive .video .vid>div {width: 95%;
                         height: 100%;
-                        background-color: #fff;
                         position: absolute;
                         left: 0;
                         top: 0;

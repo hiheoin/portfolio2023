@@ -626,7 +626,7 @@ body::-webkit-scrollbar {display: none;}
         justify-content: center;
         align-items: center;
         opacity: 0;
-        color: #0D261B;
+        color: #fff;
         background-color: rgba(63, 90, 85, 0.5);}
 
 .cjh .round:hover .img {filter: blur(3px);}
@@ -954,9 +954,9 @@ body::-webkit-scrollbar {display: none;}
         color: #0D261B;
         font-size: 28px;
         position: absolute;
-        right: 3%;
+        left: 3%;
         top: 3%;
-        text-align: right;
+        text-align: left;
         cursor: pointer;}
 .ow .btn:hover {opacity: 0.5;}
 

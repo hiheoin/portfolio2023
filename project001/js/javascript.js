@@ -1,46 +1,140 @@
 $(document).ready(function(){
+    
+    $(window).resize(function(){
+        location.reload()
+        })
 
 
     $(window).scroll(function(){
         
-        // 로고 제이쿼리
-        let sc = $(this).scrollTop()
-        let ot = $('.box2').offset().top
-        console.log(ot)
+        
+
+        if (matchMedia("screen and (min-width:1025px)").matches){
+            // 1024px 이상에서 사용할 스크립트
+            
 
 
-        if(sc>=ot-800){
-            $('.logo').addClass('on')
+                // 로고 제이쿼리
+                let sc = $(this).scrollTop()
+                let ot = $('.box2').offset().top
+                // console.log(ot)
+
+                if(sc>=ot-800){
+                    $('.logo').addClass('on')
+                }
+                else{
+                    $('.logo').removeClass('on')
+                }
+
+                // 인포 제이쿼리
+                // console.log(ot)
+                if(sc>=ot-800){
+                $("#fee").text("요금")
+                $("#res").text("예약")
+                $("#cos").text("고객")
+                $("#owo").text("O!")
+                $('.info').addClass('on')
+                $('.boxE').addClass('on')
+                }
+                else{
+                $("#fee").text("요금안내")
+                $("#res").text("예약안내")
+                $("#cos").text("고객지원")
+                $("#owo").text("O!WORLD?")
+                $('.info').removeClass('on')
+                $('.boxE').removeClass('on')
+                }
         }
-        else{
-            $('.logo').removeClass('on')
+        // else {
+        //     // 로고 제이쿼리
+        //     let sc = $(this).scrollTop()
+        //     let ot = $('.box2').offset().top
+        //     // console.log(ot)
+
+        //     if(sc>=ot-800){
+        //         $('.logo').removeClass('on')
+        //     }
+        //     else{
+        //         $('.logo').removeClass('on')
+        //     }
+
+        //     // 인포 제이쿼리
+        //     // console.log(ot)
+        //     if(sc>=ot-800){
+        //     $("#fee").text("요금안내")
+        //     $("#res").text("예약안내")
+        //     $("#cos").text("고객지원")
+        //     $("#owo").text("O!WORLD?")
+        //     $('.info').removeClass('on')
+        //     $('.boxE').removeClass('on')
+        //     }
+        //     else{
+        //     $("#fee").text("요금안내")
+        //     $("#res").text("예약안내")
+        //     $("#cos").text("고객지원")
+        //     $("#owo").text("O!WORLD?")
+        //     $('.info').removeClass('on')
+        //     $('.boxE').removeClass('on')
+        //     }
+        // }
+
+
+        if (matchMedia("(min-width:600px) and (max-width:1024px)").matches){
+            // 태블릿구간에서 사용할 스크립트
+        
+            $('.box7-2').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.976462699885!2d127.39433747633745!3d36.28862099636938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654e61dd45625d%3A0xd9e0f93060ed6a4e!2z64yA7KCE7Jik7JuU65Oc!5e0!3m2!1sko!2skr!4v1684387814760!5m2!1sko!2skr" width="900" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
         }
 
-        // 인포 제이쿼리
-        console.log(ot)
-        if(sc>=ot-800){
-        $("#fee").text("요금")
-        $("#res").text("예약")
-        $("#cos").text("고객")
-        $("#owo").text("O!")
-        $('.info').addClass('on')
-        $('.boxE').addClass('on')
+        if (matchMedia("screen and (max-width:599px)").matches){
+            // 599px 이하에서 사용할 스크립트
+                // 로고 제이쿼리
+                let sc = $(window).scrollTop()
+                let ot = $('.box2').offset().top
+                console.log(sc)
+
+                // 인포 제이쿼리
+                // console.log(ot)
+                if(sc>=ot-100){
+                $("#fee").text("요금")
+                $("#res").text("예약")
+                $("#cos").text("고객")
+                $("#owo").text("O!")
+                $('.info').addClass('on')
+                $('.boxE').addClass('on')
+                }
+                else{
+                $("#fee").text("요금안내")
+                $("#res").text("예약안내")
+                $("#cos").text("고객지원")
+                $("#owo").text("O!WORLD?")
+                $('.info').removeClass('on')
+                $('.boxE').removeClass('on')
+                }
+                
+                
+            $('.box7-2').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.976462699885!2d127.39433747633745!3d36.28862099636938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654e61dd45625d%3A0xd9e0f93060ed6a4e!2z64yA7KCE7Jik7JuU65Oc!5e0!3m2!1sko!2skr!4v1684387814760!5m2!1sko!2skr" width="400" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
+                
+            
+        
+            
+
+
         }
-        else{
-        $("#fee").text("요금안내")
-        $("#res").text("예약안내")
-        $("#cos").text("고객지원")
-        $("#owo").text("O!WORLD?")
-        $('.info').removeClass('on')
-        $('.boxE').removeClass('on')
-        }
+
     });
 
 
     $('.logo').click(function(){
         $(window).scrollTop(0)
     })
+   
+    $('.boxB span').click(function(){
+        // fadeToggle / slide Toggle
+        $('.gnb').slideToggle()
+        // $('.gnb').css({'display':'block'})
+    })
 
+    // $('.boxB span').css({'display':'block'})
 
 
 
@@ -57,6 +151,8 @@ $(document).ready(function(){
         $('.box2-4 .trailer ul').eq(a).show()
         $('.facilimg div ul').find('li').css({'opacity':0})
         $('.facilimg div ul').eq(a).find('li').css({'opacity':1})
+        $('#faciltxt li').removeClass('on')
+        $(this).addClass('on')
 
     });
 
@@ -163,6 +259,8 @@ $(document).ready(function(){
 
         $('.guideimg ul').hide()
         $('.guideimg ul').eq(a).show()
+        $('#guidetxt li').removeClass('on')
+        $(this).addClass('on')
 
     });
 
@@ -213,8 +311,10 @@ $(document).ready(function(){
             a1++;
             if(a1==3)a1=0;
 
-            $('#trailer1 li').eq(a1-1).css({'left':'0'}).stop().animate({'left':'548px'},1500);
-            $('#trailer1 li').eq(a1).css({'left':'-548px'}).stop().animate({'left':'0'},1500);
+            // $('#trailer1 li').eq(a1-1).css({'left':'0'}).stop().animate({'left':'548px'},1500);
+            // $('#trailer1 li').eq(a1).css({'left':'-548px'}).stop().animate({'left':'0'},1500);
+            $('#trailer1 li').eq(a1-1).css({'opacity':'1'}).stop().animate({'opacity':'0'},1500);
+            $('#trailer1 li').eq(a1).css({'opacity':'0'}).stop().animate({'opacity':'1'},1500);
 
     },5000);
             
