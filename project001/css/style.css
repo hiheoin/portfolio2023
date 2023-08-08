@@ -92,7 +92,8 @@ header {height: 100%;
         background-position: center center;
         text-indent: -9999px;
         box-shadow: 2px 2px 5px 0.5px rgba(128, 128, 128, 0.3);
-        cursor: pointer;}
+        cursor: pointer;
+        transition: all 0.5s;}
 
     
 .logo.on {background-image: url(../img/logo002.png);
@@ -235,7 +236,8 @@ display: none;}
 
 /* 인포 설정 */
 .boxE {width: 85%;
-        margin-left: 15%;}
+        margin-left: 15%;
+        transition: all 1.5s;}
 .info {display: flex;
         width: 100%;}
 .info div {margin: 30px 60px;}
@@ -1853,7 +1855,6 @@ body {width: 100vw;
         background-repeat: no-repeat;
         background-position: center center;
         position: absolute;
-        
         left: 0;
         top: 0;
         background-size: contain;
